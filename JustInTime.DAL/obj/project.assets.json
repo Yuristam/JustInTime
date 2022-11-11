@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.Database\\JustInTime.Database.csproj",
-      "projectName": "JustInTime.Database",
-      "projectPath": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.Database\\JustInTime.Database.csproj",
+      "projectUniqueName": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.DAL\\JustInTime.DAL.csproj",
+      "projectName": "JustInTime.DAL",
+      "projectPath": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.DAL\\JustInTime.DAL.csproj",
       "packagesPath": "C:\\Users\\lmega\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.Database\\obj\\",
+      "outputPath": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.DAL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

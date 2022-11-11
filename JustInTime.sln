@@ -5,7 +5,7 @@ VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JustInTime.WebApp", "JustInTime.WebApp\JustInTime.WebApp.csproj", "{F95C83FC-79B2-4B02-8ABE-FCD5D5CBBD2C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JustInTime.Database", "JustInTime.Database\JustInTime.Database.csproj", "{6B474485-3455-4AFC-BB19-327F6281DFB1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JustInTime.DAL", "JustInTime.DAL\JustInTime.DAL.csproj", "{A692B067-3393-470E-8B95-B74A491C7B1F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{F95C83FC-79B2-4B02-8ABE-FCD5D5CBBD2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F95C83FC-79B2-4B02-8ABE-FCD5D5CBBD2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F95C83FC-79B2-4B02-8ABE-FCD5D5CBBD2C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6B474485-3455-4AFC-BB19-327F6281DFB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6B474485-3455-4AFC-BB19-327F6281DFB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6B474485-3455-4AFC-BB19-327F6281DFB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6B474485-3455-4AFC-BB19-327F6281DFB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A692B067-3393-470E-8B95-B74A491C7B1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A692B067-3393-470E-8B95-B74A491C7B1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A692B067-3393-470E-8B95-B74A491C7B1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A692B067-3393-470E-8B95-B74A491C7B1F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
