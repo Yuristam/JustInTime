@@ -1155,6 +1155,16 @@
             "rid": "win"
           }
         }
+      },
+      "JustInTime.BLL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/JustInTime.BLL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/JustInTime.BLL.dll": {}
+        }
       }
     }
   },
@@ -3500,10 +3510,16 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "JustInTime.BLL/1.0.0": {
+      "type": "project",
+      "path": "../JustInTime.BLL/JustInTime.BLL.csproj",
+      "msbuildProject": "../JustInTime.BLL/JustInTime.BLL.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "JustInTime.BLL >= 1.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.0",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.0"
     ]
@@ -3540,7 +3556,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.BLL\\JustInTime.BLL.csproj": {
+              "projectPath": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.BLL\\JustInTime.BLL.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

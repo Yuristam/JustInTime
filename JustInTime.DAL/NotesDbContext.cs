@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using JustInTime.BLL.DomainModels;
+using Microsoft.EntityFrameworkCore;
 
 namespace JustInTime.DAL
 {
-    internal class NotesDbContext
+    public class NotesDbContext : DbContext
     {
+        public NotesDbContext(DbContextOptions <NotesDbContext> options): base(options)
+        {
+
+        }
+        DbSet<Note> Notes { get; set; }
     }
 }
