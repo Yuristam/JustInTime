@@ -1,4 +1,4 @@
-﻿using JustInTime.BLL.DomainModels;
+﻿using JustInTime.BLL.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace JustInTime.DAL
