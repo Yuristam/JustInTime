@@ -1,7 +1,14 @@
+using JustInTime.DAL;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<NotesDbContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("NotesAppConnectionString"));
+});
 
 var app = builder.Build();
 
