@@ -6,7 +6,7 @@ public interface IBaseRepository<T>
 {
     bool Create(T entity);
 
-    T Get(int id);
+    Task<Note> Get(int id);
 
     Task<List<Note>> Select();
 
