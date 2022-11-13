@@ -12,9 +12,12 @@ public class NoteRepository: INoteRepository
     {
         _db = db;
     }
-    public bool Create(Note entity)
+    public async Task<bool> Create(Note entity)
     {
-        throw new NotImplementedException();
+        await _db.Notes.AddAsync(entity);
+        await _db.SaveChangesAsync();
+
+        return true;
     }
 
     public async Task<Note> Get(int id)
@@ -27,13 +30,16 @@ public class NoteRepository: INoteRepository
         return await _db.Notes.ToListAsync();
     }
 
-    public bool Delete(Note entity)
+    public async Task<bool> Delete(Note entity)
     {
-        throw new NotImplementedException();
+        _db.Notes.Remove(entity);
+        await _db.SaveChangesAsync();
+
+        return true;
     }
 
-    public Note GetByName(string name)
+    public async Task<Note> GetByName(string name)
     {
-        throw new NotImplementedException();
+        return await _db.Notes.FirstOrDefaultAsync(x => x.Name == name);
     }
 }
