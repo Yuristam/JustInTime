@@ -1,4 +1,5 @@
 using JustInTime.DAL;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,8 +8,9 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<NotesDbContext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("NotesAppConnectionString"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("NotesConnectionString"));
 });
+
 
 var app = builder.Build();
 
