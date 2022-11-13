@@ -17,9 +17,9 @@ public class NoteRepository: INoteRepository
         throw new NotImplementedException();
     }
 
-    public Note Get(int id)
+    public async Task<Note> Get(int id)
     {
-        throw new NotImplementedException();
+        return await _db.Notes.FirstOrDefaultAsync(x => x.Id == id);
     }
 
     public async Task<List<Note>> Select()
