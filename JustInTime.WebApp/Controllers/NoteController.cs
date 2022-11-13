@@ -15,7 +15,7 @@ public class NoteController : Controller
     public async Task<IActionResult> GetNotes()
     {
         var response = await _noteRepository.Select();
-        return View();
+        return View(response);
     }
     
 }

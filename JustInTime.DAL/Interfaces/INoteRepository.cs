@@ -4,5 +4,5 @@ namespace JustInTime.DAL.Interfaces;
 
 public interface INoteRepository : IBaseRepository<Note>
 {
-    Note GetByName(string name);
+    Task<Note> GetByName(string name);
 }
