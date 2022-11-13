@@ -1,7 +1,7 @@
 ﻿
 using JustInTime.BLL.Enums;
 
-namespace JustInTime.BLL.DomainModels
+namespace JustInTime.BLL.Entities
 {
     public class Note
     {
