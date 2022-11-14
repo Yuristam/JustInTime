@@ -1,5 +1,4 @@
-﻿using JustInTime.BLL.Entities;
-using JustInTime.Domain.Entities;
+﻿using JustInTime.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace JustInTime.DAL
@@ -8,7 +7,7 @@ namespace JustInTime.DAL
     {
         public NotesDbContext(DbContextOptions <NotesDbContext> options): base(options)
         {
-
+            Database.EnsureCreated();
         }
         public DbSet<Note> Notes { get; set; }
     }

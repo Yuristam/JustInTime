@@ -1,7 +1,6 @@
-﻿
-using JustInTime.BLL.Enums;
+﻿using JustInTime.Domain.Enums;
 
-namespace JustInTime.BLL.Entities
+namespace JustInTime.Domain.Entities
 {
     public class Note
     {

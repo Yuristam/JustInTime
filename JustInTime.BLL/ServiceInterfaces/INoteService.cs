@@ -1,9 +1,9 @@
-using JustInTime.BLL.Entities;
-using JustInTime.BLL.Responses;
+using JustInTime.Domain.Entities;
+using JustInTime.Domain.Responses;
 
 namespace JustInTime.BLL.ServiceInterfaces;
 
 public interface INoteService
 {
-    Task<BaseResponse<IEnumerable<Note>>> GetAllNotes();
+    Task<IBaseResponse<IEnumerable<Note>>> GetAllNotes();
 }

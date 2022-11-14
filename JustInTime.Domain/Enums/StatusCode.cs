@@ -1,8 +1,10 @@
-namespace JustInTime.BLL.Enums;
-
-public enum StatusCode
+namespace JustInTime.Domain.Enums
 {
-    OK = 200,
-    InternalServerError = 500,
-    
+
+    public enum StatusCode
+    {
+        OK = 200,
+        InternalServerError = 500,
+
+    }
 }
