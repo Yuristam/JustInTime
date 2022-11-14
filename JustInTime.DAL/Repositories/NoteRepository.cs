@@ -1,45 +1,47 @@
-using JustInTime.BLL.Entities;
 using JustInTime.DAL.Interfaces;
+using JustInTime.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace JustInTime.DAL.Repositories;
-
-public class NoteRepository: INoteRepository
+namespace JustInTime.DAL.Repositories
 {
-    private readonly NotesDbContext _db;
 
-    public NoteRepository(NotesDbContext db)
+    public class NoteRepository : INoteRepository
     {
-        _db = db;
-    }
-    public async Task<bool> Create(Note entity)
-    {
-        await _db.Notes.AddAsync(entity);
-        await _db.SaveChangesAsync();
+        private readonly NotesDbContext _db;
 
-        return true;
-    }
+        public NoteRepository(NotesDbContext db)
+        {
+            _db = db;
+        }
+        public async Task<bool> Create(Note entity)
+        {
+            await _db.Notes.AddAsync(entity);
+            await _db.SaveChangesAsync();
 
-    public async Task<Note> Get(int id)
-    {
-        return await _db.Notes.FirstOrDefaultAsync(x => x.Id == id);
-    }
+            return true;
+        }
 
-    public async Task<List<Note>> Select()
-    {
-        return await _db.Notes.ToListAsync();
-    }
+        public async Task<Note> Get(int id)
+        {
+            return await _db.Notes.FirstOrDefaultAsync(x => x.Id == id);
+        }
 
-    public async Task<bool> Delete(Note entity)
-    {
-        _db.Notes.Remove(entity);
-        await _db.SaveChangesAsync();
+        public async Task<List<Note>> Select()
+        {
+            return await _db.Notes.ToListAsync();
+        }
 
-        return true;
-    }
+        public async Task<bool> Delete(Note entity)
+        {
+            _db.Notes.Remove(entity);
+            await _db.SaveChangesAsync();
 
-    public async Task<Note> GetByName(string name)
-    {
-        return await _db.Notes.FirstOrDefaultAsync(x => x.Name == name);
+            return true;
+        }
+
+        public async Task<Note> GetByName(string name)
+        {
+            return await _db.Notes.FirstOrDefaultAsync(x => x.Name == name);
+        }
     }
 }

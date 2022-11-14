@@ -6,9 +6,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\JustInTime.DAL\JustInTime.DAL.csproj" />
-    <ProjectReference Include="..\JustInTime.Domain\JustInTime.Domain.csproj" />
-  </ItemGroup>
-
 </Project>
