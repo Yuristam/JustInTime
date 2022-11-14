@@ -1156,14 +1156,14 @@
           }
         }
       },
-      "JustInTime.BLL/1.0.0": {
+      "JustInTime.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "compile": {
-          "bin/placeholder/JustInTime.BLL.dll": {}
+          "bin/placeholder/JustInTime.Domain.dll": {}
         },
         "runtime": {
-          "bin/placeholder/JustInTime.BLL.dll": {}
+          "bin/placeholder/JustInTime.Domain.dll": {}
         }
       }
     }
@@ -3511,15 +3511,15 @@
         "version.txt"
       ]
     },
-    "JustInTime.BLL/1.0.0": {
+    "JustInTime.Domain/1.0.0": {
       "type": "project",
-      "path": "../JustInTime.BLL/JustInTime.BLL.csproj",
-      "msbuildProject": "../JustInTime.BLL/JustInTime.BLL.csproj"
+      "path": "../JustInTime.Domain/JustInTime.Domain.csproj",
+      "msbuildProject": "../JustInTime.Domain/JustInTime.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "JustInTime.BLL >= 1.0.0",
+      "JustInTime.Domain >= 1.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.0",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.0"
     ]
@@ -3557,8 +3557,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.BLL\\JustInTime.BLL.csproj": {
-              "projectPath": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.BLL\\JustInTime.BLL.csproj"
+            "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.Domain\\JustInTime.Domain.csproj": {
+              "projectPath": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.Domain\\JustInTime.Domain.csproj"
             }
           }
         }

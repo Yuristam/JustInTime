@@ -1,8 +1,10 @@
-using JustInTime.BLL.Entities;
+using JustInTime.Domain.Entities;
 
-namespace JustInTime.DAL.Interfaces;
-
-public interface INoteRepository : IBaseRepository<Note>
+namespace JustInTime.DAL.Interfaces
 {
-    Task<Note> GetByName(string name);
+
+    public interface INoteRepository : IBaseRepository<Note>
+    {
+        Task<Note> GetByName(string name);
+    }
 }

@@ -1,7 +1,7 @@
 using JustInTime.BLL.Entities;
 using JustInTime.BLL.Responses;
 
-namespace JustInTime.BLL.Services.ServiceInterfaces;
+namespace JustInTime.BLL.ServiceInterfaces;
 
 public interface INoteService
 {

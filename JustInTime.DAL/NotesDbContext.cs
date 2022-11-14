@@ -1,4 +1,5 @@
 ﻿using JustInTime.BLL.Entities;
+using JustInTime.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace JustInTime.DAL

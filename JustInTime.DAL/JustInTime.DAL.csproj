@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\JustInTime.BLL\JustInTime.BLL.csproj" />
+    <ProjectReference Include="..\JustInTime.Domain\JustInTime.Domain.csproj" />
   </ItemGroup>
 
 </Project>
