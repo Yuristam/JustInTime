@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace JustInTime.Domain.Entities;
+namespace JustInTime.Domain.Enums;
 
 public enum ColorHex
 {

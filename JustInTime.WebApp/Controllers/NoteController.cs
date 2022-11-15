@@ -1,4 +1,5 @@
 using JustInTime.BLL.ServiceInterfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace JustInTime.WebApp.Controllers;
@@ -12,12 +13,42 @@ public class NoteController : Controller
     }
 
 
-    // GET
+    // GET ALL THE NOTES
     [HttpGet]
     public async Task<IActionResult> GetNotes()
     {
-        var response = await _noteService.GetAllNotes();
-        return View(response.Data);
+        var response = await _noteService.GetNotes();
+        if (response.StatusCode == Domain.Enums.StatusCode.OK)
+        {
+            return View(response.Data);
+        }
+        
+        return RedirectToAction("Error");
+    }
+
+    // GET NOTE BY ID
+    [HttpGet]
+    public async Task<IActionResult> GetNote(int id)
+    {
+        var response = await _noteService.GetNote(id);
+        if (response.StatusCode == Domain.Enums.StatusCode.OK)
+        {
+            return View(response.Data);
+        }
+
+        return RedirectToAction("Error");
     }
     
+    // DELETE NOTE (вот здесь важный момент, в данном примере удаление доступно только админу, ТАК ЧТО В БУДУЩЕМ ЭТО НАДО ИСПРАВИТЬ)
+    [Authorize(Roles = "Admin")]
+    public async Task<IActionResult> Delete(int id)
+    {
+        var response = await _noteService.DeleteNote(id);
+        if (response.StatusCode == Domain.Enums.StatusCode.OK)
+        {
+            return RedirectToAction("GetNotes");
+        }
+
+        return RedirectToAction("Error");
+    }
 }

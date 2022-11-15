@@ -128,7 +128,7 @@ namespace JustInTime.BLL.Implementations
         }
 
         // GET THE LIST OF NOTES (SELECT)
-        public async Task<IBaseResponse<IEnumerable<Note>>> GetAllNotes()
+        public async Task<IBaseResponse<IEnumerable<Note>>> GetNotes()
         {
             var baseResponse = new BaseResponse<IEnumerable<Note>>();
             try
