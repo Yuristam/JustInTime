@@ -1,0 +1,17 @@
+C:\Users\lmega\source\repos\JustInTime\JustInTime.BLL\bin\Debug\net6.0\JustInTime.BLL.deps.json
+C:\Users\lmega\source\repos\JustInTime\JustInTime.BLL\bin\Debug\net6.0\JustInTime.BLL.dll
+C:\Users\lmega\source\repos\JustInTime\JustInTime.BLL\bin\Debug\net6.0\JustInTime.BLL.pdb
+C:\Users\lmega\source\repos\JustInTime\JustInTime.BLL\bin\Debug\net6.0\JustInTime.DAL.dll
+C:\Users\lmega\source\repos\JustInTime\JustInTime.BLL\bin\Debug\net6.0\JustInTime.Domain.dll
+C:\Users\lmega\source\repos\JustInTime\JustInTime.BLL\bin\Debug\net6.0\JustInTime.DAL.pdb
+C:\Users\lmega\source\repos\JustInTime\JustInTime.BLL\bin\Debug\net6.0\JustInTime.Domain.pdb
+C:\Users\lmega\source\repos\JustInTime\JustInTime.BLL\obj\Debug\net6.0\JustInTime.BLL.csproj.AssemblyReference.cache
+C:\Users\lmega\source\repos\JustInTime\JustInTime.BLL\obj\Debug\net6.0\JustInTime.BLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lmega\source\repos\JustInTime\JustInTime.BLL\obj\Debug\net6.0\JustInTime.BLL.AssemblyInfoInputs.cache
+C:\Users\lmega\source\repos\JustInTime\JustInTime.BLL\obj\Debug\net6.0\JustInTime.BLL.AssemblyInfo.cs
+C:\Users\lmega\source\repos\JustInTime\JustInTime.BLL\obj\Debug\net6.0\JustInTime.BLL.csproj.CoreCompileInputs.cache
+C:\Users\lmega\source\repos\JustInTime\JustInTime.BLL\obj\Debug\net6.0\JustInTime.BLL.csproj.CopyComplete
+C:\Users\lmega\source\repos\JustInTime\JustInTime.BLL\obj\Debug\net6.0\JustInTime.BLL.dll
+C:\Users\lmega\source\repos\JustInTime\JustInTime.BLL\obj\Debug\net6.0\refint\JustInTime.BLL.dll
+C:\Users\lmega\source\repos\JustInTime\JustInTime.BLL\obj\Debug\net6.0\JustInTime.BLL.pdb
+C:\Users\lmega\source\repos\JustInTime\JustInTime.BLL\obj\Debug\net6.0\ref\JustInTime.BLL.dll

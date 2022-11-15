@@ -7,7 +7,7 @@ namespace JustInTime.DAL
     {
         public NotesDbContext(DbContextOptions <NotesDbContext> options): base(options)
         {
-            Database.EnsureCreated();
+
         }
         public DbSet<Note> Notes { get; set; }
     }
