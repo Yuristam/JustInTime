@@ -13,6 +13,8 @@ namespace JustInTime.DAL.Repositories
         {
             _db = db;
         }
+        
+        //CREATE NOTE METHOD
         public async Task<bool> Create(Note entity)
         {
             await _db.Notes.AddAsync(entity);
@@ -21,16 +23,19 @@ namespace JustInTime.DAL.Repositories
             return true;
         }
 
+        //GET BY ID METHOD
         public async Task<Note> Get(int id)
         {
             return await _db.Notes.FirstOrDefaultAsync(x => x.Id == id);
         }
 
+        // GET ALL NOTES METHOD (SELECT)
         public async Task<List<Note>> Select()
         {
             return await _db.Notes.ToListAsync();
         }
 
+        // DELETE METHOD
         public async Task<bool> Delete(Note entity)
         {
             _db.Notes.Remove(entity);
@@ -39,6 +44,7 @@ namespace JustInTime.DAL.Repositories
             return true;
         }
 
+        // GET BY NAME METHOD
         public async Task<Note> GetByName(string name)
         {
             return await _db.Notes.FirstOrDefaultAsync(x => x.Name == name);
