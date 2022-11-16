@@ -12,5 +12,6 @@ namespace JustInTime.DAL.Interfaces
         Task<List<Note>> Select();
 
         Task<bool> Delete(T entity);
+        Task<T> Update(T entity, Note entity1);
     }
 }

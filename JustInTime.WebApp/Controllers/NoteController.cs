@@ -1,4 +1,5 @@
 using JustInTime.BLL.ServiceInterfaces;
+using JustInTime.Domain.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -51,4 +52,43 @@ public class NoteController : Controller
 
         return RedirectToAction("Error");
     }
+    
+    // some stupid method do it right 
+    [Authorize(Roles = "Admin")]
+    [HttpGet]
+    public async Task<IActionResult> Save(int id)
+    {
+        if (id == 0)
+        {
+            return View();
+        }
+
+        var response = await _noteService.GetNote(id);
+        if (response.StatusCode == Domain.Enums.StatusCode.OK)
+        {
+            return View(response.Data);
+        }
+
+        return RedirectToAction("Error");
+    }
+    
+    // WTF
+    [HttpPost]
+    public async Task<IActionResult> Save(Note note)
+    {
+        if (ModelState.IsValid)
+        {
+            if (note.Id == 0)
+            {
+                await _noteService.CreateNote(note);
+            }
+            else
+            {
+                await _noteService.EditNote(note.Id, note);
+            }
+        }
+
+        return RedirectToAction("GetNotes");
+    }
+    
 }
