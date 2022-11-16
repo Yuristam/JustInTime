@@ -43,6 +43,15 @@ namespace JustInTime.DAL.Repositories
 
             return true;
         }
+        
+        //Update (edit) METHOD
+        public async Task<Note> Update(Note entity)
+        {
+            _db.Notes.Update(entity);
+            await _db.SaveChangesAsync();
+
+            return entity;
+        }
 
         // GET BY NAME METHOD
         public async Task<Note> GetByName(string name)

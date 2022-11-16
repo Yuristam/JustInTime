@@ -69,7 +69,40 @@ namespace JustInTime.BLL.Implementations
                 };
             }
         }
-        
+
+        public async Task<IBaseResponse<Note>> EditNote(int id, Note note)
+        {
+            var baseResponse = new BaseResponse<Note>();
+            try
+            {
+                note = await _noteRepository.Get(id);
+                if (note == null)
+                {
+                    baseResponse.StatusCode = StatusCode.NoteNotFound;
+                    baseResponse.Description = "Note not found.";
+                    return baseResponse;
+                }
+
+                note.Name = note.Name;
+                note.Description = note.Description;
+                note.ColorHex = note.ColorHex;
+                note.DateCreated = note.DateCreated;
+                note.NotesType = note.NotesType;
+
+                await _noteRepository.Update(note);
+
+                return baseResponse;
+            }
+            catch (Exception ex)
+            { 
+                return new BaseResponse<Note>()
+                {
+                    Description = $"[EditNote] : {ex.Message}",
+                    StatusCode = StatusCode.InternalServerError
+                };
+            }
+        }
+
         // CREATE NOTE
         public async Task<IBaseResponse<Note>> CreateNote(Note note)
         {
