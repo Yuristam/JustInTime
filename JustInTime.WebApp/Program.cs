@@ -5,7 +5,14 @@ var builder = WebApplication.CreateBuilder(args);
 
 
 // this is connection string (it connects c# code to the database)
-builder.Services.AddDbContext<NotesDbContext>(options => options.UseSqlServer("NotesConnectionString"));
+/*builder.Services.AddDbContext<NotesDbContext>(options => options.UseSqlServer("NotesConnectionString"));
+*/
+
+builder.Services.AddDbContext<NotesDbContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("NotesConnectionString"));
+});
+
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
