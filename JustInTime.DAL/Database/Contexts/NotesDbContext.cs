@@ -10,5 +10,6 @@ namespace JustInTime.DAL.Database.Contexts
 
         }
         public DbSet<Note> Notes { get; set; }
+        
     }
 }
