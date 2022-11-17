@@ -24,12 +24,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lmega/source/repos/JustInTime/JustInTime.WebApp/Views/Note/GetNote.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90ZVxHZXROb3RlLmNzaHRtbA==
+[C:/Users/lmega/source/repos/JustInTime/JustInTime.WebApp/Views/Note/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90ZVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lmega/source/repos/JustInTime/JustInTime.WebApp/Views/Note/GetNotes.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90ZVxHZXROb3Rlcy5jc2h0bWw=
+[C:/Users/lmega/source/repos/JustInTime/JustInTime.WebApp/Views/Note/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90ZVxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lmega/source/repos/JustInTime/JustInTime.WebApp/Views/Note/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90ZVxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lmega/source/repos/JustInTime/JustInTime.WebApp/Views/Note/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90ZVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lmega/source/repos/JustInTime/JustInTime.WebApp/Views/Note/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90ZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/lmega/source/repos/JustInTime/JustInTime.WebApp/Views/Shared/Error.cshtml]

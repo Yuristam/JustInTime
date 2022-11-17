@@ -8,8 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "JustInTime.BLL/1.0.0": {
         "dependencies": {
-          "JustInTime.DAL": "1.0.0",
-          "JustInTime.Domain": "1.0.0"
+          "JustInTime.DAL": "1.0.0"
         },
         "runtime": {
           "JustInTime.BLL.dll": {}
@@ -613,16 +612,10 @@
       },
       "JustInTime.DAL/1.0.0": {
         "dependencies": {
-          "JustInTime.Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.0"
         },
         "runtime": {
           "JustInTime.DAL.dll": {}
-        }
-      },
-      "JustInTime.Domain/1.0.0": {
-        "runtime": {
-          "JustInTime.Domain.dll": {}
         }
       }
     }
@@ -1068,11 +1061,6 @@
       "hashPath": "system.windows.extensions.5.0.0.nupkg.sha512"
     },
     "JustInTime.DAL/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "JustInTime.Domain/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
