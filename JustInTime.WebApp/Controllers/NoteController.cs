@@ -54,6 +54,7 @@ namespace JustInTime.WebApp.Controllers
         {
             if (ModelState.IsValid)
             {
+                note = new Note() { DateCreated = DateTime.Now };
                 _context.Add(note);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
