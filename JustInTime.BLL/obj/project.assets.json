@@ -1051,7 +1051,6 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "JustInTime.Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.0"
         },
         "compile": {
@@ -1059,16 +1058,6 @@
         },
         "runtime": {
           "bin/placeholder/JustInTime.DAL.dll": {}
-        }
-      },
-      "JustInTime.Domain/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "compile": {
-          "bin/placeholder/JustInTime.Domain.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/JustInTime.Domain.dll": {}
         }
       }
     }
@@ -3244,17 +3233,11 @@
       "type": "project",
       "path": "../JustInTime.DAL/JustInTime.DAL.csproj",
       "msbuildProject": "../JustInTime.DAL/JustInTime.DAL.csproj"
-    },
-    "JustInTime.Domain/1.0.0": {
-      "type": "project",
-      "path": "../JustInTime.Domain/JustInTime.Domain.csproj",
-      "msbuildProject": "../JustInTime.Domain/JustInTime.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "JustInTime.DAL >= 1.0.0",
-      "JustInTime.Domain >= 1.0.0"
+      "JustInTime.DAL >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -3292,9 +3275,6 @@
           "projectReferences": {
             "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.DAL\\JustInTime.DAL.csproj": {
               "projectPath": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.DAL\\JustInTime.DAL.csproj"
-            },
-            "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.Domain\\JustInTime.Domain.csproj": {
-              "projectPath": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.Domain\\JustInTime.Domain.csproj"
             }
           }
         }
