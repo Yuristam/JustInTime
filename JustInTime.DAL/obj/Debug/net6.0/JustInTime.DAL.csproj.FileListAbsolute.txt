@@ -2,14 +2,11 @@ C:\Users\lmega\source\repos\JustInTime\JustInTime.DAL\bin\Debug\net6.0\JustInTim
 C:\Users\lmega\source\repos\JustInTime\JustInTime.DAL\bin\Debug\net6.0\JustInTime.DAL.runtimeconfig.json
 C:\Users\lmega\source\repos\JustInTime\JustInTime.DAL\bin\Debug\net6.0\JustInTime.DAL.dll
 C:\Users\lmega\source\repos\JustInTime\JustInTime.DAL\bin\Debug\net6.0\JustInTime.DAL.pdb
-C:\Users\lmega\source\repos\JustInTime\JustInTime.DAL\bin\Debug\net6.0\JustInTime.Domain.dll
-C:\Users\lmega\source\repos\JustInTime\JustInTime.DAL\bin\Debug\net6.0\JustInTime.Domain.pdb
 C:\Users\lmega\source\repos\JustInTime\JustInTime.DAL\obj\Debug\net6.0\JustInTime.DAL.csproj.AssemblyReference.cache
 C:\Users\lmega\source\repos\JustInTime\JustInTime.DAL\obj\Debug\net6.0\JustInTime.DAL.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\lmega\source\repos\JustInTime\JustInTime.DAL\obj\Debug\net6.0\JustInTime.DAL.AssemblyInfoInputs.cache
 C:\Users\lmega\source\repos\JustInTime\JustInTime.DAL\obj\Debug\net6.0\JustInTime.DAL.AssemblyInfo.cs
 C:\Users\lmega\source\repos\JustInTime\JustInTime.DAL\obj\Debug\net6.0\JustInTime.DAL.csproj.CoreCompileInputs.cache
-C:\Users\lmega\source\repos\JustInTime\JustInTime.DAL\obj\Debug\net6.0\JustInTime.DAL.csproj.CopyComplete
 C:\Users\lmega\source\repos\JustInTime\JustInTime.DAL\obj\Debug\net6.0\JustInTime.DAL.dll
 C:\Users\lmega\source\repos\JustInTime\JustInTime.DAL\obj\Debug\net6.0\refint\JustInTime.DAL.dll
 C:\Users\lmega\source\repos\JustInTime\JustInTime.DAL\obj\Debug\net6.0\JustInTime.DAL.pdb
