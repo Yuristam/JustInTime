@@ -54,7 +54,7 @@ namespace JustInTime.WebApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                note = new Note() { DateCreated = DateTime.Now };
+               /* note = new Note() { DateCreated = DateTime.Now };*/   //i need this to be async and to work
                 _context.Add(note);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
