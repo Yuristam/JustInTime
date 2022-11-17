@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace JustInTime.Domain.Enums
+namespace JustInTime.DAL.Domain.Enums
 {
     public enum NotesType
     {

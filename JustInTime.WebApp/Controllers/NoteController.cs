@@ -1,5 +1,5 @@
-using JustInTime.BLL.ServiceInterfaces;
-using JustInTime.Domain.Entities;
+/*using JustInTime.BLL.ServiceInterfaces;
+using JustInTime.DAL.Domain.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -19,7 +19,7 @@ public class NoteController : Controller
     public async Task<IActionResult> GetNotes()
     {
         var response = await _noteService.GetNotes();
-        if (response.StatusCode == Domain.Enums.StatusCode.OK)
+        if (response.StatusCode == DAL.Domain.Enums.StatusCode.OK)
         {
             return View(response.Data);
         }
@@ -32,7 +32,7 @@ public class NoteController : Controller
     public async Task<IActionResult> GetNote(int id)
     {
         var response = await _noteService.GetNote(id);
-        if (response.StatusCode == Domain.Enums.StatusCode.OK)
+        if (response.StatusCode == DAL.Domain.Enums.StatusCode.OK)
         {
             return View(response.Data);
         }
@@ -45,7 +45,7 @@ public class NoteController : Controller
     public async Task<IActionResult> Delete(int id)
     {
         var response = await _noteService.DeleteNote(id);
-        if (response.StatusCode == Domain.Enums.StatusCode.OK)
+        if (response.StatusCode == DAL.Domain.Enums.StatusCode.OK)
         {
             return RedirectToAction("GetNotes");
         }
@@ -64,7 +64,7 @@ public class NoteController : Controller
         }
 
         var response = await _noteService.GetNote(id);
-        if (response.StatusCode == Domain.Enums.StatusCode.OK)
+        if (response.StatusCode == DAL.Domain.Enums.StatusCode.OK)
         {
             return View(response.Data);
         }
@@ -91,4 +91,4 @@ public class NoteController : Controller
         return RedirectToAction("GetNotes");
     }
     
-}
+}*/

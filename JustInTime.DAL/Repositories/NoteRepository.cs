@@ -1,5 +1,6 @@
+/*using JustInTime.DAL.Contexts;
 using JustInTime.DAL.Interfaces;
-using JustInTime.Domain.Entities;
+using JustInTime.DAL.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace JustInTime.DAL.Repositories
@@ -59,4 +60,4 @@ namespace JustInTime.DAL.Repositories
             return await _db.Notes.FirstOrDefaultAsync(x => x.Name == name);
         }
     }
-}
+}*/

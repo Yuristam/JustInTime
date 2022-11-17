@@ -1,4 +1,4 @@
-namespace JustInTime.Domain.Enums
+/*namespace JustInTime.DAL.Domain.Enums
 {
 
     public enum StatusCode
@@ -17,4 +17,4 @@ namespace JustInTime.Domain.Enums
         PageNotFound = 404,
 
     }
-}
+}*/

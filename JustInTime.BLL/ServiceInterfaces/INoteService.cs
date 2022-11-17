@@ -1,5 +1,5 @@
-using JustInTime.Domain.Entities;
-using JustInTime.Domain.Responses;
+/*using JustInTime.DAL.Domain.Entities;
+using JustInTime.DAL.Domain.Responses;
 
 namespace JustInTime.BLL.ServiceInterfaces;
 
@@ -11,4 +11,4 @@ public interface INoteService
     Task<IBaseResponse<bool>> DeleteNote(int id);
     Task<IBaseResponse<Note>> GetNoteByName(string name);
     Task<IBaseResponse<Note>> EditNote(int id, Note note);
-}
+}*/
