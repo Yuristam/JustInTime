@@ -50,7 +50,7 @@ namespace JustInTime.WebApp.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("DateOfBirth,Description,Image,Id,Name")] Note note)
+        public async Task<IActionResult> Create([Bind("Title,Description,ColorHex,DateCreated,NotesType")] Note note)
         {
             if (ModelState.IsValid)
             {
@@ -84,7 +84,7 @@ namespace JustInTime.WebApp.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPut]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("DateOfBirth,Description,Image,Id,Name")] Note note)
+        public async Task<IActionResult> Edit(int id, [Bind("Title,Description,ColorHex,DateCreated,NotesType")] Note note)
         {
             if (id != note.Id)
             {
