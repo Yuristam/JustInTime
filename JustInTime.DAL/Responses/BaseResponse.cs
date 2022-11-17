@@ -1,4 +1,4 @@
-using JustInTime.Domain.Enums;
+/*using JustInTime.Domain.Enums;
 
 namespace JustInTime.Domain.Responses
 {
@@ -17,4 +17,4 @@ namespace JustInTime.Domain.Responses
         T Data { get; }
         StatusCode StatusCode { get; }
     }
-}
+}*/
