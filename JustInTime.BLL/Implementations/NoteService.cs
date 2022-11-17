@@ -1,8 +1,7 @@
-using JustInTime.Domain.Entities;
-using JustInTime.Domain.Responses;
+/*using JustInTime.DAL.Domain.Entities;
 using JustInTime.BLL.ServiceInterfaces;
+using JustInTime.DAL.Domain.Enums;
 using JustInTime.DAL.Interfaces;
-using JustInTime.Domain.Enums;
 
 namespace JustInTime.BLL.Implementations
 {
@@ -190,4 +189,4 @@ namespace JustInTime.BLL.Implementations
             }
         }
     }
-}
+}*/

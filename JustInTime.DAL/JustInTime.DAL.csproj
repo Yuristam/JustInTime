@@ -14,4 +14,9 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Database" />
+    <Folder Include="Domain" />
+  </ItemGroup>
+
 </Project>

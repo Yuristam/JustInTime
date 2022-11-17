@@ -1,4 +1,5 @@
 using JustInTime.DAL;
+using JustInTime.DAL.Database.Contexts;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

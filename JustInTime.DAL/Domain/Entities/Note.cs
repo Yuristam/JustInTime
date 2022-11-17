@@ -1,6 +1,6 @@
-﻿using JustInTime.Domain.Enums;
+﻿using JustInTime.DAL.Domain.Enums;
 
-namespace JustInTime.Domain.Entities
+namespace JustInTime.DAL.Domain.Entities
 {
     public class Note
     {

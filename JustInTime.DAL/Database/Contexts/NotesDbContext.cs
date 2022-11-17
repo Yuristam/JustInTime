@@ -1,7 +1,7 @@
-﻿using JustInTime.Domain.Entities;
+﻿using JustInTime.DAL.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace JustInTime.DAL
+namespace JustInTime.DAL.Database.Contexts
 {
     public class NotesDbContext : DbContext
     {

@@ -1,4 +1,4 @@
-using JustInTime.Domain.Entities;
+using JustInTime.DAL.Domain.Entities;
 
 namespace JustInTime.DAL.Interfaces
 {

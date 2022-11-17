@@ -1,6 +1,6 @@
-/*using JustInTime.Domain.Enums;
+/*using JustInTime.DAL.Enums;
 
-namespace JustInTime.Domain.Responses
+namespace JustInTime.DAL.Responses
 {
 
     public class BaseResponse<T> : IBaseResponse<T>
