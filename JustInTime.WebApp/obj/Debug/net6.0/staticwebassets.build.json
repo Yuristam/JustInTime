@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "rnfeyRt0cDPzEcYxAlaONt+ZG6K2/rbd9W7R7HUkUDg=",
+  "Hash": "WKrlV6kvNOWofzEBb4i+F5tCIxlUPQ6Z+I5x0fhM5Jc=",
   "Source": "JustInTime.WebApp",
   "BasePath": "_content/JustInTime.WebApp",
   "Mode": "Default",
@@ -66,23 +66,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
-    },
-    {
-      "Identity": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\css\\style.css",
-      "SourceId": "JustInTime.WebApp",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\",
-      "BasePath": "_content/JustInTime.WebApp",
-      "RelativePath": "css/style.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\style.css"
     },
     {
       "Identity": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\favicon.ico",
