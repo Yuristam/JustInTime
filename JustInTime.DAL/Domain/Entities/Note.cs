@@ -1,4 +1,5 @@
 ﻿using JustInTime.DAL.Domain.Enums;
+using System.ComponentModel.DataAnnotations;
 
 namespace JustInTime.DAL.Domain.Entities
 {
@@ -19,6 +20,7 @@ namespace JustInTime.DAL.Domain.Entities
 
 
         /*public int Id { get; set; }*/
+        [MaxLength(120)]
         public string Title { get; set; }
         public string ?Description { get; set; }
         public ColorHex ColorHex { get; set; } // for the color of notes (in the future in Frontend)

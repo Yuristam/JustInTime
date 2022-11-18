@@ -50,7 +50,7 @@ namespace JustInTime.WebApp.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Title,Description,ColorHex,DateCreated,NotesType")] Note note)
+        public async Task<IActionResult> Create([Bind("Title,Description,ColorHex,DateCreated,NotesType,Id")] Note note)
         {
             if (ModelState.IsValid)
             {
@@ -83,9 +83,9 @@ namespace JustInTime.WebApp.Controllers
         // POST: Animal/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
+        [HttpPut]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Title,Description,ColorHex,DateCreated,NotesType")] Note note)
+        public async Task<IActionResult> Edit(int id, [Bind("Title,Description,ColorHex,DateCreated,NotesType,Id")] Note note)
         {
             if (id != note.Id)
             {
