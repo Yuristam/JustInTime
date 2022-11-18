@@ -1,4 +1,4 @@
-﻿using JustInTime.DAL.Database.Contexts;
+﻿/*using JustInTime.DAL.Database.Contexts;
 using JustInTime.DAL.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -53,7 +53,7 @@ namespace JustInTime.WebApp.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    /* note = new Note() { DateCreated = DateTime.Now };*/   //i need this to be async and to work
+                    *//* note = new Note() { DateCreated = DateTime.Now };*//*   //i need this to be async and to work
                     _context.Add(checkList);
                     await _context.SaveChangesAsync();
                     return RedirectToAction(nameof(Index));
@@ -161,3 +161,4 @@ namespace JustInTime.WebApp.Controllers
 
         }
     }
+*/
