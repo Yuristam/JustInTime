@@ -3,16 +3,20 @@
 namespace JustInTime.DAL.Domain.Entities
 {
     public class Note : BaseEntity
-    {/*
-        public Note(int id, string title, string description, int colorHex, DateTime dateCreated, int notesType)
+    {
+       /* public Note(string title, string description, int colorHex, DateTime dateCreated, int notesType)
         {
-            id = Id;
             title = Title;
             description = Description;
             colorHex = (int)ColorHex;
-            dateCreated = DateCreated;
+            dateCreated = DateTime.Now;
             notesType = (int)NotesType;
         }*/
+
+        public Note() { 
+            DateCreated= DateTime.Now;
+        }
+
 
         /*public int Id { get; set; }*/
         public string Title { get; set; }
