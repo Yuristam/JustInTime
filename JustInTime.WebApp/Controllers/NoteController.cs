@@ -145,10 +145,10 @@ namespace JustInTime.WebApp.Controllers
                 return Problem("Entity set 'NotesDbContext.Notes'  is null.");
             }
 
-            var animal = await _context.Notes.FindAsync(id);
-            if (animal != null)
+            var note = await _context.Notes.FindAsync(id);
+            if (note != null)
             {
-                _context.Notes.Remove(animal);
+                _context.Notes.Remove(note);
             }
 
             await _context.SaveChangesAsync();

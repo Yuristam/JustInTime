@@ -15,7 +15,8 @@ namespace JustInTime.DAL.Database.Contexts
             
         }
 
-        public DbSet<Note> Notes { get; set; }
+        public DbSet<Note> Notes { get; set; } // this is just ordinary note
+        public DbSet<CheckList> CheckLists { get; set; } // this is the List of notes
         
     }
 }
