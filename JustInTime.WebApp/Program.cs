@@ -7,7 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 // this is connection string (it connects c# code to the database)
 builder.Services.AddDbContext<NotesDbContext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("NotesConnectionString"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("NotesConnectionString"));           // this is connection string for notes
+    /*options.UseSqlServer(builder.Configuration.GetConnectionString("ConnectionString"));*/   // this is connection string for big notes lists
 });
 
 
