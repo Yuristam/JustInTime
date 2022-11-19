@@ -5,6 +5,31 @@
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
 
+    <link rel="stylesheet" href="css/sakura.css" />
+    <script src="js/sakura.js" text="text/javascript"></script>
+    
+    <script>
+          var sakura = new Sakura('body', {
+            colors: [
+              {
+                gradientColorStart: 'rgba(255, 183, 197, 0.9)',
+                gradientColorEnd: 'rgba(255, 197, 208, 0.9)',
+                gradientColorDegree: 120,
+              },
+              {
+                gradientColorStart: 'rgba(255,189,189)',
+                gradientColorEnd: 'rgba(227,170,181)',
+                gradientColorDegree: 120,
+              },
+              {
+                gradientColorStart: 'rgba(212,152,163)',
+                gradientColorEnd: 'rgba(242,185,196)',
+                gradientColorDegree: 120,
+              },
+            ],
+            delay: 200,
+          });
+        </script>
     <img src="lib/myPhotos/Spirited Away.jpg" alt="Spirited Away" width="500">  <!--this is just a background photo (the right way)-->
 
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
