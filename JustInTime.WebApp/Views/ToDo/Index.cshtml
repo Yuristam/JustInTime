@@ -1,0 +1,67 @@
+﻿@model IEnumerable<JustInTime.DAL.Domain.Entities.ToDo>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<!--css style and js links here for this site.-->
+<!--this is the name of page(it will appear at the top of the site)-->
+<h1>My ToDo List</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TaskDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsDone)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TaskDescription)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsDone)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |@*
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |*@
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@*
+<section class="hidden">
+  <h2>It's really good</h2>
+    <div class="logos">
+        <div class="logo hidden">
+            <img src="~/lib/myPhotos/anime-girl.gif";>
+        </div>
+        <div class="logo hidden">
+            <img src="/lib/myPhotos/anime-note-taking.gif";>
+        </div>
+        <div class="logo hidden">
+            <img src="/lib/myPhotos/anime-girl.gif";>
+        </div>
+        <div class="logo hidden">
+            <img src="https://static.skillshare.com/uploads/video/thumbnails/d8c1d201cdeaeda4e3ebe5621a0125e8/original";>
+        </div>
+    </div>
+</section>*@
+@*
+<section>
+    <img src="~/lib/myPhotos/anime-note-taking.gif" alt="Note Taking" width="200"> <!--this is note taking anime photo-->
+</section>*@
