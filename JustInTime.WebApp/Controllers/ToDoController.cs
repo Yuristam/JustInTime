@@ -23,7 +23,6 @@ namespace JustInTime.WebApp.Controllers
 
         // GET: Note/Details/5   I don't need details here, may be in the future when I will create CheckLists
         
-
         // GET: Note/Create
         public IActionResult Create()
         {
