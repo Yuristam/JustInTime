@@ -12,6 +12,7 @@
     <a asp-action="Create">Create New</a>
 </p>
 
+
 <table>
     <thead>
         <tr>
@@ -31,18 +32,17 @@
                     @Html.DisplayFor(modelItem => item.TaskDescription)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.IsDone)
+                    @Html.DisplayFor(modelItem=> item.IsDone)
                 </td>
                 <td>
                     <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |@*
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |*@
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |*@
                     <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
                 </td>
             </tr>
         }
     </tbody>
 </table>
-
 @*
 <section class="hidden">
   <h2>It's really good</h2>
