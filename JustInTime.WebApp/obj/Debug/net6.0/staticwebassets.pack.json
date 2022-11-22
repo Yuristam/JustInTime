@@ -261,16 +261,16 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\myPhotos\\Spirited Away.jpg",
-      "PackagePath": "staticwebassets\\lib\\myPhotos\\Spirited Away.jpg"
+      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\photos\\Spirited Away.jpg",
+      "PackagePath": "staticwebassets\\lib\\photos\\Spirited Away.jpg"
     },
     {
-      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\myPhotos\\anime-girl.gif",
-      "PackagePath": "staticwebassets\\lib\\myPhotos\\anime-girl.gif"
+      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\photos\\anime-girl.gif",
+      "PackagePath": "staticwebassets\\lib\\photos\\anime-girl.gif"
     },
     {
-      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\myPhotos\\anime-note-taking.gif",
-      "PackagePath": "staticwebassets\\lib\\myPhotos\\anime-note-taking.gif"
+      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\photos\\anime-note-taking.gif",
+      "PackagePath": "staticwebassets\\lib\\photos\\anime-note-taking.gif"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.JustInTime.WebApp.Microsoft.AspNetCore.StaticWebAssets.props",
