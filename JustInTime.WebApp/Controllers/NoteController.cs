@@ -1,4 +1,4 @@
-using JustInTime.DAL.Database.Contexts;
+﻿using JustInTime.DAL.Database.Contexts;
 using JustInTime.DAL.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;

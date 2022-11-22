@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
+﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
+
 body {
     background-color: #000000;
     color: #ffffff;
@@ -7,31 +8,30 @@ body {
     margin: 0;
 }
 
-section{
+section {
     display: grid;
     place-items: center;
     align-content: center;
     min-height: 100vh;
 }
 
-.hidden{
+.hidden {
     opacity: 0;
-    filter:blur(5px);
+    filter: blur(5px);
     transform: translateX(-100%);
     transition: all 1s;
 }
 
 @media(prefers-reduced-motion) {
-    .hidden{
+    .hidden {
         transition: none;
     }
-
 }
 
 
-.show{
+.show {
     opacity: 1;
-    filter:blur(0);
+    filter: blur(0);
     transform: translateX(0);
 }
 
