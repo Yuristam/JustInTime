@@ -23,10 +23,23 @@
     </p>
 </section>
 
+
+<!-- this is CREATE button-->
 <section class="hidden">
     <p>
         <a asp-action="Create">Create New</a>
     </p>
+
+    <!--this is a search button-->
+    <form asp-controller="Note" asp-action="Index">
+        <p>
+            Title: <input type="text" name="SearchString" />
+            <input type="submit" value="Filter" />
+        </p>
+    </form>
+
+
+
 
     <table class="hidden">
         <thead>
