@@ -16,18 +16,6 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
     .AddEntityFrameworkStores<IdentityContext>();
 builder.Services.AddControllersWithViews();
 
-
-// this is connection string (it connects c# code to the database)
-builder.Services.AddDbContext<NotesDbContext>(options =>
-{
-    options.UseSqlServer(builder.Configuration.GetConnectionString("NotesConnectionString"));           // this is connection string for notes
-    /*options.UseSqlServer(builder.Configuration.GetConnectionString("ConnectionString"));*/   // this is connection string for big notes lists
-});
-
-
-// Add services to the container.
-builder.Services.AddControllersWithViews();
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
