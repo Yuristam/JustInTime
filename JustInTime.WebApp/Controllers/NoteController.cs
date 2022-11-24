@@ -1,9 +1,6 @@
 ﻿using JustInTime.DAL.Database.Contexts;
 using JustInTime.DAL.Domain.Entities;
-using JustInTime.DAL.Domain.Enums;
-using JustInTime.WebApp.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 
 namespace JustInTime.WebApp.Controllers
@@ -19,54 +16,9 @@ namespace JustInTime.WebApp.Controllers
         }
 
         // GET: NOTES (ALL NOTES)
-
-        public async Task<IActionResult> Index(string noteType, string searchString)
+        public async Task<IActionResult> Index()
         {
-            // Use LINQ to get list of genres.
-            IQueryable<NoteTypes> typeQuery = from n in _context.Notes
-                                              orderby n.NoteType
-                                              select n.NoteType;
-            var notes = from n in _context.Notes
-                        select n;
-
-            if (!string.IsNullOrEmpty(searchString))
-            {
-                notes = notes.Where(s => s.Title!.Contains(searchString));
-            }
-
-            /*if (!string.IsNullOrEmpty(noteType))
-            {
-                notes = notes.Where(x => x.Type == noteType);
-            }*/
-/*
-            var noteTypeVM = new NoteTypeViewModel
-            {
-                Types = new SelectList(await typeQuery.Distinct().ToListAsync()),
-                Notes = await notes.ToListAsync()
-            };*/
-
-            return View(await notes.ToListAsync());
-
-
-
-
-            /*
-            // начало поиска по названию
-            // поиск Note in Notes
-            var notes = from n in _context.Notes
-                        select n;
-
-            if (!String.IsNullOrEmpty(searchString))
-            {
-                notes = notes.Where(s => s.Title!.Contains(searchString));
-            }
-
-            // это Index(in Views/Notes folder). Внутри него идет кнопка поиска( и собсвенно сама функция поиска)
-            return View(await notes.ToListAsync());
-            // конец поиска по названию
-*/
-
-            // return View(await _context.Notes.ToListAsync());     // INDEX (in Views\Note). This View is showing table of notes(i guess)
+            return View(await _context.Notes.ToListAsync());     // INDEX (in Views\Note). This View is showing table of notes(i guess)
         }
 
         // GET: Note/Details/5   (NOTE BY ID)
