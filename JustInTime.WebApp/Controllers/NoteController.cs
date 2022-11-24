@@ -16,10 +16,23 @@ namespace JustInTime.WebApp.Controllers
         }
 
         // GET: NOTES (ALL NOTES)
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString)
         {
-            return View(await _context.Notes.ToListAsync());     // INDEX (in Views\Note). This View is showing table of notes(i guess)
+            // поиск Note in Notes
+            var notes = from n in _context.Notes
+                        select n;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                notes = notes.Where(s => s.Title!.Contains(searchString));
+            }
+
+            // это Index(in Views/Notes folder). Внутри него идет кнопка поиска( и собсвенно сама функция поиска)
+            return View(await notes.ToListAsync());
         }
+
+        // return View(await _context.Notes.ToListAsync());     // INDEX (in Views\Note). This View is showing table of notes(i guess)
+
 
         // GET: Note/Details/5   (NOTE BY ID)
         public async Task<IActionResult> Details(int? id)
