@@ -1,6 +1,9 @@
 ﻿using JustInTime.DAL.Database.Contexts;
 using JustInTime.DAL.Domain.Entities;
+using JustInTime.DAL.Domain.Enums;
+using JustInTime.WebApp.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 
 namespace JustInTime.WebApp.Controllers
@@ -16,9 +19,39 @@ namespace JustInTime.WebApp.Controllers
         }
 
         // GET: NOTES (ALL NOTES)
-        public async Task<IActionResult> Index(string searchString)
-        {
 
+        public async Task<IActionResult> Index(string noteType, string searchString)
+        {
+            // Use LINQ to get list of genres.
+            IQueryable<NoteTypes> typeQuery = from n in _context.Notes
+                                              orderby n.NoteType
+                                              select n.NoteType;
+            var notes = from n in _context.Notes
+                        select n;
+
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                notes = notes.Where(s => s.Title!.Contains(searchString));
+            }
+
+            /*if (!string.IsNullOrEmpty(noteType))
+            {
+                notes = notes.Where(x => x.Type == noteType);
+            }*/
+/*
+            var noteTypeVM = new NoteTypeViewModel
+            {
+                Types = new SelectList(await typeQuery.Distinct().ToListAsync()),
+                Notes = await notes.ToListAsync()
+            };*/
+
+            return View(await notes.ToListAsync());
+
+
+
+
+            /*
+            // начало поиска по названию
             // поиск Note in Notes
             var notes = from n in _context.Notes
                         select n;
@@ -30,8 +63,10 @@ namespace JustInTime.WebApp.Controllers
 
             // это Index(in Views/Notes folder). Внутри него идет кнопка поиска( и собсвенно сама функция поиска)
             return View(await notes.ToListAsync());
+            // конец поиска по названию
+*/
 
-           // return View(await _context.Notes.ToListAsync());     // INDEX (in Views\Note). This View is showing table of notes(i guess)
+            // return View(await _context.Notes.ToListAsync());     // INDEX (in Views\Note). This View is showing table of notes(i guess)
         }
 
         // GET: Note/Details/5   (NOTE BY ID)
@@ -172,7 +207,8 @@ namespace JustInTime.WebApp.Controllers
             return _context.Notes.Any(e => e.Id == id);
         }
 
-        // Search method (found it in Microsoft Learn website)
+        // АЛГОРИТМ ПОИСКА Search method (found it in Microsoft Learn website)
+
         /*public async Task<IActionResult> Index(string searchString)
         {
             // поиск Note in Notes
@@ -188,96 +224,33 @@ namespace JustInTime.WebApp.Controllers
             return View(await notes.ToListAsync());
         }*/
 
+        // АЛГОРИТМ ПОИСКА ПО ТИПУ ЗАМЕТКИ (ЖАНРУ) Search by type(genre) (found it in Microsoft Learn website)
+        /*public async Task<IActionResult> Index(string noteType, string searchString)
+        {
+            // Use LINQ to get list of genres.
+            IQueryable<NoteTypes> typeQuery = from n in _context.Notes
+                                            orderby n.NoteTypes
+                                            select n.NoteTypes;
+            var notes = from n in _context.Notes
+                         select n;
 
-
-
-        /*
-            private readonly INoteService _noteService;
-        
-            public NoteController(INoteService noteService)
+            if (!string.IsNullOrEmpty(searchString))
             {
-                _noteService = noteService;
+                notes = notes.Where(s => s.Title!.Contains(searchString));
             }
-        
-        
-            // GET ALL THE NOTES
-            [HttpGet]
-            public async Task<IActionResult> GetNotes()
-            {
-                var response = await _noteService.GetNotes();
-                if (response.StatusCode == DAL.Domain.Enums.StatusCode.OK)
-                {
-                    return View(response.Data);
-                }
-                
-                return RedirectToAction("Error");
-            }
-        
-            // GET NOTE BY ID
-            [HttpGet]
-            public async Task<IActionResult> GetNote(int id)
-            {
-                var response = await _noteService.GetNote(id);
-                if (response.StatusCode == DAL.Domain.Enums.StatusCode.OK)
-                {
-                    return View(response.Data);
-                }
-        
-                return RedirectToAction("Error");
-            }
-            
-            // DELETE NOTE (вот здесь важный момент, в данном примере удаление доступно только админу, ТАК ЧТО В БУДУЩЕМ ЭТО НАДО ИСПРАВИТЬ)
-            [Authorize(Roles = "Admin")]
-            public async Task<IActionResult> Delete(int id)
-            {
-                var response = await _noteService.DeleteNote(id);
-                if (response.StatusCode == DAL.Domain.Enums.StatusCode.OK)
-                {
-                    return RedirectToAction("GetNotes");
-                }
-        
-                return RedirectToAction("Error");
-            }
-            
-            // some stupid method do it right 
-            [Authorize(Roles = "Admin")]
-            [HttpGet]
-            public async Task<IActionResult> Save(int id)
-            {
-                if (id == 0)
-                {
-                    return View();
-                }
-        
-                var response = await _noteService.GetNote(id);
-                if (response.StatusCode == DAL.Domain.Enums.StatusCode.OK)
-                {
-                    return View(response.Data);
-                }
-        
-                return RedirectToAction("Error");
-            }
-            
-            // WTF
-            [HttpPost]
-            public async Task<IActionResult> Save(Note note)
-            {
-                if (ModelState.IsValid)
-                {
-                    if (note.Id == 0)
-                    {
-                        await _noteService.CreateNote(note);
-                    }
-                    else
-                    {
-                        await _noteService.EditNote(note.Id, note);
-                    }
-                }
-        
-                return RedirectToAction("GetNotes");
-            }*/
 
+            if (!string.IsNullOrEmpty(noteType))
+            {
+                notes = notes.Where(x => x.Type == noteType);
+            }
 
+            var noteTypeVM = new NoteTypeViewModel
+            {
+                Types = new SelectList(await typeQuery.Distinct().ToListAsync()),
+                Notes = await notes.ToListAsync()
+            };
 
+            return View(noteTypeVM);
+        }*/
     }
 }
