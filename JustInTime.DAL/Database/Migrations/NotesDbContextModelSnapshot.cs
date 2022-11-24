@@ -39,7 +39,7 @@ namespace JustInTime.DAL.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("NotesType")
+                    b.Property<int>("NoteType")
                         .HasColumnType("int");
 
                     b.Property<string>("Title")
