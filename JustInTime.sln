@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JustInTime.DAL", "JustInTim
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JustInTime.BLL", "JustInTime.BLL\JustInTime.BLL.csproj", "{B46DBB39-722C-4496-B410-9264FD242008}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JustInTime.WebApp", "JustInTime.WebApp\JustInTime.WebApp.csproj", "{34177D59-9AE8-4D4A-9E30-8D86337EE260}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JustInTime.WebApp", "JustInTime.WebApp\JustInTime.WebApp.csproj", "{CADBCEBC-569A-43CB-A627-2D2EDE0A8E9C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{B46DBB39-722C-4496-B410-9264FD242008}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B46DBB39-722C-4496-B410-9264FD242008}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B46DBB39-722C-4496-B410-9264FD242008}.Release|Any CPU.Build.0 = Release|Any CPU
-		{34177D59-9AE8-4D4A-9E30-8D86337EE260}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{34177D59-9AE8-4D4A-9E30-8D86337EE260}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{34177D59-9AE8-4D4A-9E30-8D86337EE260}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{34177D59-9AE8-4D4A-9E30-8D86337EE260}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CADBCEBC-569A-43CB-A627-2D2EDE0A8E9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CADBCEBC-569A-43CB-A627-2D2EDE0A8E9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CADBCEBC-569A-43CB-A627-2D2EDE0A8E9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CADBCEBC-569A-43CB-A627-2D2EDE0A8E9C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
