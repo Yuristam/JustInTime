@@ -27,5 +27,6 @@ namespace JustInTime.DAL.Domain.Entities
         public ColorHex ColorHex { get; set; } // for the color of notes (in the future in Frontend)
         public DateTime DateCreated { get; set; }  // the day and time when the note was created (it will create date automatically)
         public NoteTypes NoteType { get; set; }  // the type of notes (Urgent, temporary and so on)
+        /*public string? Type {get;set;}*/
     }
 }
