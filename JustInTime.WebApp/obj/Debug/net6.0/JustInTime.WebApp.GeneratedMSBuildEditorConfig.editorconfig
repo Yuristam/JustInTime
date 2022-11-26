@@ -216,6 +216,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/lmega/source/repos/JustInTime/JustInTime.WebApp/Views/SleepTracker/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2xlZXBUcmFja2VyXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/lmega/source/repos/JustInTime/JustInTime.WebApp/Views/ToDo/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVG9Eb1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
