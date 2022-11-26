@@ -1,6 +1,10 @@
 ﻿using JustInTime.DAL.Database.Contexts;
 using JustInTime.DAL.Domain.Entities;
+using JustInTime.DAL.Domain.Enums;
+using JustInTime.WebApp.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 
 namespace JustInTime.WebApp.Controllers
@@ -16,6 +20,38 @@ namespace JustInTime.WebApp.Controllers
         }
 
         // GET: NOTES (ALL NOTES)
+        /* [Authorize]*/
+
+        /*  public async Task<IActionResult> Index(string noteType, string searchString)
+          {
+              // Use LINQ to get list of genres.
+              IQueryable<NoteTypes> typeQuery = from n in _context.Notes
+                                              orderby n.NoteType
+                                              select n.NoteType;
+              var notes = from n in _context.Notes
+                           select n;
+
+              if (!string.IsNullOrEmpty(searchString))
+              {
+                  notes = notes.Where(s => s.Title!.Contains(searchString));
+              }
+
+              if (!string.IsNullOrEmpty(noteType))
+              {
+                  notes = notes.Where(x => x.Type == noteType);
+              }
+
+              var noteTypeVM = new NoteTypeViewModel
+              {
+                  Types = new SelectList(await typeQuery.Distinct().ToListAsync()),
+                  Notes = await notes.ToListAsync()
+              };
+
+              return View(noteTypeVM);
+          }*/
+
+        // this is the beginning of the search method
+
         public async Task<IActionResult> Index(string searchString)
         {
             // поиск Note in Notes
@@ -30,6 +66,10 @@ namespace JustInTime.WebApp.Controllers
             // это Index(in Views/Notes folder). Внутри него идет кнопка поиска( и собсвенно сама функция поиска)
             return View(await notes.ToListAsync());
         }
+
+        //this is the end of search method
+
+
 
         // return View(await _context.Notes.ToListAsync());     // INDEX (in Views\Note). This View is showing table of notes(i guess)
 

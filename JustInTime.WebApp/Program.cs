@@ -4,6 +4,7 @@ using JustInTime.WebApp.Areas.Identity.Data;
 using JustInTime.DAL.Database.Contexts;
 
 var builder = WebApplication.CreateBuilder(args);
+
 var connectionString = builder.Configuration.GetConnectionString("IdentityContextConnection") ?? throw new InvalidOperationException("Connection string 'IdentityContextConnection' not found.");
 
 builder.Services.AddDbContext<IdentityContext>(options =>
@@ -11,6 +12,12 @@ builder.Services.AddDbContext<IdentityContext>(options =>
 
 builder.Services.AddDefaultIdentity<JustInTimeUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<IdentityContext>();
+
+/*
+builder.Services.AddIdentity<JustInTimeUser, IdentityRole>()
+            .AddEntityFrameworkStores<IdentityContext>()
+            .AddDefaultTokenProviders()
+            .AddDefaultUI();*/
 
 
 
