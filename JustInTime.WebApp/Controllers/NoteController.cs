@@ -54,14 +54,18 @@ namespace JustInTime.WebApp.Controllers
 
         public async Task<IActionResult> Index(string searchString)
         {
-            // поиск Note in Notes
+
+
+            // The beginning of search поиск Note in Notes
             var notes = from n in _context.Notes
                         select n;
 
-            if (!String.IsNullOrEmpty(searchString))
+            if (!string.IsNullOrEmpty(searchString))
             {
                 notes = notes.Where(s => s.Title!.Contains(searchString));
             }
+            // the end of the search
+
 
             // это Index(in Views/Notes folder). Внутри него идет кнопка поиска( и собсвенно сама функция поиска)
             return View(await notes.ToListAsync());
@@ -103,7 +107,7 @@ namespace JustInTime.WebApp.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Title,Description,ColorHex,DateCreated,NotesType,Id")] Note note)
+        public async Task<IActionResult> Create([Bind("Title,Description,ColorHex,DateCreated,NoteType,Id")] Note note)
         {
             if (ModelState.IsValid)
             {
@@ -111,6 +115,34 @@ namespace JustInTime.WebApp.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+
+
+/*
+
+            List<SelectListItem> items = new List<SelectListItem>();
+
+            items.Add(new SelectListItem { Text = "Urgent"});
+
+            items.Add(new SelectListItem { Text = "Ordinary" });
+
+            items.Add(new SelectListItem { Text = "Temporary"});
+
+            items.Add(new SelectListItem { Text = "Important" });
+
+            ViewBag.NoteType = items;*/
+            /*
+
+                        var noteTypesData = DAL.Domain.Enums.Type.GetAll();
+
+                        var model = new NoteTypeViewModel();
+                        model.NotesTypeSelectList = new List<SelectListItem>();
+
+                        foreach (var noteType in noteTypesData)
+                        {
+                            model.NotesTypeSelectList.Add(new SelectListItem { Text = noteType.Type });
+                        }
+            */
+
 
             return View(note);                                    // This View is CREATE View 
         }
@@ -137,7 +169,7 @@ namespace JustInTime.WebApp.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Title,Description,ColorHex,DateCreated,NotesType,Id")] Note note)
+        public async Task<IActionResult> Edit(int id, [Bind("Title,Description,ColorHex,DateCreated,NoteType,Id")] Note note)
         {
             if (id != note.Id)
             {

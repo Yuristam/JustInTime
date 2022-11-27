@@ -1,33 +1,23 @@
 ﻿using JustInTime.DAL.Domain.Entities;
-using System.ComponentModel.DataAnnotations;
-using System.Linq.Expressions;
 
 namespace JustInTime.DAL.Domain.Enums
 {
-    public enum NoteTypes
-    {
-        [Display(Name = "Urgent")]
-        Urgent = 0,
-        [Display(Name = "Temporary")]
-        Temporary = 1,
-        [Display(Name = "Important")]
-        Important = 2,
-        [Display(Name = "Ordinary")]
-        Ordinary = 3,
-    }
-    /*public class NoteType : BaseEntity
+    public class NoteType: BaseEntity
     {
         public string Type { get; set; }
-        public void SetType(string type)
+        public List<Note> Notes { get; set;} = new List<Note>();
+    }/*
+    public static class Type
+    {
+        public static List<NoteType> GetAll()
         {
-            switch(type)
+            return new List<NoteType>()
             {
-                case "Urgent": Type = Urgent;
-
-                    break;
-
-            }
+                new NoteType { Type = "Ordinary"},
+                new NoteType { Type ="Important"},
+                new NoteType { Type = "Urgent"},
+                new NoteType { Type = "Temporary"},
+            };
         }
-
     }*/
 }
