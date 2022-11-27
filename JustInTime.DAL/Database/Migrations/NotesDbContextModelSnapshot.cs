@@ -17,10 +17,10 @@ namespace JustInTime.DAL.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.0")
+                .HasAnnotation("ProductVersion", "6.0.10")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
-            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
             modelBuilder.Entity("JustInTime.DAL.Domain.Entities.Note", b =>
                 {
@@ -28,7 +28,7 @@ namespace JustInTime.DAL.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<int>("ColorHex")
                         .HasColumnType("int");
@@ -38,9 +38,6 @@ namespace JustInTime.DAL.Migrations
 
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("NoteType")
-                        .HasColumnType("int");
 
                     b.Property<string>("Title")
                         .IsRequired()
@@ -58,7 +55,7 @@ namespace JustInTime.DAL.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<bool>("IsDone")
                         .HasColumnType("bit");
@@ -70,6 +67,53 @@ namespace JustInTime.DAL.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("ToDos");
+                });
+
+            modelBuilder.Entity("JustInTime.DAL.Domain.Enums.NoteType", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Type")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("NoteType");
+                });
+
+            modelBuilder.Entity("NoteNoteType", b =>
+                {
+                    b.Property<int>("NoteTypeId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("NotesId")
+                        .HasColumnType("int");
+
+                    b.HasKey("NoteTypeId", "NotesId");
+
+                    b.HasIndex("NotesId");
+
+                    b.ToTable("NoteNoteType");
+                });
+
+            modelBuilder.Entity("NoteNoteType", b =>
+                {
+                    b.HasOne("JustInTime.DAL.Domain.Enums.NoteType", null)
+                        .WithMany()
+                        .HasForeignKey("NoteTypeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("JustInTime.DAL.Domain.Entities.Note", null)
+                        .WithMany()
+                        .HasForeignKey("NotesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }
