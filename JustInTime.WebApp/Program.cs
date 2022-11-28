@@ -1,7 +1,6 @@
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-using JustInTime.WebApp.Areas.Identity.Data;
 using JustInTime.DAL.Database.Contexts;
+using JustInTime.WebApp.Areas.Identity.Data;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -47,12 +46,18 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-app.UseAuthentication();;
+app.UseAuthentication();
 
 app.UseAuthorization();
 
-app.MapControllerRoute(
+app.UseEndpoints(e =>
+{
+    e.MapRazorPages();
+    e.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+});
+
 
 app.Run();

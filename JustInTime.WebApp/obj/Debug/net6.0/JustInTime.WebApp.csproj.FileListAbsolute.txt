@@ -277,3 +277,4 @@ C:\Users\lmega\source\repos\JustInTime\JustInTime.WebApp\bin\Debug\net6.0\runtim
 C:\Users\lmega\source\repos\JustInTime\JustInTime.WebApp\obj\Debug\net6.0\JustInTime.WebApp.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\lmega\source\repos\JustInTime\JustInTime.WebApp\bin\Debug\net6.0\JustInTime.DAL.dll
 C:\Users\lmega\source\repos\JustInTime\JustInTime.WebApp\bin\Debug\net6.0\JustInTime.DAL.pdb
+C:\Users\lmega\source\repos\JustInTime\JustInTime.WebApp\bin\Debug\net6.0\Views\Shared\_Layout.cshtml

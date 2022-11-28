@@ -50,6 +50,14 @@ namespace JustInTime.WebApp.Controllers
               return View(noteTypeVM);
           }*/
 
+
+
+
+
+
+
+
+
         // this is the beginning of the search method
 
         public async Task<IActionResult> Index(string searchString)
@@ -72,6 +80,12 @@ namespace JustInTime.WebApp.Controllers
         }
 
         //this is the end of search method
+
+
+
+
+
+
 
 
 
