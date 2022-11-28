@@ -2,10 +2,10 @@
 
 namespace JustInTime.DAL.Domain.Enums
 {
-    public class NoteType: BaseEntity
+    public class NoteType : BaseEntity
     {
         public string Type { get; set; }
-        public List<Note> Notes { get; set;} = new List<Note>();
+        public List<Note> Notes { get; set; } = new List<Note>();
     }/*
     public static class Type
     {

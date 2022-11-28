@@ -22,6 +22,21 @@ namespace JustInTime.DAL.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
+            modelBuilder.Entity("ColorHexNote", b =>
+                {
+                    b.Property<int>("ColorHexId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("NotesId")
+                        .HasColumnType("int");
+
+                    b.HasKey("ColorHexId", "NotesId");
+
+                    b.HasIndex("NotesId");
+
+                    b.ToTable("ColorHexNote");
+                });
+
             modelBuilder.Entity("JustInTime.DAL.Domain.Entities.Note", b =>
                 {
                     b.Property<int>("Id")
@@ -29,9 +44,6 @@ namespace JustInTime.DAL.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<int>("ColorHex")
-                        .HasColumnType("int");
 
                     b.Property<DateTime>("DateCreated")
                         .HasColumnType("datetime2");
@@ -69,6 +81,23 @@ namespace JustInTime.DAL.Migrations
                     b.ToTable("ToDos");
                 });
 
+            modelBuilder.Entity("JustInTime.DAL.Domain.Enums.ColorHex", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Color")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ColorHex");
+                });
+
             modelBuilder.Entity("JustInTime.DAL.Domain.Enums.NoteType", b =>
                 {
                     b.Property<int>("Id")
@@ -99,6 +128,21 @@ namespace JustInTime.DAL.Migrations
                     b.HasIndex("NotesId");
 
                     b.ToTable("NoteNoteType");
+                });
+
+            modelBuilder.Entity("ColorHexNote", b =>
+                {
+                    b.HasOne("JustInTime.DAL.Domain.Enums.ColorHex", null)
+                        .WithMany()
+                        .HasForeignKey("ColorHexId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("JustInTime.DAL.Domain.Entities.Note", null)
+                        .WithMany()
+                        .HasForeignKey("NotesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("NoteNoteType", b =>
