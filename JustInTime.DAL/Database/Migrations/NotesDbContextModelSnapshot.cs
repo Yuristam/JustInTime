@@ -95,7 +95,7 @@ namespace JustInTime.DAL.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ColorHex");
+                    b.ToTable("ColorHexes");
                 });
 
             modelBuilder.Entity("JustInTime.DAL.Domain.Enums.NoteType", b =>
@@ -112,7 +112,7 @@ namespace JustInTime.DAL.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("NoteType");
+                    b.ToTable("NoteTypes");
                 });
 
             modelBuilder.Entity("NoteNoteType", b =>
