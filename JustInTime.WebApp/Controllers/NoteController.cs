@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
 
 namespace JustInTime.WebApp.Controllers
 {
@@ -20,7 +21,7 @@ namespace JustInTime.WebApp.Controllers
         }
 
         // GET: NOTES (ALL NOTES)
-        /* [Authorize]*/
+        [Authorize]
 
         /*  public async Task<IActionResult> Index(string noteType, string searchString)
           {

@@ -36,8 +36,52 @@
     <!--this is for text on the site-->
     <p>This is a note-taking website. You can use it for making your future plans, ideas, exploring and etc.</p>
 
+    <!--Note Button-->
+    <link rel="stylesheet" href="css/homepage.css" />
+    <a class="home-button" asp-area="" asp-controller="Note" asp-action="Index">Notes</a>
+    <br/>
+    <!--Note Button-->
 
     <img src="lib/photos/Spirited Away.jpg" alt="Spirited Away" width="500">  <!--this is just a background photo (the right way)   BUT I NEED TO CHANGE IT TO CALENDAR VIEW AND THERE WILL BE ANOTHER PHOTO-->
+
+
+
+<!--this is paralax background-->
+     @*   <link rel="stylesheet" href="~/css/paralaxhomepage.css">
+       
+        <div class="items">
+            <div class="items__inner" id="parallax-container">
+                <div class="items__layer" data-depth="0.85">
+                    <div class="items__item">
+                        <img src="~/lib/photos/Spirited Away background.png" alt="img">
+                    </div>
+                </div>
+                <div class="items__layer" data-depth="0.7">
+                    <div class="items__item">
+                        <img src="~/lib/photos/Spirited Away dragon part.png" alt="img">
+                    </div>
+                </div>
+                <div class="items__layer" data-depth="0.65">
+                    <div class="items__item">
+                        <img src="~/lib/photos/Spirited Away girl part.png" alt="img">
+                    </div>
+                </div>
+               
+                <div class="items__layer" data-depth="0.0">
+                    <div class="items__item">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+        <script src="~/js/paralaxhomepage.js"></script>
+
+
+*@
+
+<!--this is paralax background ending-->
+
+
 
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>

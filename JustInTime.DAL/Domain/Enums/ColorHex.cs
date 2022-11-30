@@ -2,8 +2,9 @@
 
 namespace JustInTime.DAL.Domain.Enums
 {
-    public class ColorHex : BaseEntity
+    public class ColorHex :BaseEntity
     {
+       /* public int ColorId { get; set; }*/
         public string Color { get; set; }
         public List<Note> Notes { get; set; } = new List<Note>();
       /*  public enum ColorsHex

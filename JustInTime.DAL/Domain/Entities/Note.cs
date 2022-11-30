@@ -3,14 +3,14 @@ using System.ComponentModel.DataAnnotations;
 
 namespace JustInTime.DAL.Domain.Entities
 {
-    public class Note : BaseEntity
+    public class Note: BaseEntity
     {
         public Note()
         {
             DateCreated = DateTime.Now;
         }
 
-
+   /*     public int NoteId { get; set; }*/
         [MaxLength(120)]
         public string Title { get; set; }
         public string? Description { get; set; }

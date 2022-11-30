@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 namespace JustInTime.DAL.Repositories
 {
 
-    public class NoteRepository<T> : IRepository<T> where T: BaseEntity
+    public class NoteRepository<T> : IRepository<T> where T : BaseEntity
     {
         private readonly NotesDbContext _ctx;
 

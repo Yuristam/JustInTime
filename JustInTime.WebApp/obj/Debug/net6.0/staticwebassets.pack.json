@@ -5,8 +5,24 @@
       "PackagePath": "staticwebassets\\JustInTime.WebApp.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\css\\calendarstyle.css",
+      "PackagePath": "staticwebassets\\css\\calendarstyle.css"
+    },
+    {
+      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\css\\dycalendar.css",
+      "PackagePath": "staticwebassets\\css\\dycalendar.css"
+    },
+    {
+      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\css\\homepage.css",
+      "PackagePath": "staticwebassets\\css\\homepage.css"
+    },
+    {
       "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\css\\mynotes.css",
       "PackagePath": "staticwebassets\\css\\mynotes.css"
+    },
+    {
+      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\css\\paralaxhomepage.css",
+      "PackagePath": "staticwebassets\\css\\paralaxhomepage.css"
     },
     {
       "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\css\\sakura.css",
@@ -21,8 +37,16 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\js\\dycalendar.js",
+      "PackagePath": "staticwebassets\\js\\dycalendar.js"
+    },
+    {
       "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\js\\mynotes.js",
       "PackagePath": "staticwebassets\\js\\mynotes.js"
+    },
+    {
+      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\js\\paralaxhomepage.js",
+      "PackagePath": "staticwebassets\\js\\paralaxhomepage.js"
     },
     {
       "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\js\\sakura.js",
@@ -259,6 +283,18 @@
     {
       "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\photos\\Spirited Away background.png",
+      "PackagePath": "staticwebassets\\lib\\photos\\Spirited Away background.png"
+    },
+    {
+      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\photos\\Spirited Away dragon part.png",
+      "PackagePath": "staticwebassets\\lib\\photos\\Spirited Away dragon part.png"
+    },
+    {
+      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\photos\\Spirited Away girl part.png",
+      "PackagePath": "staticwebassets\\lib\\photos\\Spirited Away girl part.png"
     },
     {
       "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\photos\\Spirited Away.jpg",

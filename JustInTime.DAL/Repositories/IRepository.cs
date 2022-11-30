@@ -3,7 +3,7 @@ using JustInTime.DAL.Domain.Entities;
 namespace JustInTime.DAL.Repositories
 {
 
-    public interface IRepository<T> where T: BaseEntity
+    public interface IRepository<T> where T : BaseEntity
     {/*
         Task<bool> Create(T entity);
 
