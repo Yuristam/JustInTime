@@ -1,4 +1,4 @@
-﻿/*using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace JustInTime.WebApp.Controllers
@@ -10,7 +10,7 @@ namespace JustInTime.WebApp.Controllers
         {
             return View();
         }
-
+/*
         // GET: CalendarController/Details/5
         public ActionResult Details(int id)
         {
@@ -78,7 +78,6 @@ namespace JustInTime.WebApp.Controllers
             {
                 return View();
             }
-        }
+        }*/
     }
 }
-*/

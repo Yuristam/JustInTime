@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\JustInTime.WebApp.csproj": {}
+    "C:\\Users\\lmega\\Source\\Repos\\JustInTime\\JustInTime.WebApp\\JustInTime.WebApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.DAL\\JustInTime.DAL.csproj": {
+    "C:\\Users\\lmega\\Source\\Repos\\JustInTime\\JustInTime.DAL\\JustInTime.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.DAL\\JustInTime.DAL.csproj",
+        "projectUniqueName": "C:\\Users\\lmega\\Source\\Repos\\JustInTime\\JustInTime.DAL\\JustInTime.DAL.csproj",
         "projectName": "JustInTime.DAL",
-        "projectPath": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.DAL\\JustInTime.DAL.csproj",
+        "projectPath": "C:\\Users\\lmega\\Source\\Repos\\JustInTime\\JustInTime.DAL\\JustInTime.DAL.csproj",
         "packagesPath": "C:\\Users\\lmega\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.DAL\\obj\\",
+        "outputPath": "C:\\Users\\lmega\\Source\\Repos\\JustInTime\\JustInTime.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -76,14 +76,14 @@
         }
       }
     },
-    "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\JustInTime.WebApp.csproj": {
+    "C:\\Users\\lmega\\Source\\Repos\\JustInTime\\JustInTime.WebApp\\JustInTime.WebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\JustInTime.WebApp.csproj",
+        "projectUniqueName": "C:\\Users\\lmega\\Source\\Repos\\JustInTime\\JustInTime.WebApp\\JustInTime.WebApp.csproj",
         "projectName": "JustInTime.WebApp",
-        "projectPath": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\JustInTime.WebApp.csproj",
+        "projectPath": "C:\\Users\\lmega\\Source\\Repos\\JustInTime\\JustInTime.WebApp\\JustInTime.WebApp.csproj",
         "packagesPath": "C:\\Users\\lmega\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\obj\\",
+        "outputPath": "C:\\Users\\lmega\\Source\\Repos\\JustInTime\\JustInTime.WebApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -105,8 +105,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.DAL\\JustInTime.DAL.csproj": {
-                "projectPath": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.DAL\\JustInTime.DAL.csproj"
+              "C:\\Users\\lmega\\Source\\Repos\\JustInTime\\JustInTime.DAL\\JustInTime.DAL.csproj": {
+                "projectPath": "C:\\Users\\lmega\\Source\\Repos\\JustInTime\\JustInTime.DAL\\JustInTime.DAL.csproj"
               }
             }
           }
