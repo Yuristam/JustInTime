@@ -1934,11 +1934,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.BLL\\JustInTime.BLL.csproj",
+      "projectUniqueName": "C:\\Users\\lmega\\Source\\Repos\\JustInTime\\JustInTime.BLL\\JustInTime.BLL.csproj",
       "projectName": "JustInTime.BLL",
-      "projectPath": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.BLL\\JustInTime.BLL.csproj",
+      "projectPath": "C:\\Users\\lmega\\Source\\Repos\\JustInTime\\JustInTime.BLL\\JustInTime.BLL.csproj",
       "packagesPath": "C:\\Users\\lmega\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.BLL\\obj\\",
+      "outputPath": "C:\\Users\\lmega\\Source\\Repos\\JustInTime\\JustInTime.BLL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1960,8 +1960,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.DAL\\JustInTime.DAL.csproj": {
-              "projectPath": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.DAL\\JustInTime.DAL.csproj"
+            "C:\\Users\\lmega\\Source\\Repos\\JustInTime\\JustInTime.DAL\\JustInTime.DAL.csproj": {
+              "projectPath": "C:\\Users\\lmega\\Source\\Repos\\JustInTime\\JustInTime.DAL\\JustInTime.DAL.csproj"
             }
           }
         }

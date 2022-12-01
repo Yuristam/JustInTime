@@ -7,6 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Views\SleepTracker\**" />
+    <Content Remove="Views\SleepTracker\**" />
+    <EmbeddedResource Remove="Views\SleepTracker\**" />
+    <None Remove="Views\SleepTracker\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.10" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.10" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.10">
@@ -22,8 +29,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Views\SleepTracker\" />
-    <Folder Include="wwwroot\lib\photos\" />
+    <Folder Include="wwwroot\lib\images\" />
   </ItemGroup>
 
   <ItemGroup>
