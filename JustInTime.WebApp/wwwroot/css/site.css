@@ -16,3 +16,8 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+
+.main-icon {
+    width: 150px; /*this is the main JustInTime icon 150px or 200px*/
+}
