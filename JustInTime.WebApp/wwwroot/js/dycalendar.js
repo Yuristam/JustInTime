@@ -37,10 +37,10 @@
 
         //name of the days
         dayName = {
-            full: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-            d: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
-            dd: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
-            ddd: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+            full: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+            d: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
+            dd: ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'],
+            ddd: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
         };
 
     /**
@@ -62,7 +62,7 @@
         //create 1st row for the day letters
         for (c = 0; c <= 6; c = c + 1) {
             td = document.createElement("td");
-            td.innerHTML = "SMTWTFS"[c];
+            td.innerHTML = "MTWTFSS"[c];
             tr.appendChild(td);
         }
         table.appendChild(tr);

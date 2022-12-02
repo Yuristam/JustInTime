@@ -1,10 +1,14 @@
-﻿namespace JustInTime.DAL.Domain.Entities
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace JustInTime.DAL.Domain.Entities
 {
-    public class ToDo : BaseEntity
+    public class ToDo
     {
-     /*   public int ToDoId { get; set; }*/
+        public int Id { get; set; }
+        [Required]
+        [MaxLength (120)]
         public string TaskDescription { get; set; }
         public bool IsDone { get; set; }
-       // public virtual ApplicationUser User{get;set;}
+        public virtual List<CheckList> CheckList { get; set; }/* = new List<CheckList>();*/
     }
 }

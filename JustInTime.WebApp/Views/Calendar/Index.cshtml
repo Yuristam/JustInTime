@@ -1,8 +1,12 @@
-﻿<!DOCTYPE html>
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Glassmorphism Calendar | dyCalendarJS</title>
+    <title>JustInTime | CalendarJS</title>
     <link rel="stylesheet" href="~/css/dycalendar.css">
     <link rel="stylesheet" href="~/css/calendarstyle.css">
 </head>
@@ -23,8 +27,10 @@
             monthformat: 'full',
             highlighttargetdate: true,
             prevnextbutton: 'show'
-
         })
     </script>
+    <div class="button">
+        <a class="home-button" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+    </div>
 </body>
 </html>

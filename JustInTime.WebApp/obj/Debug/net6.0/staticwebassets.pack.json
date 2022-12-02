@@ -237,6 +237,26 @@
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
+      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\Spirited Away background.png",
+      "PackagePath": "staticwebassets\\lib\\images\\Spirited Away background.png"
+    },
+    {
+      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\Spirited Away dragon part.png",
+      "PackagePath": "staticwebassets\\lib\\images\\Spirited Away dragon part.png"
+    },
+    {
+      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\Spirited Away girl part.png",
+      "PackagePath": "staticwebassets\\lib\\images\\Spirited Away girl part.png"
+    },
+    {
+      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\Spirited Away.jpg",
+      "PackagePath": "staticwebassets\\lib\\images\\Spirited Away.jpg"
+    },
+    {
+      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\anime-note-taking.gif",
+      "PackagePath": "staticwebassets\\lib\\images\\anime-note-taking.gif"
+    },
+    {
       "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
@@ -283,26 +303,6 @@
     {
       "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
-    },
-    {
-      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\photos\\Spirited Away background.png",
-      "PackagePath": "staticwebassets\\lib\\photos\\Spirited Away background.png"
-    },
-    {
-      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\photos\\Spirited Away dragon part.png",
-      "PackagePath": "staticwebassets\\lib\\photos\\Spirited Away dragon part.png"
-    },
-    {
-      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\photos\\Spirited Away girl part.png",
-      "PackagePath": "staticwebassets\\lib\\photos\\Spirited Away girl part.png"
-    },
-    {
-      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\photos\\Spirited Away.jpg",
-      "PackagePath": "staticwebassets\\lib\\photos\\Spirited Away.jpg"
-    },
-    {
-      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\photos\\anime-note-taking.gif",
-      "PackagePath": "staticwebassets\\lib\\photos\\anime-note-taking.gif"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.JustInTime.WebApp.Microsoft.AspNetCore.StaticWebAssets.props",

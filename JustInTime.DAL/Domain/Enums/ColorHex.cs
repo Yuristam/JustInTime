@@ -1,24 +1,26 @@
 ﻿using JustInTime.DAL.Domain.Entities;
+using System.ComponentModel.DataAnnotations;
 
 namespace JustInTime.DAL.Domain.Enums
 {
-    public class ColorHex :BaseEntity
+    public class ColorHex
     {
-       /* public int ColorId { get; set; }*/
-        public string Color { get; set; }
-        public List<Note> Notes { get; set; } = new List<Note>();
-      /*  public enum ColorsHex
-        {
-            [Display(Name = "Red")] Red = 0,
-            [Display(Name = "Cyan")] Cyan = 1,
-            [Display(Name = "Green")] Green = 2,
-            [Display(Name = "Blue")] Blue = 3,
-            [Display(Name = "Yellow")] Yellow = 4,
-            [Display(Name = "White")] White = 5,
-            [Display(Name = "Grey")] Grey = 6,
-            [Display(Name = "Magenta")] Magenta = 7,
-            [Display(Name = "Orange")] Orange = 8,
-            [Display(Name = "Dark Green")] DarkGreen = 9,
-        }*/
+        public int Id { get; set; }
+        public Color Colors { get; set; }
+        public virtual List<Note> Notes { get; set; } /*= new List<Note>();*/
+
+    }
+    public enum Color
+    {
+        [Display(Name = "Red")] Red,
+        [Display(Name = "Cyan")] Cyan,
+        [Display(Name = "Green")] Green,
+        [Display(Name = "Blue")] Blue,
+        [Display(Name = "Yellow")] Yellow,
+        [Display(Name = "White")] White,
+        [Display(Name = "Grey")] Grey,
+        [Display(Name = "Magenta")] Magenta,
+        [Display(Name = "Orange")] Orange,
+        [Display(Name = "Dark Green")] DarkGreen,
     }
 }

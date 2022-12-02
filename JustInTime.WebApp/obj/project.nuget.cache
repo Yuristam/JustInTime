@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mPafYv3JR+UBAEMcmd6w0s1xB5vocne0GoAjicxyiJ78U38RB4N0nhsnGKhmuZfdaZcGqnT+a1oyG76DkC1ZCw==",
+  "dgSpecHash": "uUCQ3sKTjnADccRCf1AutQYplF4KPejXTPZ7fZV1XF3En9v/KFl37GT4b43MudqJh0ea+N9oR/w0C+scI67yUA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\lmega\\Source\\Repos\\JustInTime\\JustInTime.WebApp\\JustInTime.WebApp.csproj",
+  "projectFilePath": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\JustInTime.WebApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lmega\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\lmega\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",

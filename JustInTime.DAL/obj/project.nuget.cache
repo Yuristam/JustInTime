@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7oyH7VCHBk808pUpbmgJb0om19/+KhbJ8diFI/kwmVY0bFhxYz6gI+5fbyaH2Ppd6teL3xANxy6EqUBxvk6S1w==",
+  "dgSpecHash": "mBNugjOTjUnwFzyS13w3hHmkjgL3jWczNiQAJl/Dm5NsULtgsLQuP8eRbanYYvWANW0AQl9qLHrEBDBgA/0c8Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\lmega\\Source\\Repos\\JustInTime\\JustInTime.DAL\\JustInTime.DAL.csproj",
+  "projectFilePath": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.DAL\\JustInTime.DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lmega\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\lmega\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

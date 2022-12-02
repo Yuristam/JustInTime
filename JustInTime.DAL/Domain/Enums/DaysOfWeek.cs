@@ -1,4 +1,4 @@
-﻿namespace JustInTime.DAL.Domain.Enums
+﻿/*namespace JustInTime.DAL.Domain.Enums
 {
     public enum DaysOfWeek
     {
@@ -6,3 +6,4 @@
         Friday, Saturday, Sunday
     }
 }
+*/
