@@ -1,4 +1,4 @@
-using JustInTime.DAL.Database.Contexts;
+/*using JustInTime.DAL.Database.Contexts;
 using JustInTime.DAL.Domain.Entities;
 using JustInTime.DAL.Repositories;
 
@@ -16,4 +16,4 @@ public class NoteController
     {
         return _noteRepository.Create(note);
     }
-}
+}*/

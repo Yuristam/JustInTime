@@ -1,9 +1,7 @@
-﻿
-
-namespace JustInTime.DAL.Domain.Entities
+﻿namespace JustInTime.DAL.Domain.Entities
 {
     public class NoteCalendar
     {/*
-        Calendar*/
+        NoteCalendar*/
     }
 }

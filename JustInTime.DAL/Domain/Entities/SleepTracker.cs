@@ -1,4 +1,4 @@
-﻿using JustInTime.DAL.Domain.Enums;
+﻿/*using JustInTime.DAL.Domain.Enums;
 
 namespace JustInTime.DAL.Domain.Entities
 {
@@ -9,3 +9,4 @@ namespace JustInTime.DAL.Domain.Entities
         public DateTime GoSleepTime { get; set;}
     }
 }
+*/

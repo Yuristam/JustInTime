@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/oqjQlFjMVn+pctSt1G+7Nvo7dELVpxlrRGFUdtRz686dK94lAUKfPUnRG9dTalkT/TVMl7hQPB5NEfArW/qBQ==",
+  "dgSpecHash": "wraTruI9NIWVfYzsJZxrvw0kl8j9oNnEX1WRYvHT+owFdC6YMEJDKPTNAqXjY5Xb653oJfzFTVdf426kOeKAOQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\lmega\\Source\\Repos\\JustInTime\\JustInTime.BLL\\JustInTime.BLL.csproj",
+  "projectFilePath": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.BLL\\JustInTime.BLL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lmega\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\lmega\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",

@@ -1,4 +1,4 @@
-using System.ComponentModel.DataAnnotations;
+/*using System.ComponentModel.DataAnnotations;
 
 namespace JustInTime.DAL.Domain.Enums
 {
@@ -16,4 +16,4 @@ namespace JustInTime.DAL.Domain.Enums
         
 
     }
-}
+}*/

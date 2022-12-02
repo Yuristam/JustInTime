@@ -70,10 +70,15 @@ section {
     }
 
         #dycalendar table tr:nth-child(1) td {
-            backgroud: #ffffff;
-            color: #111111;
+            color: #ffffff;
             border-radius: 4px;
             font-weight: 600;
+            background: rgba(255,255,255,0.1);
+            box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+            border: 1px solid rgba(255,255,255,0.5);
+            border-right: 1px solid rgba(255,255,255,0.2);
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            backdrop-filter: blur(25px);
         }
 
         #dycalendar table td {
@@ -89,13 +94,12 @@ section {
             }
 
 .dycalendar-month-container .dycalendar-today-date, .dycalendar-month-container .dycalendar-target-date {
-    background: #ffffff;
+    background: #ffc107;
     color: #111111 !important;
 }
 
-.dycalendar-month-container .dycalendar-header .dycalendar-prev-next-btn .prev-btn {
-    background: #ffffff;
-    color: #111111;
+.dycalendar-month-container .dycalendar-header .dycalendar-prev-next-btn.prev-btn {
+    color: #ffffff;
     width: 44px;
     height: 38px;
     left: 4px;
@@ -104,19 +108,30 @@ section {
     justify-content: center;
     align-items: center;
     font-size: 24px;
+    background: rgba(255,255,255,0.1);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+    border: 1px solid rgba(255,255,255,0.5);
+    border-right: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    backdrop-filter: blur(25px);
 }
 
-.dycalendar-month-container .dycalendar-header .dycalendar-prev-next-btn .next-btn {
-    background: #ffffff;
-    color: #111111;
+.dycalendar-month-container .dycalendar-header .dycalendar-prev-next-btn.next-btn {
+    color: #ffffff;
     width: 44px;
     height: 38px;
-    left: 4px;
+    right: 4px;
     border-radius: 4px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 24px;
+    background: rgba(255,255,255,0.1);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+    border: 1px solid rgba(255,255,255,0.5);
+    border-right: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    backdrop-filter: blur(25px);
 }
 
 .dycalendar-month-container .dycalendar-span-month-year {
@@ -124,3 +139,24 @@ section {
     font-size: 1.5em;
     font-weight: 500;
 }
+
+
+.button 
+{
+    background-color: darkturquoise; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.button {
+    transition-duration: 0.4s;
+}
+
+    .button:hover {
+        background-color: #4CAF50; /* Green */
+        color: white;
+    }

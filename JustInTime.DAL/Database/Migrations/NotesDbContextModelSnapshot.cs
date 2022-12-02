@@ -22,6 +22,21 @@ namespace JustInTime.DAL.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
+            modelBuilder.Entity("CheckListToDo", b =>
+                {
+                    b.Property<int>("CheckListId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ToDoId")
+                        .HasColumnType("int");
+
+                    b.HasKey("CheckListId", "ToDoId");
+
+                    b.HasIndex("ToDoId");
+
+                    b.ToTable("CheckListToDo");
+                });
+
             modelBuilder.Entity("ColorHexNote", b =>
                 {
                     b.Property<int>("ColorHexId")
@@ -35,6 +50,19 @@ namespace JustInTime.DAL.Migrations
                     b.HasIndex("NotesId");
 
                     b.ToTable("ColorHexNote");
+                });
+
+            modelBuilder.Entity("JustInTime.DAL.Domain.Entities.CheckList", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.HasKey("Id");
+
+                    b.ToTable("CheckLists");
                 });
 
             modelBuilder.Entity("JustInTime.DAL.Domain.Entities.Note", b =>
@@ -74,7 +102,8 @@ namespace JustInTime.DAL.Migrations
 
                     b.Property<string>("TaskDescription")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(120)
+                        .HasColumnType("nvarchar(120)");
 
                     b.HasKey("Id");
 
@@ -89,9 +118,8 @@ namespace JustInTime.DAL.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<string>("Color")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Colors")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -106,9 +134,8 @@ namespace JustInTime.DAL.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<string>("Type")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Type")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -128,6 +155,21 @@ namespace JustInTime.DAL.Migrations
                     b.HasIndex("NotesId");
 
                     b.ToTable("NoteNoteType");
+                });
+
+            modelBuilder.Entity("CheckListToDo", b =>
+                {
+                    b.HasOne("JustInTime.DAL.Domain.Entities.CheckList", null)
+                        .WithMany()
+                        .HasForeignKey("CheckListId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("JustInTime.DAL.Domain.Entities.ToDo", null)
+                        .WithMany()
+                        .HasForeignKey("ToDoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("ColorHexNote", b =>

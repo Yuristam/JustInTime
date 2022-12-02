@@ -1,4 +1,4 @@
-
+/*
 namespace JustInTime.DAL.Domain.Entities
 {
 
@@ -6,4 +6,4 @@ namespace JustInTime.DAL.Domain.Entities
     {
         public int Id { get; set; }
     }
-}
+}*/
