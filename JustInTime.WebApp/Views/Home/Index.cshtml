@@ -2,86 +2,20 @@
     ViewData["Title"] = "Home Page";
 }
 
+<link rel="stylesheet" href="~/css/homepage.css" />
 <div class="text-center">
+    <img src="~/lib/images/Zuko background.jpg" width="100%" />
     <h1 class="display-4">Welcome</h1>
 
-    <!--this is Sakura blossom background (beginning)-->
-    <link rel="stylesheet" href="css/sakura.css" />
-    <script src="js/sakura.js" text="text/javascript"></script>
-
-    <script>
-        var sakura = new Sakura('body', {
-            colors: [
-                {
-                    gradientColorStart: 'rgba(255, 183, 197, 0.9)',
-                    gradientColorEnd: 'rgba(255, 197, 208, 0.9)',
-                    gradientColorDegree: 120,
-                },
-                {
-                    gradientColorStart: 'rgba(255,189,189)',
-                    gradientColorEnd: 'rgba(227,170,181)',
-                    gradientColorDegree: 120,
-                },
-                {
-                    gradientColorStart: 'rgba(212,152,163)',
-                    gradientColorEnd: 'rgba(242,185,196)',
-                    gradientColorDegree: 120,
-                },
-            ],
-            delay: 200,
-        });
-    </script>
-
-    <!--this is Sakura blossom background (ending of code)-->
     <!--this is for text on the site-->
     <p>This is a note-taking website. You can use it for making your future plans, ideas, exploring and etc.</p>
 
     <!--Note Button-->
-    <link rel="stylesheet" href="css/homepage.css" />
     <a class="home-button" asp-area="" asp-controller="Note" asp-action="Index">Notes</a>
     <br/>
     <!--Note Button-->
 
-    <img src="lib/images/Spirited Away.jpg" alt="Spirited Away" width="500">  <!--this is just a background photo (the right way)   BUT I NEED TO CHANGE IT TO CALENDAR VIEW AND THERE WILL BE ANOTHER PHOTO-->
-
-
-
-<!--this is paralax background-->
-     @*   <link rel="stylesheet" href="~/css/paralaxhomepage.css">
-       
-        <div class="items">
-            <div class="items__inner" id="parallax-container">
-                <div class="items__layer" data-depth="0.85">
-                    <div class="items__item">
-    <img src="~/lib/images/Spirited Away background.png" alt="img">
-                    </div>
-                </div>
-                <div class="items__layer" data-depth="0.7">
-                    <div class="items__item">
-    <img src="~/lib/images/Spirited Away dragon part.png" alt="img">
-                    </div>
-                </div>
-                <div class="items__layer" data-depth="0.65">
-                    <div class="items__item">
-    <img src="~/lib/images/Spirited Away girl part.png" alt="img">
-                    </div>
-                </div>
-               
-                <div class="items__layer" data-depth="0.0">
-                    <div class="items__item">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
-        <script src="~/js/paralaxhomepage.js"></script>
-
-
-*@
-
-<!--this is paralax background ending-->
-
-
+   @* <img src="lib/images/Spirited Away.jpg" alt="Spirited Away" width="500">  <!--this is just a background photo (the right way)   BUT I NEED TO CHANGE IT TO CALENDAR VIEW AND THERE WILL BE ANOTHER PHOTO-->*@
 
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
