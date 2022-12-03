@@ -21,10 +21,6 @@
       "PackagePath": "staticwebassets\\css\\mynotes.css"
     },
     {
-      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\css\\paralaxhomepage.css",
-      "PackagePath": "staticwebassets\\css\\paralaxhomepage.css"
-    },
-    {
       "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\css\\sakura.css",
       "PackagePath": "staticwebassets\\css\\sakura.css"
     },
@@ -43,10 +39,6 @@
     {
       "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\js\\mynotes.js",
       "PackagePath": "staticwebassets\\js\\mynotes.js"
-    },
-    {
-      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\js\\paralaxhomepage.js",
-      "PackagePath": "staticwebassets\\js\\paralaxhomepage.js"
     },
     {
       "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\js\\sakura.js",
@@ -237,12 +229,16 @@
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
+      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\Home Page background.png",
+      "PackagePath": "staticwebassets\\lib\\images\\Home Page background.png"
+    },
+    {
       "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\JustInTime icon.png",
       "PackagePath": "staticwebassets\\lib\\images\\JustInTime icon.png"
     },
     {
-      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\JustInTime icon01.png",
-      "PackagePath": "staticwebassets\\lib\\images\\JustInTime icon01.png"
+      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\JustInTime icon1.png",
+      "PackagePath": "staticwebassets\\lib\\images\\JustInTime icon1.png"
     },
     {
       "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\Spirited Away background.png",
@@ -259,6 +255,10 @@
     {
       "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\Spirited Away.jpg",
       "PackagePath": "staticwebassets\\lib\\images\\Spirited Away.jpg"
+    },
+    {
+      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\Zuko background.jpg",
+      "PackagePath": "staticwebassets\\lib\\images\\Zuko background.jpg"
     },
     {
       "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\anime-note-taking.gif",
