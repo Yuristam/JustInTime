@@ -237,28 +237,12 @@
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\Iconforsite.png",
-      "PackagePath": "staticwebassets\\lib\\images\\Iconforsite.png"
-    },
-    {
-      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\Iconforsite1.png",
-      "PackagePath": "staticwebassets\\lib\\images\\Iconforsite1.png"
-    },
-    {
-      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\Iconforsite3.png",
-      "PackagePath": "staticwebassets\\lib\\images\\Iconforsite3.png"
-    },
-    {
-      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\Iconforsite8.png",
-      "PackagePath": "staticwebassets\\lib\\images\\Iconforsite8.png"
-    },
-    {
-      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\Iconforsite9.png",
-      "PackagePath": "staticwebassets\\lib\\images\\Iconforsite9.png"
-    },
-    {
       "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\JustInTime icon.png",
       "PackagePath": "staticwebassets\\lib\\images\\JustInTime icon.png"
+    },
+    {
+      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\JustInTime icon01.png",
+      "PackagePath": "staticwebassets\\lib\\images\\JustInTime icon01.png"
     },
     {
       "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\Spirited Away background.png",
@@ -279,62 +263,6 @@
     {
       "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\anime-note-taking.gif",
       "PackagePath": "staticwebassets\\lib\\images\\anime-note-taking.gif"
-    },
-    {
-      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\notebook (1).png",
-      "PackagePath": "staticwebassets\\lib\\images\\notebook (1).png"
-    },
-    {
-      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\notebook (2).png",
-      "PackagePath": "staticwebassets\\lib\\images\\notebook (2).png"
-    },
-    {
-      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\notebook (3).png",
-      "PackagePath": "staticwebassets\\lib\\images\\notebook (3).png"
-    },
-    {
-      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\notebook (4).png",
-      "PackagePath": "staticwebassets\\lib\\images\\notebook (4).png"
-    },
-    {
-      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\notebook.png",
-      "PackagePath": "staticwebassets\\lib\\images\\notebook.png"
-    },
-    {
-      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\notepad (1).png",
-      "PackagePath": "staticwebassets\\lib\\images\\notepad (1).png"
-    },
-    {
-      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\notepad (2).png",
-      "PackagePath": "staticwebassets\\lib\\images\\notepad (2).png"
-    },
-    {
-      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\notepad.png",
-      "PackagePath": "staticwebassets\\lib\\images\\notepad.png"
-    },
-    {
-      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\notes (1).png",
-      "PackagePath": "staticwebassets\\lib\\images\\notes (1).png"
-    },
-    {
-      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\notes (2).png",
-      "PackagePath": "staticwebassets\\lib\\images\\notes (2).png"
-    },
-    {
-      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\notes.png",
-      "PackagePath": "staticwebassets\\lib\\images\\notes.png"
-    },
-    {
-      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\pencil.png",
-      "PackagePath": "staticwebassets\\lib\\images\\pencil.png"
-    },
-    {
-      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\post-it.png",
-      "PackagePath": "staticwebassets\\lib\\images\\post-it.png"
-    },
-    {
-      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\sticky-notes.png",
-      "PackagePath": "staticwebassets\\lib\\images\\sticky-notes.png"
     },
     {
       "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
