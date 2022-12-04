@@ -229,8 +229,24 @@
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\Home Page background.png",
-      "PackagePath": "staticwebassets\\lib\\images\\Home Page background.png"
+      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\3.png",
+      "PackagePath": "staticwebassets\\lib\\images\\3.png"
+    },
+    {
+      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\7.jpg",
+      "PackagePath": "staticwebassets\\lib\\images\\7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\83913e_7d939c644d1f4a8c9220043d286f986b_mv2.png",
+      "PackagePath": "staticwebassets\\lib\\images\\83913e_7d939c644d1f4a8c9220043d286f986b_mv2.png"
+    },
+    {
+      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\87827291_p0.jpg",
+      "PackagePath": "staticwebassets\\lib\\images\\87827291_p0.jpg"
+    },
+    {
+      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\Cartoon2_land.jpg",
+      "PackagePath": "staticwebassets\\lib\\images\\Cartoon2_land.jpg"
     },
     {
       "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\JustInTime icon.png",
@@ -261,8 +277,56 @@
       "PackagePath": "staticwebassets\\lib\\images\\Zuko background.jpg"
     },
     {
+      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\anime-guitar-boy.jpg",
+      "PackagePath": "staticwebassets\\lib\\images\\anime-guitar-boy.jpg"
+    },
+    {
       "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\anime-note-taking.gif",
       "PackagePath": "staticwebassets\\lib\\images\\anime-note-taking.gif"
+    },
+    {
+      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\away_by_ricodz_deg3pfe.jpg",
+      "PackagePath": "staticwebassets\\lib\\images\\away_by_ricodz_deg3pfe.jpg"
+    },
+    {
+      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\bf82f6956a32819af48c2572243e8286.jpg",
+      "PackagePath": "staticwebassets\\lib\\images\\bf82f6956a32819af48c2572243e8286.jpg"
+    },
+    {
+      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\talking to myself.jpg",
+      "PackagePath": "staticwebassets\\lib\\images\\talking to myself.jpg"
+    },
+    {
+      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\train_lights_railway_city_metro_street-1845347.jpg",
+      "PackagePath": "staticwebassets\\lib\\images\\train_lights_railway_city_metro_street-1845347.jpg"
+    },
+    {
+      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\wallpaperflare.com_wallpaper (24).jpg",
+      "PackagePath": "staticwebassets\\lib\\images\\wallpaperflare.com_wallpaper (24).jpg"
+    },
+    {
+      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\wallpaperflare.com_wallpaper (26).jpg",
+      "PackagePath": "staticwebassets\\lib\\images\\wallpaperflare.com_wallpaper (26).jpg"
+    },
+    {
+      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\wallpaperflare.com_wallpaper (4).jpg",
+      "PackagePath": "staticwebassets\\lib\\images\\wallpaperflare.com_wallpaper (4).jpg"
+    },
+    {
+      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\wallpaperflare.com_wallpaper (41).jpg",
+      "PackagePath": "staticwebassets\\lib\\images\\wallpaperflare.com_wallpaper (41).jpg"
+    },
+    {
+      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\wallpaperflare.com_wallpaper (43).jpg",
+      "PackagePath": "staticwebassets\\lib\\images\\wallpaperflare.com_wallpaper (43).jpg"
+    },
+    {
+      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\work background.png",
+      "PackagePath": "staticwebassets\\lib\\images\\work background.png"
+    },
+    {
+      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\wp5565660.jpg",
+      "PackagePath": "staticwebassets\\lib\\images\\wp5565660.jpg"
     },
     {
       "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",

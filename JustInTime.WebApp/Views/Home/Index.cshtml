@@ -1,21 +1,35 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+<link rel="stylesheet" href="/css/homepage.css">
 
-<link rel="stylesheet" href="~/css/homepage.css" />
-<div class="text-center">
-    <img src="~/lib/images/Zuko background.jpg" width="100%" />
-    <h1 class="display-4">Welcome</h1>
+@*<div class="notes-for-fun">
+    <p>This the text  itself.</p>
+    <img src="~/lib/images/anime-guitar-boy.jpg"/>
+</div>@*
 
-    <!--this is for text on the site-->
-    <p>This is a note-taking website. You can use it for making your future plans, ideas, exploring and etc.</p>
+@**@
+@*  <p>This is a note-taking website. You can use it for making your future plans, ideas, exploring and etc.</p>
+*@
 
+<!--This is the first section-->
+<section class="first-section">
+<div class="card">
+    <img src="~/lib/images/work background.png">
+    <div class="details">
+        <div class="content">
+            <h2>Need to focus at work?<br></h2>
+            <h3>Stay focused in every conditionals.</h3>
+            <p>Is there a fire in your office, tsunami in your town, earthquake in your city? Don't care about it with our site you can stay focused all the time.</p>
+            <a class="home-button" asp-area="" asp-controller="Note" asp-action="Index">Notes</a>
+        </div>
+    </div>
+</div>
+</section>
+
+
+@*
     <!--Note Button-->
     <a class="home-button" asp-area="" asp-controller="Note" asp-action="Index">Notes</a>
     <br/>
-    <!--Note Button-->
-
-   @* <img src="lib/images/Spirited Away.jpg" alt="Spirited Away" width="500">  <!--this is just a background photo (the right way)   BUT I NEED TO CHANGE IT TO CALENDAR VIEW AND THERE WILL BE ANOTHER PHOTO-->*@
-
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+    <!--Note Button-->*@
