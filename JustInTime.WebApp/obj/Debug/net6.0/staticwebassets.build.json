@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Qt3jENeHIIrPVOF9LrABGuLA1YfovnzeJTLp6dbE4cE=",
+  "Hash": "BPOOkUZQirJzc8MfN+UFtZCn7kqVcXScqfeugU2MXNY=",
   "Source": "JustInTime.WebApp",
   "BasePath": "_content/JustInTime.WebApp",
   "Mode": "Default",
@@ -2278,6 +2278,23 @@
       "OriginalItemSpec": "wwwroot\\lib\\images\\Spirited Away.jpg"
     },
     {
+      "Identity": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\study background.jpg",
+      "SourceId": "JustInTime.WebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\",
+      "BasePath": "_content/JustInTime.WebApp",
+      "RelativePath": "lib/images/study background.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\images\\study background.jpg"
+    },
+    {
       "Identity": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\talking to myself.jpg",
       "SourceId": "JustInTime.WebApp",
       "SourceType": "Discovered",
@@ -2344,23 +2361,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\images\\wallpaperflare.com_wallpaper (26).jpg"
-    },
-    {
-      "Identity": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\wallpaperflare.com_wallpaper (4).jpg",
-      "SourceId": "JustInTime.WebApp",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\",
-      "BasePath": "_content/JustInTime.WebApp",
-      "RelativePath": "lib/images/wallpaperflare.com_wallpaper (4).jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\images\\wallpaperflare.com_wallpaper (4).jpg"
     },
     {
       "Identity": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\wallpaperflare.com_wallpaper (41).jpg",

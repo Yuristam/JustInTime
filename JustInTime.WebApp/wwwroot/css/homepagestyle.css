@@ -1,0 +1,105 @@
+﻿*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #fbe9e7;
+}
+
+.card {
+    position: relative;
+    width: 900px;  /*1000px*/ /*900px*/
+    height: 500px;  /*500px*/ /*550px*/ /*600px*/
+    background: #ffffff; /*#ffffff (also might be white color)*/
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    box-shadow: 10px 20px 40px rgba(0,0,0,0.25);
+    /*transition: 1s;*/
+}
+/*
+.card:nth-child(2){
+    margin: 25px;
+}*/
+/* ============================ HOVER means that (hover selector is used to select elements when you mouse over them) ====================================*/
+/*
+.card:hover {
+    transform: translateX(50%);
+}*/
+/*
+
+.card .imgBox {
+    position: absolute;
+    width: 200px;
+    z-index: 1;
+    transform-origin: left;
+    transform-style: preserve-3d;
+    background: #000;
+    transition: 1s;
+    box-shadow: 10px 20px 40px rgba(0,0,0,0.25);
+}
+*/
+
+/*.card:hover .imgBox {
+    transform: rotateY(-180deg);
+}*/
+/*
+.card .imgBox img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}*/
+    /*.card .imgBox img:nth-child(2) {
+        transform: rotateY(180deg);
+    }*/
+/*
+.card .imgBox .img: */
+/*
+.card .details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+   !* display: flex;*! !*without this text will be at the top fo the card*!
+    justify-content: center;
+    align-items: center;
+*/
+
+/*
+    .card .details .content {
+        color:aliceblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }*/
+/*
+.card .details .content h2 {
+    text-align: center;
+    font-weight: 700;
+    line-height: 1em;
+}*/
+    /*
+
+    .card .details .content h2 span {
+        color: #e21212;
+        font-size: 0.8em;
+    }
+    */
+
+/*.home-button {
+}
+*/
