@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "bRhswuYPDjRXXT8JbJUQa0/UK8VDUdTS+El7MWSJv38=",
+  "Hash": "7lLYKJQ0KkWh/SWun0AkbQicQi+ugESleO0q3oUTFqY=",
   "Source": "JustInTime.WebApp",
   "BasePath": "_content/JustInTime.WebApp",
   "Mode": "Default",
@@ -2210,6 +2210,23 @@
       "OriginalItemSpec": "wwwroot\\lib\\images\\JustInTime icon1.png"
     },
     {
+      "Identity": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\lofi-girl-study.jpg",
+      "SourceId": "JustInTime.WebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\",
+      "BasePath": "_content/JustInTime.WebApp",
+      "RelativePath": "lib/images/lofi-girl-study.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\images\\lofi-girl-study.jpg"
+    },
+    {
       "Identity": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\Spirited Away background.png",
       "SourceId": "JustInTime.WebApp",
       "SourceType": "Discovered",
@@ -2278,12 +2295,12 @@
       "OriginalItemSpec": "wwwroot\\lib\\images\\Spirited Away.jpg"
     },
     {
-      "Identity": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\study background 3243433.jpg",
+      "Identity": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\study background cosmo.jpg",
       "SourceId": "JustInTime.WebApp",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\",
       "BasePath": "_content/JustInTime.WebApp",
-      "RelativePath": "lib/images/study background 3243433.jpg",
+      "RelativePath": "lib/images/study background cosmo.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -2292,24 +2309,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\images\\study background 3243433.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\study background.jpg",
-      "SourceId": "JustInTime.WebApp",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\",
-      "BasePath": "_content/JustInTime.WebApp",
-      "RelativePath": "lib/images/study background.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\images\\study background.jpg"
+      "OriginalItemSpec": "wwwroot\\lib\\images\\study background cosmo.jpg"
     },
     {
       "Identity": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\talking to myself.jpg",
