@@ -20,6 +20,38 @@
     transform:();
 }*/
 
+    .card .imgBox {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        /*z-index: 1;*/   /*ставит на передний план*/
+        background: #fff;
+    }
+
+        /*.card .imgBox img {*/ /*may be there is no card*/
+            /*position: absolute;
+            top: 30px;*/ /*the same thing as below*/
+            /* left: 0; */ /*this is for moving photo left*/
+            /*right: -90px;*/ /*this is for moving photo right*/
+            /* width: 100%;*/ /*without this it won't be at the center (with this it will be at the center)*/
+            /*height: 100%;
+            object-fit: contain;*/ /*this is fit*/
+            /*border-radius: 2rem;
+            box-shadow: 10px 20px 40px rgba(0,0,0,0.55);
+        }*/
+
+
+        #AnimeGuitarBoy { /*may be there is no card*/
+            position: absolute;
+            top: 30px; /*the same thing as below*/
+            /* left: 0; */ /*this is for moving photo left*/
+            right: -90px; /*this is for moving photo right*/
+            /* width: 100%;*/ /*without this it won't be at the center (with this it will be at the center)*/
+            height: 100%;
+            object-fit: contain; /*this is fit*/
+            border-radius: 2rem;
+            box-shadow: 10px 20px 40px rgba(0,0,0,0.55);
+        }
 
 
     .card .details {
@@ -39,10 +71,59 @@
         align-items: center;
         flex-direction: column;
     }
-    .home-button{
-        text-decoration: none; /*это нужно, чтобы убрать подчекривающую линию в ссылках*/
-    }
+.home-button {
+    text-decoration: none; /*это нужно, чтобы убрать подчекривающую линию в ссылках*/
+    margin: 0 auto; /*кнопка посередине cards*/
+    float: none;    /*кнопка посередине cards*/
+    z-index: 1; /*на передний план(активируется кнопка)*/
+}
     .card .container {
-        color: darkgoldenrod; /*this is the color of the lastest text*/ /*also may be black or grey*/
+        color: black; /*this is the color of the lastest text*/ /*also may be black or grey*/
     }
-    
+
+    #mycardcontent3{
+        color:darkgoldenrod;
+    }
+#mycardcontainer3 { /*# means that it will effect only card with this id(specific card(3))*/
+    color: #000000; /*this is the color of the lastest text*/ /*also may be black or grey*/
+    left: 0;
+}
+#mycard3button{
+    margin-bottom: 40px;
+}
+#mycard3list{
+    display: list-item;    /*это нужно, чтобы управлять местополжением надписи*/ /*list item ставит точки (как todo list)*/
+    position: relative;    /*это нужно, чтобы управлять местополжением надписи*/
+    font-family:cursive;
+    margin-top: 10px;      /*отступ сверху*/
+    left: 100px;           /*это для того, чтобы надпись была слева (а не по центру)*/
+    align-self:flex-start; /*чтобы выпррямить справа*/
+    color: black;          /*цвет надписи*/
+}
+
+.home-button {
+    padding: 10px;
+    width: 220px;
+    font-family: "montserrat",sans-serif;
+    text-transform: uppercase;
+    border-radius: 6px;
+    /*cursor: pointer;*/
+    color: #fff;
+    background-size: 230%;
+    transition: 0.6s;
+}
+
+#mycard1button {
+    background-image: linear-gradient(to left,#FFC312,#EE5A24,#FFC312);
+}
+#mycard2button {
+    background-image: linear-gradient(to left,#C4E538,#009432,#C4E538);
+}
+#mycard3button {
+    background-image: linear-gradient(to left,#12CBC4,#0652DD,#12CBC4);
+}/*
+#mycard1button*/
+
+.home-button:hover {
+    background-position: right;
+}
