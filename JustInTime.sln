@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JustInTime.DAL", "JustInTim
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JustInTime.BLL", "JustInTime.BLL\JustInTime.BLL.csproj", "{B46DBB39-722C-4496-B410-9264FD242008}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JustInTime.WebApp", "JustInTime.WebApp\JustInTime.WebApp.csproj", "{61E063B8-4F11-4312-B535-79AA4E0C1CF7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JustInTime.WebApp", "JustInTime.WebApp\JustInTime.WebApp.csproj", "{61E063B8-4F11-4312-B535-79AA4E0C1CF7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
