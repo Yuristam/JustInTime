@@ -3,13 +3,37 @@
 @{
     ViewData["Title"] = "Index";
 }
-<h1>My CheckLists List</h1>
+<link rel="stylesheet" href="~/css/checklistindexstyle.css" />
+
+
+<h1 id="pageTitle">My CheckLists List</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a id="createButton" asp-action="Create">Create New</a>
 </p>
 
+<!--==================================this is first card=======================================-->
+@foreach (var item in Model)
+{
+    <a class="home-button" id="mycard1button" asp-area="" asp-controller="Note" asp-action="Index">
+        <div class="card">
+            <div class="details">
+                <div class="content">
+                    <h3>
+                        @Html.DisplayFor(modelItem => item.Title)
+                    </h3>
+                    <h6>
+                        @Html.DisplayFor(modelItem => item.DateCreated)
+                    </h6>
+                    <p>Click Me</p>
+                </div>
+            </div>
 
+        </div>
+    </a>
+}
+<!--==================================this is first card=======================================-->
+@*
 <table>
     <thead>
         <tr>
@@ -38,4 +62,4 @@
             </tr>
         }
     </tbody>
-</table>
+</table>*@

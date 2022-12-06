@@ -1,0 +1,81 @@
+﻿body {
+    background-image: linear-gradient(to left,#FDA7DF,#9980FA,#FDA7DF
+    );
+    color: aliceblue;
+}
+/*
+    body::before {
+        content: '';
+        position: absolute;                                                 два шара мадары
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(#e91e61,#ffc107);
+        clip-path: circle(22% at 30% 20%);
+    }
+
+    body::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(#ffffff,#da00ff);
+        clip-path: circle(20% at 70% 90%);
+    }
+*/
+#pageTitle{
+    text-align:center;
+}
+
+.card {
+    margin: 40px;
+    margin-top: 10%; /*для выпрямления*/
+    margin-bottom: -5%; /*для выпрямления*/
+    width: 240px; /*250px*/ /*30%*/
+    height: 100px; /*150px*/
+    display: inline-block;
+    backdrop-filter: blur(15px);  /*эффект блюра*/
+    background: rgba(255,255,255,0.05); /*the color of card*/
+    color: aliceblue;
+    box-shadow: 10px 20px 40px rgba(0,0,0,0.25);
+    border: 0;
+    border-radius: 0.5rem;
+    /* transition: 1s;*/
+}
+    .card .details .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+#createButton {
+    margin-top: 20px; 
+    position: absolute;
+   left:45%;
+    padding: 15px;
+    width: 150px;
+    font-family: "montserrat",sans-serif;
+    text-transform: uppercase;
+    border-radius: 15px;
+    color: #fff;
+    background-size: 220%;
+    transition: 0.6s;
+    background-image: linear-gradient(to left,#12CBC4,#0652DD,#12CBC4);
+    text-decoration: none; /*это нужно, чтобы убрать подчекривающую линию в ссылках*/
+    z-index: 1; /*на передний план(активируется кнопка)*/
+    text-align: center; /*ставит текст на центр*/
+}
+
+#createButton:hover {
+    background-position: right;
+}
+.home-button {
+
+    text-decoration: none; /*это нужно, чтобы убрать подчекривающую линию в ссылках*/
+    display: contents; /*для правильного размера поля действия кнопки*/
+
+}
