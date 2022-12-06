@@ -111,6 +111,7 @@
     color: #fff;
     background-size: 230%;
     transition: 0.6s;
+    text-align: center; /*ставит текст на центр*/
 }
 
 #mycard1button {
