@@ -1,4 +1,4 @@
-﻿@using JustInTime.DAL.Domain.Enums;
+﻿@*@using JustInTime.DAL.Domain.Enums;*@
 @model JustInTime.DAL.Domain.Entities.Note
 
 @{
@@ -24,15 +24,10 @@
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ColorHex" class="control-label"></label>
-                <input asp-for="ColorHex" class="form-control" />
-                <span asp-validation-for="ColorHex" class="text-danger"></span>
+                <label asp-for="Type" class="control-label"></label>
+                <input asp-for="Type" class="form-control" />
+                <span asp-validation-for="Type" class="text-danger"></span>
             </div>
-            @*<div class="form-group">
-                <label asp-for="NoteType" class="control-label"></label>
-                <input asp-for="NoteType" class="form-control" />
-                <span asp-validation-for="NoteType" class="text-danger"></span>
-            </div>*@
             @*
             <div class="form-group">
             <select asp-for="NoteType" asp-items="@ViewBag.States">
@@ -42,7 +37,7 @@
                 <option>Important</option>
                 <option>Temporary</option>
             </select>
-            </div>*@
+            </div>*@@*
             <div class="form-group">
                 <label asp-for="NoteType" class="col-md-2 control-label"></label>
                 <div class="col-md-10">
@@ -51,7 +46,7 @@
                     </select>
                     <span asp-validation-for="NoteType" class="text-danger" />
                 </div>
-            </div>
+            </div>*@
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>

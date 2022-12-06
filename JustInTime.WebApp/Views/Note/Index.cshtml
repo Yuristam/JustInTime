@@ -83,7 +83,7 @@
                     @Html.DisplayNameFor(model => model.DateCreated)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.NoteType)
+                    @Html.DisplayNameFor(model => model.Type)
                 </th>
             </tr>
         </thead>
@@ -101,8 +101,9 @@
                         @Html.DisplayFor(modelItem => item.DateCreated)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.NoteType)
+                        @Html.DisplayFor(modelItem => item.Type)
                     </td>
+                    <td>
                     <td>
                         <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
                         <a asp-action="Details" asp-route-id="@item.Id">Details</a> |

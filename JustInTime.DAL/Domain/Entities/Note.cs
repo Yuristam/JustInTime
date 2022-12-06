@@ -1,4 +1,4 @@
-﻿using JustInTime.DAL.Domain.Enums;
+﻿/*using JustInTime.DAL.Domain.Enums;*/
 using System.ComponentModel.DataAnnotations;
 
 namespace JustInTime.DAL.Domain.Entities
@@ -11,13 +11,24 @@ namespace JustInTime.DAL.Domain.Entities
         }
 
         public int Id { get; set; }
-        [Required]                               // what the fuck is this?
+        [Required]
         [MaxLength(120)]
         public string Title { get; set; }
         public string? Description { get; set; }
-        public virtual List<ColorHex> ColorHex { get; set; } /*= new List<ColorHex>();*/ // for the color of notes (in the future in Frontend)
         public DateTime DateCreated { get; set; }  // the day and time when the note was created (it will create date automatically)
-        public virtual List<NoteType> NoteType { get; set; }/* = new List<NoteType>();*/ // the type of notes (Urgent, temporary and so on)
+        public virtual Type Type { get; set; }
 
+    }
+
+    public enum Type
+    {
+        [Display(Name = "Urgent")]
+        Urgent = 1,
+        [Display(Name = "Temporary")]
+        Temporary = 2,
+        [Display(Name = "Important")]
+        Important = 3,
+        [Display(Name = "Ordinary")]
+        Ordinary = 4,
     }
 }

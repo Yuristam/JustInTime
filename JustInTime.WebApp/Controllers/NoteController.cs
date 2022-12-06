@@ -1,12 +1,8 @@
 ﻿using JustInTime.DAL.Database.Contexts;
 using JustInTime.DAL.Domain.Entities;
-using JustInTime.DAL.Domain.Enums;
-using JustInTime.WebApp.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using System.ComponentModel.DataAnnotations;
 
 namespace JustInTime.WebApp.Controllers
 {
@@ -122,7 +118,7 @@ namespace JustInTime.WebApp.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Title,Description,ColorHex,DateCreated,NoteType,Id")] Note note)
+        public async Task<IActionResult> Create([Bind("Title,Description,DateCreated,Type,Id")] Note note)
         {
             if (ModelState.IsValid)
             {
@@ -184,7 +180,7 @@ namespace JustInTime.WebApp.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Title,Description,ColorHex,DateCreated,NoteType,Id")] Note note)
+        public async Task<IActionResult> Edit(int id, [Bind("Title,Description,DateCreated,Type,Id")] Note note)
         {
             if (id != note.Id)
             {

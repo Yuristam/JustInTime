@@ -1,22 +1,28 @@
 using JustInTime.DAL.Database.Contexts;
+using JustInTime.WebApp.Areas;
 using JustInTime.WebApp.Areas.Identity.Data;
+using JustInTime.WebApp.Controllers;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using System;
 
 var builder = WebApplication.CreateBuilder(args);
-
 var connectionString = builder.Configuration.GetConnectionString("IdentityContextConnection") ?? throw new InvalidOperationException("Connection string 'IdentityContextConnection' not found.");
 
+builder.Services.AddTransient<IShortedUserController, ShortenUserController>();
 builder.Services.AddDbContext<IdentityContext>(options =>
     options.UseSqlServer(connectionString));
-
-builder.Services.AddDefaultIdentity<JustInTimeUser>(options => options.SignIn.RequireConfirmedAccount = true)
-    .AddEntityFrameworkStores<IdentityContext>();
+builder.Services.AddRazorPages();
 
 /*
+builder.Services.AddDefaultIdentity<JustInTimeUser>(options => options.SignIn.RequireConfirmedAccount = true)
+    .AddEntityFrameworkStores<IdentityContext>();
+*/
+
 builder.Services.AddIdentity<JustInTimeUser, IdentityRole>()
             .AddEntityFrameworkStores<IdentityContext>()
-            .AddDefaultTokenProviders()
-            .AddDefaultUI();*/
+            .AddDefaultTokenProviders();
+            /*.AddDefaultUI();*/
 
 
 
