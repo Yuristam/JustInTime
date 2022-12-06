@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\css\\calendarstyle.css"
     },
     {
+      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\css\\checklistindexstyle.css",
+      "PackagePath": "staticwebassets\\css\\checklistindexstyle.css"
+    },
+    {
       "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\css\\dycalendar.css",
       "PackagePath": "staticwebassets\\css\\dycalendar.css"
     },
