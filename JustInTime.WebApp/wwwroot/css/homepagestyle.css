@@ -74,8 +74,9 @@
 .home-button {
     text-decoration: none; /*это нужно, чтобы убрать подчекривающую линию в ссылках*/
     margin: 0 auto; /*кнопка посередине cards*/
-    float: none;    /*кнопка посередине cards*/
+    float: none; /*кнопка посередине cards*/
     z-index: 1; /*на передний план(активируется кнопка)*/
+    text-align: center; /*ставит текст на центр*/
 }
     .card .container {
         color: black; /*this is the color of the lastest text*/ /*also may be black or grey*/
@@ -95,7 +96,6 @@
     display: list-item;    /*это нужно, чтобы управлять местополжением надписи*/ /*list item ставит точки (как todo list)*/
     position: relative;    /*это нужно, чтобы управлять местополжением надписи*/
     font-family:cursive;
-    margin-top: 10px;      /*отступ сверху*/
     left: 100px;           /*это для того, чтобы надпись была слева (а не по центру)*/
     align-self:flex-start; /*чтобы выпррямить справа*/
     color: black;          /*цвет надписи*/
@@ -111,7 +111,6 @@
     color: #fff;
     background-size: 230%;
     transition: 0.6s;
-    text-align: center; /*ставит текст на центр*/
 }
 
 #mycard1button {
