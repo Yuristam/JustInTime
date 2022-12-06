@@ -3619,7 +3619,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.10"
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.10",
+          "Microsoft.Extensions.Identity.Stores": "6.0.10"
         },
         "compile": {
           "bin/placeholder/JustInTime.DAL.dll": {}
@@ -10286,7 +10287,7 @@
       "projectName": "JustInTime.WebApp",
       "projectPath": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\JustInTime.WebApp.csproj",
       "packagesPath": "C:\\Users\\lmega\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lmega\\Source\\Repos\\JustInTime\\JustInTime.WebApp\\obj\\",
+      "outputPath": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

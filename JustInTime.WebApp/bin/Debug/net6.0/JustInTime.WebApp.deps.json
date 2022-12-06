@@ -2313,7 +2313,8 @@
       },
       "JustInTime.DAL/1.0.0": {
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.10"
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.10",
+          "Microsoft.Extensions.Identity.Stores": "6.0.10"
         },
         "runtime": {
           "JustInTime.DAL.dll": {}

@@ -1,0 +1,41 @@
+﻿@model IEnumerable<JustInTime.DAL.Domain.Entities.CheckList>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<h1>My CheckLists List</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+
+<table>
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateCreated)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem=> item.DateCreated)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.CheckListId">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@item.CheckListId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
