@@ -58,10 +58,5 @@
 
     text-decoration: none; /*это нужно, чтобы убрать подчекривающую линию в ссылках*/
     display: contents; /*для правильного размера поля действия кнопки*/
-
-}
-
-a{
-    text-decoration: none;
-    color:aliceblue;
+    color: aliceblue;
 }

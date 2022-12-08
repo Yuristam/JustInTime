@@ -20,72 +20,75 @@ namespace JustInTime.WebApp.Controllers
 
         // GET: NOTES (ALL NOTES)
         [Authorize]
-
-        /*  public async Task<IActionResult> Index(string noteType, string searchString)
-          {
-              // Use LINQ to get list of genres.
-              IQueryable<NoteTypes> typeQuery = from n in _context.Notes
-                                              orderby n.NoteType
-                                              select n.NoteType;
-              var notes = from n in _context.Notes
-                           select n;
-
-              if (!string.IsNullOrEmpty(searchString))
-              {
-                  notes = notes.Where(s => s.Title!.Contains(searchString));
-              }
-
-              if (!string.IsNullOrEmpty(noteType))
-              {
-                  notes = notes.Where(x => x.Type == noteType);
-              }
-
-              var noteTypeVM = new NoteTypeViewModel
-              {
-                  Types = new SelectList(await typeQuery.Distinct().ToListAsync()),
-                  Notes = await notes.ToListAsync()
-              };
-
-              return View(noteTypeVM);
-          }*/
-
-
-
-
-        public async Task<IActionResult> Index(string noteType, string searchString)
+        public async Task<IActionResult> Index(string sortOrder)
         {
-            // Use LINQ to get list of genres.
-            IQueryable<DAL.Domain.Entities.Type> genreQuery = from n in _context.Notes
-                                            orderby n.Type
-                                            select n.Type;
+            ViewData["NameSortParm"] = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+            ViewData["DateSortParm"] = sortOrder == "Date" ? "date_desc" : "Date";
             var notes = from n in _context.Notes
-                         select n;
-
-            if (!string.IsNullOrEmpty(searchString))
+                           select n;
+            switch (sortOrder)
             {
-                notes = notes.Where(s => s.Title!.Contains(searchString));
+                case "name_desc":
+                    notes = notes.OrderByDescending(n => n.Title);
+                    break;
+                case "Date":
+                    notes = notes.OrderBy(n => n.DateCreated);
+                    break;
+                case "date_desc":
+                    notes = notes.OrderByDescending(n => n.DateCreated);
+                    break;
+                default:
+                    notes = notes.OrderBy(n => n.Title);
+                    break;
             }
-
-            if (!string.IsNullOrEmpty(noteType))
-            {
-                notes = notes.Where(x => x.Type.ToString("Temporary") == noteType);
-            }
-
-            var noteTypeVM = new NoteTypeViewModel
-            {
-                Types = new SelectList(await genreQuery.Distinct().ToListAsync()),
-                Notes = await notes.ToListAsync()
-            };
-
-            return View(noteTypeVM);
+            return View(await notes.AsNoTracking().ToListAsync());
         }
 
 
 
 
-        // this is the beginning of the search method
 
-        /*public async Task<IActionResult> Index(string searchString)
+
+
+
+        //filter
+
+        /*
+                public async Task<IActionResult> Index(string noteType, string searchString)
+                {
+                    // Use LINQ to get list of genres.
+                    IQueryable<DAL.Domain.Entities.Type> genreQuery = from n in _context.Notes
+                                                                      orderby n.Type
+                                                                      select n.Type;
+                    var notes = from n in _context.Notes
+                                select n;
+
+
+                    if (!string.IsNullOrEmpty(searchString))
+                    {
+                        notes = notes.Where(s => s.Title!.Contains(searchString));
+                    }
+
+                    if (!string.IsNullOrEmpty(noteType))
+                    {
+                        notes = notes.Where(x => x.Type.ToString() == noteType);
+                    }
+
+                    var noteTypeVM = new NoteTypeViewModel
+                    {
+                        Types = new SelectList(await genreQuery.Distinct().ToListAsync()),
+                        Notes = await notes.ToListAsync()
+                    };
+
+                    return View(noteTypeVM);
+                }
+
+        */
+
+
+        // this is the beginning of the search method
+/*
+        public async Task<IActionResult> Index(string searchString)
         {
 
 
@@ -105,16 +108,6 @@ namespace JustInTime.WebApp.Controllers
         }*/
 
         //this is the end of search method
-
-
-
-
-
-
-
-
-
-        // return View(await _context.Notes.ToListAsync());     // INDEX (in Views\Note). This View is showing table of notes(i guess)
 
 
         // GET: Note/Details/5   (NOTE BY ID)
