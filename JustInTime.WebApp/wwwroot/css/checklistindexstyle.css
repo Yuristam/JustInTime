@@ -1,31 +1,8 @@
 ﻿body {
-    background-image: linear-gradient(to left,#FDA7DF,#9980FA,#FDA7DF
-    );
+    background-image: url("../lib/images/train background.jpg");
     color: aliceblue;
 }
-/*
-    body::before {
-        content: '';
-        position: absolute;                                                 два шара мадары
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(#e91e61,#ffc107);
-        clip-path: circle(22% at 30% 20%);
-    }
 
-    body::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(#ffffff,#da00ff);
-        clip-path: circle(20% at 70% 90%);
-    }
-*/
 #pageTitle{
     text-align:center;
 }
@@ -43,14 +20,18 @@
     box-shadow: 10px 20px 40px rgba(0,0,0,0.25);
     border: 0;
     border-radius: 0.5rem;
-    /* transition: 1s;*/
+     transition: 0.5s;
 }
+    .card:hover {
+        transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */ /*увеличивает размер*/
+    }
     .card .details .content {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
     }
+
 
 #createButton {
     margin-top: 20px; 
@@ -78,4 +59,9 @@
     text-decoration: none; /*это нужно, чтобы убрать подчекривающую линию в ссылках*/
     display: contents; /*для правильного размера поля действия кнопки*/
 
+}
+
+a{
+    text-decoration: none;
+    color:aliceblue;
 }
