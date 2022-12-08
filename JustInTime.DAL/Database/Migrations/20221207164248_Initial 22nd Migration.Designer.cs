@@ -4,6 +4,7 @@ using JustInTime.DAL.Database.Contexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace JustInTime.DAL.Migrations
 {
     [DbContext(typeof(NotesDbContext))]
-    partial class NotesDbContextModelSnapshot : ModelSnapshot
+    [Migration("20221207164248_Initial 22nd Migration")]
+    partial class Initial22ndMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -40,7 +42,7 @@ namespace JustInTime.DAL.Migrations
 
                     b.HasKey("CheckListId");
 
-                    b.ToTable("CheckLists", (string)null);
+                    b.ToTable("CheckLists");
                 });
 
             modelBuilder.Entity("JustInTime.DAL.Domain.Entities.Note", b =>
@@ -67,7 +69,7 @@ namespace JustInTime.DAL.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Notes", (string)null);
+                    b.ToTable("Notes");
                 });
 
             modelBuilder.Entity("JustInTime.DAL.Domain.Entities.ToDo", b =>
@@ -96,7 +98,7 @@ namespace JustInTime.DAL.Migrations
 
                     b.HasIndex("CheckListId");
 
-                    b.ToTable("ToDos", (string)null);
+                    b.ToTable("ToDos");
                 });
 
             modelBuilder.Entity("JustInTime.DAL.Domain.Identity.ShortenUser", b =>
@@ -110,7 +112,7 @@ namespace JustInTime.DAL.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Users", (string)null);
+                    b.ToTable("Users");
                 });
 
             modelBuilder.Entity("JustInTime.DAL.Domain.Entities.ToDo", b =>

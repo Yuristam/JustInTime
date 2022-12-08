@@ -12,10 +12,10 @@
     <a id="createButton" asp-action="Create">Create New</a>
 </p>
 
-<!--==================================this is first card=======================================-->
+<!--==================================this is CheckList card=======================================-->
 @foreach (var item in Model)
 {
-    <a class="home-button" id="mycard1button" asp-area="" asp-controller="Note" asp-action="Index">
+    <a class="home-button" id="mycard1button" asp-area="" asp-controller="ToDo" asp-action="Index">
         <div class="card">
             <div class="details">
                 <div class="content">
@@ -28,38 +28,8 @@
                     <p>Click Me</p>
                 </div>
             </div>
-
+            <a asp-action="Edit" asp-route-id="@item.CheckListId">Edit</a> |
+            <a asp-action="Delete" asp-route-id="@item.CheckListId">❌</a>
         </div>
     </a>
 }
-<!--==================================this is first card=======================================-->
-@*
-<table>
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Title)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DateCreated)
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Title)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem=> item.DateCreated)
-                </td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.CheckListId">Edit</a> |
-                    <a asp-action="Delete" asp-route-id="@item.CheckListId">Delete</a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>*@

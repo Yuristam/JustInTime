@@ -16,19 +16,20 @@ namespace JustInTime.DAL.Domain.Entities
         public string Title { get; set; }
         public string? Description { get; set; }
         public DateTime DateCreated { get; set; }  // the day and time when the note was created (it will create date automatically)
+        /*public string NoteType { get; set; } = Type.Format(string);*/
         public virtual Type Type { get; set; }
-
+  
     }
 
     public enum Type
     {
         [Display(Name = "Urgent")]
-        Urgent = 1,
+        Urgent,
         [Display(Name = "Temporary")]
-        Temporary = 2,
+        Temporary,
         [Display(Name = "Important")]
-        Important = 3,
+        Important,
         [Display(Name = "Ordinary")]
-        Ordinary = 4,
+        Ordinary,
     }
 }

@@ -33,6 +33,10 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\css\\toDoIndexStyle.css",
+      "PackagePath": "staticwebassets\\css\\toDoIndexStyle.css"
+    },
+    {
       "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
@@ -309,8 +313,8 @@
       "PackagePath": "staticwebassets\\lib\\images\\talking to myself.jpg"
     },
     {
-      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\train_lights_railway_city_metro_street-1845347.jpg",
-      "PackagePath": "staticwebassets\\lib\\images\\train_lights_railway_city_metro_street-1845347.jpg"
+      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\train background.jpg",
+      "PackagePath": "staticwebassets\\lib\\images\\train background.jpg"
     },
     {
       "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\wallpaperflare.com_wallpaper (24).jpg",

@@ -17,17 +17,13 @@ namespace JustInTime.DAL.Database.Contexts
 
         }
 
-        public virtual DbSet<Note> Notes { get; set; } // this is just ordinary note 
-        /*  public virtual DbSet<ToDo> ToDos { get; set; } // this is ToDo notes
-          public virtual DbSet<CheckList> CheckLists { get; set; } // this is the List of notes
-        */
+        public virtual DbSet<Note> Notes { get; set; } 
+        public DbSet<CheckList> CheckLists { get; set; }
+        public DbSet<ToDo> ToDos { get; set; }
         public DbSet<ShortenUser> Users { get; set; }
 
 
 
-
-        public DbSet<CheckList> CheckLists { get; set; }
-        public DbSet<ToDo> ToDos { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

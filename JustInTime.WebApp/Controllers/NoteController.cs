@@ -1,7 +1,9 @@
 ﻿using JustInTime.DAL.Database.Contexts;
 using JustInTime.DAL.Domain.Entities;
+using JustInTime.WebApp.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 
 namespace JustInTime.WebApp.Controllers
@@ -50,14 +52,40 @@ namespace JustInTime.WebApp.Controllers
 
 
 
+        public async Task<IActionResult> Index(string noteType, string searchString)
+        {
+            // Use LINQ to get list of genres.
+            IQueryable<DAL.Domain.Entities.Type> genreQuery = from n in _context.Notes
+                                            orderby n.Type
+                                            select n.Type;
+            var notes = from n in _context.Notes
+                         select n;
 
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                notes = notes.Where(s => s.Title!.Contains(searchString));
+            }
+
+            if (!string.IsNullOrEmpty(noteType))
+            {
+                notes = notes.Where(x => x.Type.ToString("Temporary") == noteType);
+            }
+
+            var noteTypeVM = new NoteTypeViewModel
+            {
+                Types = new SelectList(await genreQuery.Distinct().ToListAsync()),
+                Notes = await notes.ToListAsync()
+            };
+
+            return View(noteTypeVM);
+        }
 
 
 
 
         // this is the beginning of the search method
 
-        public async Task<IActionResult> Index(string searchString)
+        /*public async Task<IActionResult> Index(string searchString)
         {
 
 
@@ -74,7 +102,7 @@ namespace JustInTime.WebApp.Controllers
 
             // это Index(in Views/Notes folder). Внутри него идет кнопка поиска( и собсвенно сама функция поиска)
             return View(await notes.ToListAsync());
-        }
+        }*/
 
         //this is the end of search method
 
