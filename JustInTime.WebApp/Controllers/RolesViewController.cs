@@ -1,4 +1,4 @@
-﻿/*using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace JustInTime.WebApp.Controllers
@@ -23,4 +23,3 @@ namespace JustInTime.WebApp.Controllers
         }
     }
 }
-*/
