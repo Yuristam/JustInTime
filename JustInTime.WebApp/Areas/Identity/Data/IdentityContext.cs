@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace JustInTime.WebApp.Areas.Identity.Data;
 
-public class IdentityContext : IdentityDbContext<JustInTimeUser>
+public class IdentityContext : IdentityDbContext<JustInTimeUser,IdentityRole, string>
 {
     public IdentityContext(DbContextOptions<IdentityContext> options)
         : base(options)

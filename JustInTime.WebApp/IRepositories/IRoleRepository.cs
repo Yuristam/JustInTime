@@ -1,4 +1,4 @@
-﻿/*using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
 
 namespace JustInTime.WebApp.IRepositories
 {
@@ -7,4 +7,3 @@ namespace JustInTime.WebApp.IRepositories
         ICollection<IdentityRole> GetRoles();
     }
 }
-*/

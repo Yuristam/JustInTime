@@ -1,4 +1,4 @@
-﻿/*using JustInTime.WebApp.Areas.Identity.Data;
+﻿using JustInTime.WebApp.Areas.Identity.Data;
 using JustInTime.WebApp.IRepositories;
 using JustInTime.WebApp.Models;
 using Microsoft.AspNetCore.Identity;
@@ -18,16 +18,7 @@ namespace JustInTime.WebApp.Controllers
             _signInManager = signInManager;
         }
 
-        public IActionResult Index()
-        {
-            var users = _unitOfWork.User.GetUsers();
-            return View(users);
-        }
-        public IActionResult Edit(string id) {
-            return Content(id);
-        }
-
-        *//*public async Task<IActionResult> Edit(string id)
+        public async Task<IActionResult> Edit(string id)
         {
             var user = _unitOfWork.User.GetUser(id);
             var roles = _unitOfWork.Role.GetRoles();
@@ -47,7 +38,7 @@ namespace JustInTime.WebApp.Controllers
             };
 
             return View(vm);
-        }*//*
+        }
 
         [HttpPost]
         public async Task<IActionResult> OnPostAsync(EditUserViewModel data)
@@ -107,4 +98,3 @@ namespace JustInTime.WebApp.Controllers
         }
     }
 }
-*/
