@@ -228,8 +228,28 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90ZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lmega/source/repos/JustInTime/JustInTime.WebApp/Views/RolesView/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNWaWV3XEluZGV4LmNzaHRtbA==
+[C:/Users/lmega/source/repos/JustInTime/JustInTime.WebApp/Views/RoleViews/GroupAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZVZpZXdzXEdyb3VwQWRtaW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lmega/source/repos/JustInTime/JustInTime.WebApp/Views/RoleViews/GroupMember.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZVZpZXdzXEdyb3VwTWVtYmVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lmega/source/repos/JustInTime/JustInTime.WebApp/Views/RoleViews/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZVZpZXdzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lmega/source/repos/JustInTime/JustInTime.WebApp/Views/Role/GroupAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZVxHcm91cEFkbWluLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lmega/source/repos/JustInTime/JustInTime.WebApp/Views/Role/GroupMember.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZVxHcm91cE1lbWJlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lmega/source/repos/JustInTime/JustInTime.WebApp/Views/Role/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/lmega/source/repos/JustInTime/JustInTime.WebApp/Views/Shared/Error.cshtml]

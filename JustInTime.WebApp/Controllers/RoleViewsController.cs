@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace JustInTime.WebApp.Controllers
 {
-    public class RolesViewController : Controller
+    public class RoleViewsController : Controller
     {
         public IActionResult Index()
         {
@@ -11,13 +11,13 @@ namespace JustInTime.WebApp.Controllers
         }
 
         [Authorize(Policy = Constants.Policies.RequireMember)]
-        public IActionResult Manager()
+        public IActionResult GroupMember()
         {
             return View();
         }
 
         [Authorize(Policy = "RequireAdmin")]
-        public IActionResult Admin()
+        public IActionResult GroupAdmin()
         {
             return View();
         }
