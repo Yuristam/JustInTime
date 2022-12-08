@@ -2,9 +2,9 @@ using JustInTime.DAL.Database.Contexts;
 using JustInTime.WebApp;
 using JustInTime.WebApp.Areas;
 using JustInTime.WebApp.Areas.Identity.Data;
-using JustInTime.WebApp.Controllers;/*
+using JustInTime.WebApp.Controllers;
 using JustInTime.WebApp.IRepositories;
-using JustInTime.WebApp.Repositories;*/
+using JustInTime.WebApp.Repositories;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -47,8 +47,8 @@ builder.Services.AddControllersWithViews();
 AddAuthorizationPolicies();
 
 #endregion
-/*
-AddScoped();*/
+
+AddScoped();
 
 
 var app = builder.Build();
@@ -93,10 +93,10 @@ void AddAuthorizationPolicies()
         options.AddPolicy(Constants.Policies.RequireMember, policy => policy.RequireRole(Constants.Roles.GroupMember));
     });
 }
-/*
+
 void AddScoped()
 {
     builder.Services.AddScoped<IUserRepository, UserRepository>();
     builder.Services.AddScoped<IRoleRepository, RoleRepository>();
     builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
-}*/
+}

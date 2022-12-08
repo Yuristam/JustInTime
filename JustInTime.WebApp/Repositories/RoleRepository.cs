@@ -1,14 +1,14 @@
-﻿/*using JustInTime.WebApp.IRepositories;
+﻿using JustInTime.WebApp.Areas.Identity.Data;
+using JustInTime.WebApp.IRepositories;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace JustInTime.WebApp.Repositories
 {
     public class RoleRepository : IRoleRepository
     {
-        private readonly IdentityDbContext _context;
+        private readonly IdentityContext _context;
 
-        public RoleRepository(IdentityDbContext context)
+        public RoleRepository(IdentityContext context)
         {
             _context = context;
         }
@@ -19,4 +19,3 @@ namespace JustInTime.WebApp.Repositories
         }
     }
 }
-*/
