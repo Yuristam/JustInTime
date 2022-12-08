@@ -1,6 +1,6 @@
 ﻿namespace JustInTime.WebApp
 {
-    public class Constants
+    public static class Constants
     {
         public static class Roles
         {

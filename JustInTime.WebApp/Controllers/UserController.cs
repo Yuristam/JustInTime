@@ -18,6 +18,12 @@ namespace JustInTime.WebApp.Controllers
             _signInManager = signInManager;
         }
 
+        public IActionResult Index()
+        {
+            var users = _unitOfWork.User.GetUsers();
+            return View(users);
+        }
+
         public async Task<IActionResult> Edit(string id)
         {
             var user = _unitOfWork.User.GetUser(id);

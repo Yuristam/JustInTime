@@ -5,7 +5,7 @@
 
 <div class="text-center">
     <h1 class="display-4">Users</h1>
-    <img src="~/lib/images/user-icon.png" />
+    <img src="~/lib/images/user-icon.png" width="150px" />
     @if (@Model != null && @Model.Any())
     {
         <table class="table">
@@ -23,9 +23,9 @@
                 {
                     <tr>
                         <th scope="row">@user.Id</th>
-                        <td>user.FirstName</td>
-                        <td>user.LastName</td>
-                        <td>user.Email</td>
+                        <td>@user.FirstName</td>
+                        <td>@user.LastName</td>
+                        <td>@user.Email</td>
                         <td>
                             <a asp-controller="User" asp-action="Edit" asp-route-id="@user.Id">Edit</a>
                         </td>
@@ -36,4 +36,5 @@
     }
 </div>
 
-<div class="text-center"></div>
+<div class="text-center">
+</div>

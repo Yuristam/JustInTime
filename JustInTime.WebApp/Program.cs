@@ -11,9 +11,8 @@ using System;
 
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("IdentityContextConnection") ?? throw new InvalidOperationException("Connection string 'IdentityContextConnection' not found.");
-/*
-builder.Services.AddTransient<IShortedUserController, ShortenUserController>();
-*/builder.Services.AddDbContext<IdentityContext>(options =>
+
+builder.Services.AddDbContext<IdentityContext>(options =>
     options.UseSqlServer(connectionString));
 
 
@@ -66,9 +65,8 @@ app.UseStaticFiles();
 
 app.UseRouting();
 app.UseAuthentication();
-
 app.UseAuthorization();
-
+/*
 app.UseEndpoints(e =>
 {
     e.MapRazorPages();
@@ -76,7 +74,8 @@ app.UseEndpoints(e =>
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
-});
+});*/
+app.MapRazorPages();
 
 
 app.Run();

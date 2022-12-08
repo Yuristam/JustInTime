@@ -11,14 +11,14 @@ namespace JustInTime.WebApp.Controllers
             return View();
         }
         [Authorize(Policy = Constants.Policies.RequireAdmin)]
-        public IActionResult Manager()
+        public IActionResult GroupMember()
         {
             return View();
         }
 
         //[Authorize(Policy = "RequireAdmin")]
         [Authorize(Roles = $"{Constants.Roles.GroupAdmin},{Constants.Roles.GroupMember}")]
-        public IActionResult Admin()
+        public IActionResult GroupAdmin()
         {
             return View();
         }
