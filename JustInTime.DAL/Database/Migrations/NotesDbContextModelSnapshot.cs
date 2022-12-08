@@ -22,6 +22,32 @@ namespace JustInTime.DAL.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
+            modelBuilder.Entity("JustInTime.DAL.Domain.Entities.CalendarEvent", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Color")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("End")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("Start")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Text")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Events");
+                });
+
             modelBuilder.Entity("JustInTime.DAL.Domain.Entities.CheckList", b =>
                 {
                     b.Property<int>("CheckListId")
@@ -40,7 +66,7 @@ namespace JustInTime.DAL.Migrations
 
                     b.HasKey("CheckListId");
 
-                    b.ToTable("CheckLists", (string)null);
+                    b.ToTable("CheckLists");
                 });
 
             modelBuilder.Entity("JustInTime.DAL.Domain.Entities.Note", b =>
@@ -67,7 +93,7 @@ namespace JustInTime.DAL.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Notes", (string)null);
+                    b.ToTable("Notes");
                 });
 
             modelBuilder.Entity("JustInTime.DAL.Domain.Entities.ToDo", b =>
@@ -96,21 +122,7 @@ namespace JustInTime.DAL.Migrations
 
                     b.HasIndex("CheckListId");
 
-                    b.ToTable("ToDos", (string)null);
-                });
-
-            modelBuilder.Entity("JustInTime.DAL.Domain.Identity.ShortenUser", b =>
-                {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("Nickname")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Users", (string)null);
+                    b.ToTable("ToDos");
                 });
 
             modelBuilder.Entity("JustInTime.DAL.Domain.Entities.ToDo", b =>

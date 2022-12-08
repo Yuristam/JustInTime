@@ -1,4 +1,5 @@
-﻿@model IEnumerable<JustInTime.DAL.Domain.Entities.Note>
+﻿@using JustInTime.BLL.Controllers;
+@model PaginatedList<JustInTime.DAL.Domain.Entities.Note>
 
 @{
     ViewData["Title"] = "Index";
@@ -59,31 +60,36 @@
 
 
     <!--this is search button-->
-    <form asp-controller="Note" asp-action="Index" method="get">
+    @*<form asp-controller="Note" asp-action="Index" method="get">
         <p>
             Title: <input type="text" name="SearchString" />
             <input type="submit" value="Filter" />
         </p>
-    </form>
+    </form>*@
 
     <!--this is search button end-->
-
+    <form asp-action="Index" method="get">
+        <div class="form-actions no-color">
+            <p>
+                Search: <input type="text" name="SearchString" value="@ViewData["CurrentFilter"]" />
+                <input type="submit" value="Search" class="btn btn-default" /> |
+                <a asp-action="Index">Back to Full List</a>
+            </p>
+        </div>
+    </form>
 
 
     <table class="hidden">
         <thead>
             <tr>
                 <th>
-                    <a asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParm"]">@Html.DisplayNameFor(model => model.Title)</a>
+                    <a asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Title</a>
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Description)
-                </th>
+                   <a asp-action="Index" asp-route-sortOrder="@ViewData["DateSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">DateCreated</a>
+            </th>
                 <th>
-                    <a asp-action="Index" asp-route-sortOrder="@ViewData["DateSortParm"]">@Html.DisplayNameFor(model => model.DateCreated)</a>
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Type)
+                    Type
                 </th>
             </tr>
         </thead>
@@ -95,9 +101,6 @@
                         @Html.DisplayFor(modelItem => item.Title)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.Description)
-                    </td>
-                    <td>
                         @Html.DisplayFor(modelItem => item.DateCreated)
                     </td>
                     <td>
@@ -106,13 +109,33 @@
                     <td>
                     <td>
                         <a asp-action="Edit" asp-route-id="@item.Id">🖋</a> |
-                        <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                        <a asp-action="Details" asp-route-id="@item.Id">Open</a> |
                         <a asp-action="Delete" asp-route-id="@item.Id">❌</a>
                     </td>
                 </tr>
             }
         </tbody>
     </table>
+
+    @{
+        var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+        var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+    }
+
+    <a asp-action="Index"
+       asp-route-sortOrder="@ViewData["CurrentSort"]"
+       asp-route-pageNumber="@(Model.PageIndex - 1)"
+       asp-route-currentFilter="@ViewData["CurrentFilter"]"
+       class="btn btn-default @prevDisabled">
+        Previous
+    </a>
+    <a asp-action="Index"
+       asp-route-sortOrder="@ViewData["CurrentSort"]"
+       asp-route-pageNumber="@(Model.PageIndex + 1)"
+       asp-route-currentFilter="@ViewData["CurrentFilter"]"
+       class="btn btn-default @nextDisabled">
+        Next
+    </a>
 </section>
 
 

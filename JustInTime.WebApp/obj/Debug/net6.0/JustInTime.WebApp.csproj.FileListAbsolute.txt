@@ -278,3 +278,6 @@ C:\Users\lmega\source\repos\JustInTime\JustInTime.WebApp\obj\Debug\net6.0\JustIn
 C:\Users\lmega\source\repos\JustInTime\JustInTime.WebApp\bin\Debug\net6.0\JustInTime.DAL.dll
 C:\Users\lmega\source\repos\JustInTime\JustInTime.WebApp\bin\Debug\net6.0\JustInTime.DAL.pdb
 C:\Users\lmega\source\repos\JustInTime\JustInTime.WebApp\bin\Debug\net6.0\Views\Shared\_Layout.cshtml
+C:\Users\lmega\source\repos\JustInTime\JustInTime.WebApp\bin\Debug\net6.0\JustInTime.BLL.dll
+C:\Users\lmega\source\repos\JustInTime\JustInTime.WebApp\bin\Debug\net6.0\JustInTime.BLL.pdb
+C:\Users\lmega\source\repos\JustInTime\JustInTime.WebApp\bin\Debug\net6.0\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll

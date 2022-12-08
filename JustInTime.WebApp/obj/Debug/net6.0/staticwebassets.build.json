@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "vXeTBKxZel3XCjxdkNwTFJ6ruq1lsDZa8QNPE2cU4f0=",
+  "Hash": "/xU1wRV1xWerJqKCOnB+nhbqvQGwcuxKphJAkeSj/2w=",
   "Source": "JustInTime.WebApp",
   "BasePath": "_content/JustInTime.WebApp",
   "Mode": "Default",
@@ -2057,6 +2057,23 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
     },
     {
+      "Identity": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\daypilot\\daypilot-all.min.js",
+      "SourceId": "JustInTime.WebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\",
+      "BasePath": "_content/JustInTime.WebApp",
+      "RelativePath": "lib/daypilot/daypilot-all.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\daypilot\\daypilot-all.min.js"
+    },
+    {
       "Identity": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\3.png",
       "SourceId": "JustInTime.WebApp",
       "SourceType": "Discovered",
@@ -2378,6 +2395,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\images\\train background.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\user-icon.png",
+      "SourceId": "JustInTime.WebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\",
+      "BasePath": "_content/JustInTime.WebApp",
+      "RelativePath": "lib/images/user-icon.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\images\\user-icon.png"
     },
     {
       "Identity": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\wallpaperflare.com_wallpaper (24).jpg",

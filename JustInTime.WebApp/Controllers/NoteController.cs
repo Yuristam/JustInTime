@@ -1,9 +1,8 @@
-﻿using JustInTime.DAL.Database.Contexts;
+﻿using JustInTime.BLL.Controllers;
+using JustInTime.DAL.Database.Contexts;
 using JustInTime.DAL.Domain.Entities;
-using JustInTime.WebApp.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 
 namespace JustInTime.WebApp.Controllers
@@ -20,12 +19,34 @@ namespace JustInTime.WebApp.Controllers
 
         // GET: NOTES (ALL NOTES)
         [Authorize]
-        public async Task<IActionResult> Index(string sortOrder)
+        public async Task<IActionResult> Index(
+    string sortOrder,
+    string currentFilter,
+    string searchString,
+    int? pageNumber)
         {
+            ViewData["CurrentSort"] = sortOrder;
             ViewData["NameSortParm"] = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
             ViewData["DateSortParm"] = sortOrder == "Date" ? "date_desc" : "Date";
+
+            if (searchString != null)
+            {
+                pageNumber = 1;
+            }
+            else
+            {
+                searchString = currentFilter;
+            }
+
+            ViewData["CurrentFilter"] = searchString;
+
             var notes = from n in _context.Notes
-                           select n;
+                        select n;
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                notes = notes.Where(n => n.Title.Contains(searchString)
+                                       || n.Description.Contains(searchString));
+            }
             switch (sortOrder)
             {
                 case "name_desc":
@@ -41,73 +62,9 @@ namespace JustInTime.WebApp.Controllers
                     notes = notes.OrderBy(n => n.Title);
                     break;
             }
-            return View(await notes.AsNoTracking().ToListAsync());
+            int pageSize = 10;
+            return View(await PaginatedList<Note>.CreateAsync(notes.AsNoTracking(), pageNumber ?? 1, pageSize));
         }
-
-
-
-
-
-
-
-
-        //filter
-
-        /*
-                public async Task<IActionResult> Index(string noteType, string searchString)
-                {
-                    // Use LINQ to get list of genres.
-                    IQueryable<DAL.Domain.Entities.Type> genreQuery = from n in _context.Notes
-                                                                      orderby n.Type
-                                                                      select n.Type;
-                    var notes = from n in _context.Notes
-                                select n;
-
-
-                    if (!string.IsNullOrEmpty(searchString))
-                    {
-                        notes = notes.Where(s => s.Title!.Contains(searchString));
-                    }
-
-                    if (!string.IsNullOrEmpty(noteType))
-                    {
-                        notes = notes.Where(x => x.Type.ToString() == noteType);
-                    }
-
-                    var noteTypeVM = new NoteTypeViewModel
-                    {
-                        Types = new SelectList(await genreQuery.Distinct().ToListAsync()),
-                        Notes = await notes.ToListAsync()
-                    };
-
-                    return View(noteTypeVM);
-                }
-
-        */
-
-
-        // this is the beginning of the search method
-/*
-        public async Task<IActionResult> Index(string searchString)
-        {
-
-
-            // The beginning of search поиск Note in Notes
-            var notes = from n in _context.Notes
-                        select n;
-
-            if (!string.IsNullOrEmpty(searchString))
-            {
-                notes = notes.Where(s => s.Title!.Contains(searchString));
-            }
-            // the end of the search
-
-
-            // это Index(in Views/Notes folder). Внутри него идет кнопка поиска( и собсвенно сама функция поиска)
-            return View(await notes.ToListAsync());
-        }*/
-
-        //this is the end of search method
 
 
         // GET: Note/Details/5   (NOTE BY ID)
@@ -147,34 +104,6 @@ namespace JustInTime.WebApp.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-
-
-/*
-
-            List<SelectListItem> items = new List<SelectListItem>();
-
-            items.Add(new SelectListItem { Text = "Urgent"});
-
-            items.Add(new SelectListItem { Text = "Ordinary" });
-
-            items.Add(new SelectListItem { Text = "Temporary"});
-
-            items.Add(new SelectListItem { Text = "Important" });
-
-            ViewBag.NoteType = items;*/
-            /*
-
-                        var noteTypesData = DAL.Domain.Enums.Type.GetAll();
-
-                        var model = new NoteTypeViewModel();
-                        model.NotesTypeSelectList = new List<SelectListItem>();
-
-                        foreach (var noteType in noteTypesData)
-                        {
-                            model.NotesTypeSelectList.Add(new SelectListItem { Text = noteType.Type });
-                        }
-            */
-
 
             return View(note);                                    // This View is CREATE View 
         }
@@ -275,51 +204,5 @@ namespace JustInTime.WebApp.Controllers
         {
             return _context.Notes.Any(e => e.Id == id);
         }
-
-        // АЛГОРИТМ ПОИСКА Search method (found it in Microsoft Learn website)
-
-        /*public async Task<IActionResult> Index(string searchString)
-        {
-            // поиск Note in Notes
-            var notes = from n in _context.Notes
-                         select n;
-
-            if (!String.IsNullOrEmpty(searchString))
-            {
-                notes = notes.Where(s => s.Title!.Contains(searchString));
-            }
-
-            // это Index(in Views/Notes folder). Внутри него идет кнопка поиска( и собсвенно сама функция поиска)
-            return View(await notes.ToListAsync());
-        }*/
-
-        // АЛГОРИТМ ПОИСКА ПО ТИПУ ЗАМЕТКИ (ЖАНРУ) Search by type(genre) (found it in Microsoft Learn website)
-        /*public async Task<IActionResult> Index(string noteType, string searchString)
-        {
-            // Use LINQ to get list of genres.
-            IQueryable<NoteTypes> typeQuery = from n in _context.Notes
-                                            orderby n.NoteTypes
-                                            select n.NoteTypes;
-            var notes = from n in _context.Notes
-                         select n;
-
-            if (!string.IsNullOrEmpty(searchString))
-            {
-                notes = notes.Where(s => s.Title!.Contains(searchString));
-            }
-
-            if (!string.IsNullOrEmpty(noteType))
-            {
-                notes = notes.Where(x => x.Type == noteType);
-            }
-
-            var noteTypeVM = new NoteTypeViewModel
-            {
-                Types = new SelectList(await typeQuery.Distinct().ToListAsync()),
-                Notes = await notes.ToListAsync()
-            };
-
-            return View(noteTypeVM);
-        }*/
     }
 }

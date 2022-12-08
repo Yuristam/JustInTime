@@ -8,12 +8,15 @@
     ".NETCoreApp,Version=v6.0": {
       "JustInTime.WebApp/1.0.0": {
         "dependencies": {
+          "JustInTime.BLL": "1.0.0",
           "JustInTime.DAL": "1.0.0",
+          "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "6.0.10",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.10",
           "Microsoft.AspNetCore.Identity.UI": "6.0.10",
           "Microsoft.EntityFrameworkCore.Design": "6.0.10",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.10",
           "Microsoft.EntityFrameworkCore.Tools": "6.0.10",
+          "Microsoft.TypeScript.MSBuild": "4.9.4",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.10"
         },
         "runtime": {
@@ -69,6 +72,17 @@
         "runtime": {
           "lib/net6.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll": {
             "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.1022.47617"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore/6.0.10": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Relational": "6.0.10"
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll": {
+            "assemblyVersion": "6.0.10.0",
             "fileVersion": "6.0.1022.47617"
           }
         }
@@ -1166,6 +1180,7 @@
       },
       "Microsoft.NETCore.Platforms/3.1.0": {},
       "Microsoft.NETCore.Targets/1.1.3": {},
+      "Microsoft.TypeScript.MSBuild/4.9.4": {},
       "Microsoft.VisualStudio.Debugger.Contracts/17.2.0": {
         "dependencies": {
           "MessagePack": "2.1.152",
@@ -2311,6 +2326,14 @@
           "System.Xml.ReaderWriter": "4.3.0"
         }
       },
+      "JustInTime.BLL/1.0.0": {
+        "dependencies": {
+          "JustInTime.DAL": "1.0.0"
+        },
+        "runtime": {
+          "JustInTime.BLL.dll": {}
+        }
+      },
       "JustInTime.DAL/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.10",
@@ -2369,6 +2392,13 @@
       "sha512": "sha512-ziq8vzvlVN0yKHzUp+z0qwZoSU2P/XUdNsEJxRzLRg1HbHp11Za6c2cuR6f+MgjxLHGkCupSam5b9is4sJSs5A==",
       "path": "microsoft.aspnetcore.cryptography.keyderivation/6.0.10",
       "hashPath": "microsoft.aspnetcore.cryptography.keyderivation.6.0.10.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore/6.0.10": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QfoXqYywSKAal7dyZDpKABuFRd+eWXKXSnuLHNQNME0OAgQHDDHQLQc/ek5uK68vCRqx9QFq6mlXLh5NNxOEqQ==",
+      "path": "microsoft.aspnetcore.diagnostics.entityframeworkcore/6.0.10",
+      "hashPath": "microsoft.aspnetcore.diagnostics.entityframeworkcore.6.0.10.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Identity.EntityFrameworkCore/6.0.10": {
       "type": "package",
@@ -2754,6 +2784,13 @@
       "sha512": "sha512-3Wrmi0kJDzClwAC+iBdUBpEKmEle8FQNsCs77fkiOIw/9oYA07bL1EZNX0kQ2OMN3xpwvl0vAtOCYY3ndDNlhQ==",
       "path": "microsoft.netcore.targets/1.1.3",
       "hashPath": "microsoft.netcore.targets.1.1.3.nupkg.sha512"
+    },
+    "Microsoft.TypeScript.MSBuild/4.9.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HRuRwFqPik9OGy+SMRVFkbUx8dD+s/5jJ4Sq2p7ARNtchHVQqExIvLwfNBLqyFkNYL+/cbAXdzU5ZUZmnxQftQ==",
+      "path": "microsoft.typescript.msbuild/4.9.4",
+      "hashPath": "microsoft.typescript.msbuild.4.9.4.nupkg.sha512"
     },
     "Microsoft.VisualStudio.Debugger.Contracts/17.2.0": {
       "type": "package",
@@ -3573,6 +3610,11 @@
       "sha512": "sha512-5zJ0XDxAIg8iy+t4aMnQAu0MqVbqyvfoUVl1yDV61xdo3Vth45oA2FoY4pPkxYAH5f8ixpmTqXeEIya95x0aCQ==",
       "path": "system.xml.xdocument/4.3.0",
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
+    },
+    "JustInTime.BLL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "JustInTime.DAL/1.0.0": {
       "type": "project",

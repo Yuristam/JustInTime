@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Users";
+}
+@model ICollection<JustInTime.WebApp.Areas.Identity.Data.JustInTimeUser>
+
+<div class="text-center">
+    <h1 class="display-4">Users</h1>
+    <img src="~/lib/images/user-icon.png" />
+    @if (@Model != null && @Model.Any())
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Edit</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var user in Model)
+                {
+                    <tr>
+                        <th scope="row">@user.Id</th>
+                        <td>user.FirstName</td>
+                        <td>user.LastName</td>
+                        <td>user.Email</td>
+                        <td>
+                            <a asp-controller="User" asp-action="Edit" asp-route-id="@user.Id">Edit</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+</div>
+
+<div class="text-center"></div>
