@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Cd/9eIMb2iNMpyxc5bDbtrbzQ+brwCyfgMMOxAILPnYgoUVERpRjdWN8DJcGeDhqnSFPfMmbhZPPN6vzrkOOMA==",
+  "dgSpecHash": "c1jiKJuiTbAYBgPGSYJ7sW6v8/QRKOTqVLOuzbjUwy/my8T/4JSWKMGcPY050aLs/3ZoXmEPspMnCyFN+KEUGw==",
   "success": true,
   "projectFilePath": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\JustInTime.WebApp.csproj",
   "expectedPackageFiles": [
@@ -10,6 +10,7 @@
     "C:\\Users\\lmega\\.nuget\\packages\\messagepackanalyzer\\2.1.152\\messagepackanalyzer.2.1.152.nupkg.sha512",
     "C:\\Users\\lmega\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.10\\microsoft.aspnetcore.cryptography.internal.6.0.10.nupkg.sha512",
     "C:\\Users\\lmega\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\6.0.10\\microsoft.aspnetcore.cryptography.keyderivation.6.0.10.nupkg.sha512",
+    "C:\\Users\\lmega\\.nuget\\packages\\microsoft.aspnetcore.diagnostics.entityframeworkcore\\6.0.10\\microsoft.aspnetcore.diagnostics.entityframeworkcore.6.0.10.nupkg.sha512",
     "C:\\Users\\lmega\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\6.0.10\\microsoft.aspnetcore.identity.entityframeworkcore.6.0.10.nupkg.sha512",
     "C:\\Users\\lmega\\.nuget\\packages\\microsoft.aspnetcore.identity.ui\\6.0.10\\microsoft.aspnetcore.identity.ui.6.0.10.nupkg.sha512",
     "C:\\Users\\lmega\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\6.0.0\\microsoft.aspnetcore.razor.language.6.0.0.nupkg.sha512",
@@ -65,6 +66,7 @@
     "C:\\Users\\lmega\\.nuget\\packages\\microsoft.net.stringtools\\1.0.0\\microsoft.net.stringtools.1.0.0.nupkg.sha512",
     "C:\\Users\\lmega\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\lmega\\.nuget\\packages\\microsoft.netcore.targets\\1.1.3\\microsoft.netcore.targets.1.1.3.nupkg.sha512",
+    "C:\\Users\\lmega\\.nuget\\packages\\microsoft.typescript.msbuild\\4.9.4\\microsoft.typescript.msbuild.4.9.4.nupkg.sha512",
     "C:\\Users\\lmega\\.nuget\\packages\\microsoft.visualstudio.debugger.contracts\\17.2.0\\microsoft.visualstudio.debugger.contracts.17.2.0.nupkg.sha512",
     "C:\\Users\\lmega\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration\\6.0.10\\microsoft.visualstudio.web.codegeneration.6.0.10.nupkg.sha512",
     "C:\\Users\\lmega\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.core\\6.0.10\\microsoft.visualstudio.web.codegeneration.core.6.0.10.nupkg.sha512",

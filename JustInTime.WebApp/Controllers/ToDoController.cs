@@ -1,6 +1,5 @@
 ﻿using JustInTime.DAL.Database.Contexts;
 using JustInTime.DAL.Domain.Entities;
-using JustInTime.WebApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -16,24 +15,88 @@ namespace JustInTime.WebApp.Controllers
             _context = context;
         }
 
-        // GET: TODOS (ALL ToDoS)
+
         public async Task<IActionResult> Index()
         {
-
-            ToDoViewModel viewModel = new ToDoViewModel();
-            return View("Index", viewModel);     // INDEX (in Views\Note). This View is showing table of notes(i guess)
+            return View(await _context.ToDos.ToListAsync());    
         }
 
-        // GET: Note/Details/5   I don't need details here, may be in the future when I will create CheckLists
 
-        // GET: Note/Create
-        public IActionResult Create(int id) // THIS IS MAY BE LIKE THIS (int? id)
+        public IActionResult Create()
         {
-            ToDoViewModel viewModel = new ToDoViewModel();
-            viewModel.EditableItem = viewModel.ToDos.FirstOrDefault(x => x.ToDoId == id);
-            return View("Index", viewModel);                                   // This View is CREATE View 
+            return View();                                    
         }
 
+      
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create([Bind("ToDoId,AddDate,TaskDescription,IsDone,CheckListId,CheckList")] ToDo toDo)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Add(toDo);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+
+            return View(toDo);                                     
+        }
+
+        // GET: Animal/Edit/5
+        public async Task<IActionResult> Edit(int? id)
+        {
+            if (id == null || _context.ToDos == null)
+            {
+                return NotFound();
+            }
+
+            var toDo = await _context.ToDos.FindAsync(id);
+            if (toDo == null)
+            {
+                return NotFound();
+            }
+
+            return View(toDo);                                     
+        }
+
+        // POST: Animal/Edit/5
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int id, [Bind("ToDoId,AddDate,TaskDescription,IsDone,CheckListId,CheckList")] ToDo toDo)
+        {
+            if (id != toDo.ToDoId)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    _context.Update(toDo);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!ToDoExists(toDo.ToDoId))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+
+                return RedirectToAction(nameof(Index));
+            }
+
+            return View(toDo);                                              // Edit (update)
+        }
+
+        // GET: Todo/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null || _context.ToDos == null)
@@ -47,12 +110,21 @@ namespace JustInTime.WebApp.Controllers
             {
                 return NotFound();
             }
+
+            return View(toDo);                                     // this view is for DELETE
+        }
+
+        // POST: Animal/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
             if (_context.ToDos == null)
             {
                 return Problem("Entity set 'NotesDbContext.Notes'  is null.");
             }
 
-            toDo = await _context.ToDos.FindAsync(id);
+            var toDo = await _context.ToDos.FindAsync(id);
             if (toDo != null)
             {
                 _context.ToDos.Remove(toDo);
@@ -61,41 +133,10 @@ namespace JustInTime.WebApp.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
-        public IActionResult CreateUpdate(ToDoViewModel viewModel)
+
+        private bool ToDoExists(int id)
         {
-            if (ModelState.IsValid)
-            {
-               /* using (var db = DbHelper.GetConnection())*/
-                {
-                    if (viewModel.EditableItem.ToDoId <= 0)
-                    {
-                        viewModel.EditableItem.AddDate = DateTime.Now;
-                        _context.Add<ToDo>(viewModel.EditableItem);
-                    }
-                    else
-                    {
-                        ToDo dbItem = _context.Find<ToDo>(viewModel.EditableItem.ToDoId);
-                        var result = TryUpdateModelAsync<ToDo>(dbItem, "EditableItem");
-                        _context.Update<ToDo>(dbItem);
-                    }
-                }
-                return RedirectToAction("Index");
-            }
-            else
-                return View("Index", new ToDoViewModel());
-        }
-        public IActionResult ToggleIsDone(int id)
-        {
-            /*using (var db = DbHelper.GetConnection())
-            */{
-                ToDo item = _context.Find<ToDo>(id);
-                if (item != null)
-                {
-                    item.IsDone = !item.IsDone;
-                    _context.Update<ToDo>(item);
-                }
-                return RedirectToAction("Index");
-            }
+            return _context.ToDos.Any(e => e.ToDoId == id);
         }
     }
 }

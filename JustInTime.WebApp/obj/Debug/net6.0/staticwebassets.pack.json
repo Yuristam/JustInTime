@@ -237,6 +237,10 @@
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
+      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\daypilot\\daypilot-all.min.js",
+      "PackagePath": "staticwebassets\\lib\\daypilot\\daypilot-all.min.js"
+    },
+    {
       "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\3.png",
       "PackagePath": "staticwebassets\\lib\\images\\3.png"
     },
@@ -315,6 +319,10 @@
     {
       "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\train background.jpg",
       "PackagePath": "staticwebassets\\lib\\images\\train background.jpg"
+    },
+    {
+      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\user-icon.png",
+      "PackagePath": "staticwebassets\\lib\\images\\user-icon.png"
     },
     {
       "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\wallpaperflare.com_wallpaper (24).jpg",
