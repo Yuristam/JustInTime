@@ -1,4 +1,4 @@
-﻿/*using JustInTime.DAL.Domain.Enums;*/
+﻿
 using System.ComponentModel.DataAnnotations;
 
 namespace JustInTime.DAL.Domain.Entities
@@ -10,15 +10,16 @@ namespace JustInTime.DAL.Domain.Entities
             DateCreated = DateTime.Now;
         }
 
-        public int Id { get; set; }
+        public int NoteId { get; set; }
+        public virtual Person Person { get; set; }
+        public string PersonId { get; set; }
         [Required]
         [MaxLength(120)]
         public string Title { get; set; }
         public string? Description { get; set; }
-        public DateTime DateCreated { get; set; }  // the day and time when the note was created (it will create date automatically)
-        /*public string NoteType { get; set; } = Type.Format(string);*/
+        public DateTime DateCreated { get; set; }  
         public virtual Type Type { get; set; }
-  
+
     }
 
     public enum Type

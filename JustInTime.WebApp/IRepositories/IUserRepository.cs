@@ -1,4 +1,4 @@
-﻿using JustInTime.WebApp.Areas.Identity.Data;
+﻿/*using JustInTime.WebApp.Areas.Identity.Data;
 
 namespace JustInTime.WebApp.IRepositories
 {
@@ -11,3 +11,4 @@ namespace JustInTime.WebApp.IRepositories
         JustInTimeUser UpdateUser(JustInTimeUser user);
     }
 }
+*/

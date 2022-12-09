@@ -9,6 +9,9 @@ namespace JustInTime.DAL.Domain.Entities
             DateCreated = DateTime.Now;
         }
         public int CheckListId { get; set; }
+
+        public virtual Person Person { get; set; }
+        public string PersonId { get; set; }
         [Required]
         [MaxLength (120)]
         public string Title { get; set; }

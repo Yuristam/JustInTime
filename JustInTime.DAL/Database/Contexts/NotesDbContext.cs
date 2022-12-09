@@ -1,5 +1,6 @@
 ﻿using JustInTime.DAL.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 namespace JustInTime.DAL.Database.Contexts
 {
@@ -15,32 +16,45 @@ namespace JustInTime.DAL.Database.Contexts
 
         }
 
+        public virtual DbSet<Person> Person { get; set; }
         public virtual DbSet<Note> Notes { get; set; } 
-        public DbSet<CheckList> CheckLists { get; set; }
-        public DbSet<ToDo> ToDos { get; set; }
-        public DbSet<CalendarEvent> Events { get; set; }
+        public virtual DbSet<CheckList> CheckLists { get; set; }
+        public virtual DbSet<ToDo> ToDos { get; set; }
 
 
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            IConfiguration config = new ConfigurationBuilder()
+                .AddJsonFile("appsettings.json")
+                .Build();
 
+            string connectionString = config.GetConnectionString("NotesConnectionString");
+
+            optionsBuilder
+                .UseSqlServer(connectionString);
+        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
+            //many-t0-one
             modelBuilder.Entity<ToDo>()
                 .HasOne(t => t.CheckList)
                 .WithMany(c => c.ToDos)
                 .HasForeignKey(t => t.CheckListId)
                 .IsRequired(false);
+
+            modelBuilder.Entity<Person>()
+               .HasMany(x => x.Notes)
+               .WithOne(x => x.Person)
+               .HasForeignKey(x => x.PersonId);
+
+            modelBuilder.Entity<Person>()
+              .HasMany(x => x.CheckLists)
+              .WithOne(x => x.Person)
+              .HasForeignKey(x => x.PersonId);
+
+
         }
-
-        /*    protected override void OnModelCreating(ModelBuilder modelBuilder)
-            {
-                base.OnModelCreating(modelBuilder);
-
-                modelBuilder.Entity<Note>()
-                    .HasKey(x => x.NoteType)
-                    .WithMany(x => x.ColorHex)
-                    .HasForiegnKey(x => x.)
-
-            }*/
     }
 }

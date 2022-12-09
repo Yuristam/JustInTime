@@ -3,6 +3,7 @@ using JustInTime.DAL.Database.Contexts;
 using JustInTime.DAL.Domain.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 
 namespace JustInTime.WebApp.Controllers
@@ -25,7 +26,7 @@ namespace JustInTime.WebApp.Controllers
     string searchString,
     int? pageNumber)
         {
-            ViewData["CurrentSort"] = sortOrder;
+                        ViewData["CurrentSort"] = sortOrder;
             ViewData["NameSortParm"] = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
             ViewData["DateSortParm"] = sortOrder == "Date" ? "date_desc" : "Date";
 
@@ -42,6 +43,7 @@ namespace JustInTime.WebApp.Controllers
 
             var notes = from n in _context.Notes
                         select n;
+            notes = _context.Notes.Include(a => a.Person);
             if (!String.IsNullOrEmpty(searchString))
             {
                 notes = notes.Where(n => n.Title.Contains(searchString)
@@ -62,7 +64,7 @@ namespace JustInTime.WebApp.Controllers
                     notes = notes.OrderBy(n => n.Title);
                     break;
             }
-            int pageSize = 10;
+            int pageSize = 8;
             return View(await PaginatedList<Note>.CreateAsync(notes.AsNoTracking(), pageNumber ?? 1, pageSize));
         }
 
@@ -76,7 +78,8 @@ namespace JustInTime.WebApp.Controllers
             }
 
             var note = await _context.Notes
-                .FirstOrDefaultAsync(x => x.Id == id);
+                .Include(a => a.Person)
+                .FirstOrDefaultAsync(x => x.NoteId == id);
             if (note == null)
             {
                 return NotFound();
@@ -88,6 +91,7 @@ namespace JustInTime.WebApp.Controllers
         // GET: Note/Create
         public IActionResult Create()
         {
+            ViewData["PersonId"] = new SelectList(_context.Person, "Id", "FirstName");
             return View();                                      // This View is CREATE View 
         }
 
@@ -96,7 +100,7 @@ namespace JustInTime.WebApp.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Title,Description,DateCreated,Type,Id")] Note note)
+        public async Task<IActionResult> Create([Bind("NoteId,PersonId,Title,Description,DateCreated,Type")] Note note)
         {
             if (ModelState.IsValid)
             {
@@ -104,6 +108,7 @@ namespace JustInTime.WebApp.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["PersonId"] = new SelectList(_context.Person, "Id", "FirstName", note.PersonId);
 
             return View(note);                                    // This View is CREATE View 
         }
@@ -121,6 +126,7 @@ namespace JustInTime.WebApp.Controllers
             {
                 return NotFound();
             }
+            ViewData["PersonId"] = new SelectList(_context.Person, "Id", "FirstName", note.PersonId);
 
             return View(note);                                      // this View is EDIT(UPDATE) View
         }
@@ -130,9 +136,9 @@ namespace JustInTime.WebApp.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Title,Description,DateCreated,Type,Id")] Note note)
+        public async Task<IActionResult> Edit(int id, [Bind("NoteId,PersonId,Title,Description,DateCreated,Type")] Note note)
         {
-            if (id != note.Id)
+            if (id != note.NoteId)
             {
                 return NotFound();
             }
@@ -146,7 +152,7 @@ namespace JustInTime.WebApp.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!NoteExists(note.Id))
+                    if (!NoteExists(note.NoteId))
                     {
                         return NotFound();
                     }
@@ -158,6 +164,7 @@ namespace JustInTime.WebApp.Controllers
 
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["PersonId"] = new SelectList(_context.Person, "Id", "FirstName", note.PersonId);
 
             return View(note);                                              // Edit (update)
         }
@@ -171,7 +178,8 @@ namespace JustInTime.WebApp.Controllers
             }
 
             var note = await _context.Notes
-                .FirstOrDefaultAsync(x => x.Id == id);
+                .Include(a => a.Person)
+                .FirstOrDefaultAsync(x => x.NoteId == id);
             if (note == null)
             {
                 return NotFound();
@@ -202,7 +210,7 @@ namespace JustInTime.WebApp.Controllers
 
         private bool NoteExists(int id)
         {
-            return _context.Notes.Any(e => e.Id == id);
+            return _context.Notes.Any(e => e.NoteId == id);
         }
     }
 }

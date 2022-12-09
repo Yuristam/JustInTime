@@ -1,4 +1,4 @@
-﻿namespace JustInTime.WebApp.IRepositories
+﻿/*namespace JustInTime.WebApp.IRepositories
 {
     public interface IUnitOfWork
     {
@@ -7,3 +7,4 @@
         IRoleRepository Role { get; }
     }
 }
+*/

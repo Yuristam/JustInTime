@@ -4,6 +4,51 @@
     ViewData["Title"] = "Index";
 }
 
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TaskDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AddDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsDone)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                    @Html.DisplayFor(modelItem => item.TaskDescription)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.AddDate)
+            </td>
+            <td>
+                    <input type="checkbox" checked="@item.IsDone" onclick="window.location.href = '/ToDo/ToggleIsDone/@item.ToDoId';" />
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ToDoId">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@item.ToDoId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+
+@*
+
+
+
 @foreach (var item in Model)
 {
     <a class="home-button" id="mycard1button" asp-area="" asp-controller="ToDo" asp-action="Index">
@@ -28,7 +73,7 @@
     <table class="table table-striped table-bordered table-hover" style="max-width: 500px;">
     <tr>            
         <td colspan="3">
-        @*@using(var form = Html.BeginForm("Create", "ToDo", FormMethod.Post))
+        @using(var form = Html.BeginForm("Create", "ToDo", FormMethod.Post))
         {
             @Html.HiddenFor(model => model.EditableItem.ToDoId)
             <div class="input-group">
@@ -38,7 +83,7 @@
             </div>
             </div>                
             @Html.ValidationSummary()
-        }*@
+        }
         </td>
     </tr>
     @foreach(var item in Model)
@@ -58,4 +103,4 @@
         </td>
         </tr>
     }
-    </table>
+    </table>*@
