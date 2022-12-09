@@ -39,31 +39,31 @@ namespace JustInTime.WebApp.Controllers
 
             ViewData["CurrentFilter"] = searchString;
 
-            var notes = from n in _context.Notes
+            var globalNotes = from n in _context.GlobalNotes
                         select n;
             
             if (!String.IsNullOrEmpty(searchString))
             {
-                notes = notes.Where(n => n.Title.Contains(searchString)
+                globalNotes = globalNotes.Where(n => n.Title.Contains(searchString)
                                        || n.Description.Contains(searchString));
             }
             switch (sortOrder)
             {
                 case "name_desc":
-                    notes = notes.OrderByDescending(n => n.Title);
+                    globalNotes = globalNotes.OrderByDescending(n => n.Title);
                     break;
                 case "Date":
-                    notes = notes.OrderBy(n => n.DateCreated);
+                    globalNotes = globalNotes.OrderBy(n => n.DateCreated);
                     break;
                 case "date_desc":
-                    notes = notes.OrderByDescending(n => n.DateCreated);
+                    globalNotes = globalNotes.OrderByDescending(n => n.DateCreated);
                     break;
                 default:
-                    notes = notes.OrderBy(n => n.Title);
+                    globalNotes = globalNotes.OrderBy(n => n.Title);
                     break;
             }
             int pageSize = 8;
-            return View(await PaginatedList<Note>.CreateAsync(notes.AsNoTracking(), pageNumber ?? 1, pageSize));
+            return View(await PaginatedList<GlobalNote>.CreateAsync(globalNotes.AsNoTracking(), pageNumber ?? 1, pageSize));
         }
 
 
@@ -96,7 +96,7 @@ namespace JustInTime.WebApp.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,Description,DateCreated")] Note note)
+        public async Task<IActionResult> Create([Bind("Id,Title,Description,DateCreated")] GlobalNote note)
         {
             if (ModelState.IsValid)
             {
@@ -111,12 +111,12 @@ namespace JustInTime.WebApp.Controllers
         // GET: Animal/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null || _context.Notes == null)
+            if (id == null || _context.GlobalNotes == null)
             {
                 return NotFound();
             }
 
-            var note = await _context.Notes.FindAsync(id);
+            var note = await _context.GlobalNotes.FindAsync(id);
             if (note == null)
             {
                 return NotFound();
@@ -130,9 +130,9 @@ namespace JustInTime.WebApp.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Description,DateCreated")] Note note)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Description,DateCreated")] GlobalNote note)
         {
-            if (id != note.NoteId)
+            if (id != note.Id)
             {
                 return NotFound();
             }
@@ -146,7 +146,7 @@ namespace JustInTime.WebApp.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!NoteExists(note.NoteId))
+                    if (!NoteExists(note.Id))
                     {
                         return NotFound();
                     }
@@ -165,13 +165,13 @@ namespace JustInTime.WebApp.Controllers
         // GET: Animal/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null || _context.Notes == null)
+            if (id == null || _context.GlobalNotes == null)
             {
                 return NotFound();
             }
 
-            var note = await _context.Notes
-                .FirstOrDefaultAsync(x => x.NoteId == id);
+            var note = await _context.GlobalNotes
+                .FirstOrDefaultAsync(x => x.Id == id);
             if (note == null)
             {
                 return NotFound();
@@ -190,10 +190,10 @@ namespace JustInTime.WebApp.Controllers
                 return Problem("Entity set 'NotesDbContext.Notes'  is null.");
             }
 
-            var note = await _context.Notes.FindAsync(id);
+            var note = await _context.GlobalNotes.FindAsync(id);
             if (note != null)
             {
-                _context.Notes.Remove(note);
+                _context.GlobalNotes.Remove(note);
             }
 
             await _context.SaveChangesAsync();
@@ -202,7 +202,7 @@ namespace JustInTime.WebApp.Controllers
 
         private bool NoteExists(int id)
         {
-            return _context.Notes.Any(e => e.NoteId == id);
+            return _context.GlobalNotes.Any(e => e.Id == id);
         }
     }
 }

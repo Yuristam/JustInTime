@@ -1,5 +1,5 @@
 ﻿@using JustInTime.BLL.Controllers;
-@model PaginatedList<JustInTime.DAL.Domain.Entities.Note>
+@model PaginatedList<JustInTime.DAL.Domain.Entities.GlobalNote>
 @{
     ViewData["Title"] = "Index";
 }
@@ -77,9 +77,6 @@
                 <th>
                     <a asp-action="Index" asp-route-sortOrder="@ViewData["DateSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">DateCreated</a>
                 </th>
-                <th>
-                    Type
-                </th>
                 <th></th>
             </tr>
         </thead>
@@ -93,14 +90,11 @@
                     <td>
                         @Html.DisplayFor(modelItem => item.DateCreated)
                     </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Type)
-                    </td>
 
                     <td>
-                        <a asp-action="Edit" asp-route-id="@item.NoteId">🖋</a> |
-                        <a asp-action="Details" asp-route-id="@item.NoteId">Open</a> |
-                        <a asp-action="Delete" asp-route-id="@item.NoteId">❌</a>
+                        <a asp-action="Edit" asp-route-id="@item.Id">🖋</a> |
+                        <a asp-action="Details" asp-route-id="@item.Id">Open</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id">❌</a>
                     </td>
                 </tr>
             }

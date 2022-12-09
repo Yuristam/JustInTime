@@ -1,4 +1,4 @@
-﻿@*@{
+﻿@{
     ViewData["Title"] = "Users";
 }
 @model ICollection<JustInTime.WebApp.Areas.Identity.Data.JustInTimeUser>
@@ -12,10 +12,10 @@
             <thead>
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
+                    <th scope="col">Name</th>
                     <th scope="col">Email</th>
-                    <th scope="col">Edit</th>
+                    <th scope="col">Date of Birth</th>@*
+                    <th scope="col">Edit</th>*@
                 </tr>
             </thead>
             <tbody>
@@ -23,12 +23,13 @@
                 {
                     <tr>
                         <th scope="row">@user.Id</th>
-                        <td>@user.FirstName</td>
-                        <td>@user.LastName</td>
+                        <td>@user.UserName</td>
                         <td>@user.Email</td>
+                       @* здесь должна была быть дата рождения
+ *@                       @*
                         <td>
                             <a asp-controller="User" asp-action="Edit" asp-route-id="@user.Id">Edit</a>
-                        </td>
+                        </td>*@
                     </tr>
                 }
             </tbody>
@@ -37,4 +38,4 @@
 </div>
 
 <div class="text-center">
-</div>*@
+</div>
