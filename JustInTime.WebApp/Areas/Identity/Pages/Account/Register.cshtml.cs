@@ -29,21 +29,25 @@ namespace JustInTime.WebApp.Areas.Identity.Pages.Account
         private readonly IUserStore<JustInTimeUser> _userStore;
         private readonly IUserEmailStore<JustInTimeUser> _emailStore;
         private readonly ILogger<RegisterModel> _logger;
-        private readonly IEmailSender _emailSender;
+        private readonly RoleManager<IdentityRole> _roleManager;
+        private readonly IShortedUserController _shortedUserController;
 
         public RegisterModel(
             UserManager<JustInTimeUser> userManager,
             IUserStore<JustInTimeUser> userStore,
             SignInManager<JustInTimeUser> signInManager,
             ILogger<RegisterModel> logger,
-            IEmailSender emailSender)
+            RoleManager<IdentityRole> roleManager,
+            IShortedUserController shortedUserController)
         {
             _userManager = userManager;
             _userStore = userStore;
             _emailStore = GetEmailStore();
             _signInManager = signInManager;
             _logger = logger;
-            _emailSender = emailSender;
+            _roleManager = roleManager;
+            _roleManager = roleManager;
+            _shortedUserController = shortedUserController;
         }
 
         /// <summary>
@@ -72,12 +76,12 @@ namespace JustInTime.WebApp.Areas.Identity.Pages.Account
         public class InputModel
         {
             [Required]
-            [StringLength(255, ErrorMessage = "The first name maximum is 255 characters.")]
+            [StringLength(255, ErrorMessage = "The first name field should have a maximum of 255 characters")]
             [Display(Name ="Firstname")]
             public string FirstName { get; set; }
 
             [Required]
-            [StringLength(255, ErrorMessage = "The last name maximum is 255 characters.")]
+            [StringLength(255, ErrorMessage = "The last name field should have a maximum of 255 characters")]
             [Display(Name ="Lastname")]
             public string LastName { get; set; }
 
@@ -85,6 +89,12 @@ namespace JustInTime.WebApp.Areas.Identity.Pages.Account
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
+            [Required]
+            [DataType(DataType.Date)]
+            [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+            [Display(Name = "DateTime")]
+            public DateTime DateTime { get; set; }
+
             [Required]
             [EmailAddress]
             [Display(Name = "Email")]
@@ -113,6 +123,11 @@ namespace JustInTime.WebApp.Areas.Identity.Pages.Account
 
         public async Task OnGetAsync(string returnUrl = null)
         {
+            if (!await _roleManager.RoleExistsAsync(WC.Admin))
+            {
+                await _roleManager.CreateAsync(new IdentityRole(WC.Admin));
+                await _roleManager.CreateAsync(new IdentityRole(WC.User));
+            }
             ReturnUrl = returnUrl;
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
         }
@@ -124,9 +139,6 @@ namespace JustInTime.WebApp.Areas.Identity.Pages.Account
             if (ModelState.IsValid)
             {
                 var user = CreateUser();
-/*
-                user.FirstName = Input.FirstName;
-                user.LastName = Input.LastName;*/
 
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
@@ -134,6 +146,16 @@ namespace JustInTime.WebApp.Areas.Identity.Pages.Account
 
                 if (result.Succeeded)
                 {
+                    _shortedUserController.AddUser(user,  Input.FirstName, Input.LastName, Input.DateTime);
+
+                    if (User.IsInRole(WC.Admin))
+                    {
+                        await _userManager.AddToRoleAsync(user, WC.Admin);
+                    }
+                    else
+                    {
+                        await _userManager.AddToRoleAsync(user, WC.User);
+                    }
                     _logger.LogInformation("User created a new account with password.");
 
                     var userId = await _userManager.GetUserIdAsync(user);
@@ -144,9 +166,6 @@ namespace JustInTime.WebApp.Areas.Identity.Pages.Account
                         pageHandler: null,
                         values: new { area = "Identity", userId = userId, code = code, returnUrl = returnUrl },
                         protocol: Request.Scheme);
-
-                    await _emailSender.SendEmailAsync(Input.Email, "Confirm your email",
-                        $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
 
                     if (_userManager.Options.SignIn.RequireConfirmedAccount)
                     {
@@ -167,7 +186,6 @@ namespace JustInTime.WebApp.Areas.Identity.Pages.Account
             // If we got this far, something failed, redisplay form
             return Page();
         }
-
         private JustInTimeUser CreateUser()
         {
             try
