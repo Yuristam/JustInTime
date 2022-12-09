@@ -1,6 +1,5 @@
-﻿@*@using JustInTime.BLL.Controllers;
-@model PaginatedList<JustInTime.DAL.Domain.Entities.Note>*@
-@model IEnumerable<JustInTime.DAL.Domain.Entities.Note>
+﻿@using JustInTime.BLL.Controllers;
+@model PaginatedList<JustInTime.DAL.Domain.Entities.Note>
 @{
     ViewData["Title"] = "Index";
 }
@@ -36,7 +35,6 @@
     });
 </script>
 <!--this is Sakura blossom background (ending of code)-->
-
 <!--this is the name of page(it will appear at the top of the site)-->
 <h1>My Notes</h1>
 <section class="hidden">
@@ -77,8 +75,8 @@
                     <a asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Title</a>
                 </th>
                 <th>
-                   <a asp-action="Index" asp-route-sortOrder="@ViewData["DateSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">DateCreated</a>
-            </th>
+                    <a asp-action="Index" asp-route-sortOrder="@ViewData["DateSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">DateCreated</a>
+                </th>
                 <th>
                     Type
                 </th>
@@ -98,7 +96,7 @@
                     <td>
                         @Html.DisplayFor(modelItem => item.Type)
                     </td>
-                 
+
                     <td>
                         <a asp-action="Edit" asp-route-id="@item.NoteId">🖋</a> |
                         <a asp-action="Details" asp-route-id="@item.NoteId">Open</a> |
@@ -108,7 +106,7 @@
             }
         </tbody>
     </table>
-@*
+
     @{
         var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
         var nextDisabled = !Model.HasNextPage ? "disabled" : "";
@@ -127,7 +125,7 @@
        asp-route-currentFilter="@ViewData["CurrentFilter"]"
        class="btn btn-default @nextDisabled">
         Next
-    </a>*@
+    </a>
 </section>
 
 

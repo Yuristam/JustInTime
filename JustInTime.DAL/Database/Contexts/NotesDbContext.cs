@@ -15,7 +15,7 @@ namespace JustInTime.DAL.Database.Contexts
         {
 
         }
-
+        public DbSet<GlobalNote> GlobalNotes { get; set; }
         public virtual DbSet<Person> Person { get; set; }
         public virtual DbSet<Note> Notes { get; set; } 
         public virtual DbSet<CheckList> CheckLists { get; set; }
@@ -47,14 +47,21 @@ namespace JustInTime.DAL.Database.Contexts
             modelBuilder.Entity<Person>()
                .HasMany(x => x.Notes)
                .WithOne(x => x.Person)
-               .HasForeignKey(x => x.PersonId);
+               .HasForeignKey(x => x.PersonId)
+               .IsRequired()
+                .OnDelete(DeleteBehavior.Cascade);
 
             modelBuilder.Entity<Person>()
               .HasMany(x => x.CheckLists)
               .WithOne(x => x.Person)
-              .HasForeignKey(x => x.PersonId);
-
-
+              .HasForeignKey(x => x.PersonId)
+              .IsRequired();
+/*
+            modelBuilder.Entity<Note>()
+              .HasOne(x => x.Person)
+              .WithMany(x => x.Notes)
+              .HasForeignKey(x => x.NoteId);*/
+            
         }
     }
 }

@@ -8,55 +8,67 @@ using Microsoft.EntityFrameworkCore;
 
 namespace JustInTime.WebApp.Controllers
 {
-
-    public class NoteController : Controller
+    public class GlobalNoteController : Controller
     {
         private readonly NotesDbContext _context;
 
-        public NoteController(NotesDbContext context)
+        public GlobalNoteController(NotesDbContext context)
         {
             _context = context;
         }
 
         // GET: NOTES (ALL NOTES)
-        [Authorize]
-        public async Task<IActionResult> Index(string sortOrder, string searchString)
+        public async Task<IActionResult> Index(
+    string sortOrder,
+    string currentFilter,
+    string searchString,
+    int? pageNumber)
         {
-
+            ViewData["CurrentSort"] = sortOrder;
             ViewData["NameSortParm"] = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
             ViewData["DateSortParm"] = sortOrder == "Date" ? "date_desc" : "Date";
+
+            if (searchString != null)
+            {
+                pageNumber = 1;
+            }
+            else
+            {
+                searchString = currentFilter;
+            }
+
             ViewData["CurrentFilter"] = searchString;
 
-            var notes = from s in _context.Notes
-                        select s;
-
-            notes = _context.Notes.Include(a => a.Person);
-
+            var notes = from n in _context.Notes
+                        select n;
+            
             if (!String.IsNullOrEmpty(searchString))
             {
-                notes = notes.Where(s => s.Title.Contains(searchString)
-                                       || s.Description.Contains(searchString));
+                notes = notes.Where(n => n.Title.Contains(searchString)
+                                       || n.Description.Contains(searchString));
             }
             switch (sortOrder)
             {
                 case "name_desc":
-                    notes = notes.OrderByDescending(s => s.Title);
+                    notes = notes.OrderByDescending(n => n.Title);
                     break;
                 case "Date":
-                    notes = notes.OrderBy(s => s.DateCreated);
+                    notes = notes.OrderBy(n => n.DateCreated);
                     break;
                 case "date_desc":
-                    notes = notes.OrderByDescending(s => s.DateCreated);
+                    notes = notes.OrderByDescending(n => n.DateCreated);
                     break;
                 default:
-                    notes = notes.OrderBy(s => s.Title);
+                    notes = notes.OrderBy(n => n.Title);
                     break;
             }
-            return View(await notes.AsNoTracking().ToListAsync());
-
+            int pageSize = 8;
+            return View(await PaginatedList<Note>.CreateAsync(notes.AsNoTracking(), pageNumber ?? 1, pageSize));
         }
-            // GET: Note/Details/5   (NOTE BY ID)
-            public async Task<IActionResult> Details(int? id)
+
+
+        // GET: Note/Details/5   (NOTE BY ID)
+        public async Task<IActionResult> Details(int? id)
         {
             if (id == null || _context.Notes == null)
             {
@@ -64,7 +76,6 @@ namespace JustInTime.WebApp.Controllers
             }
 
             var note = await _context.Notes
-                .Include(a => a.Person)
                 .FirstOrDefaultAsync(x => x.NoteId == id);
             if (note == null)
             {
@@ -77,8 +88,7 @@ namespace JustInTime.WebApp.Controllers
         // GET: Note/Create
         public IActionResult Create()
         {
-            ViewData["PersonId"] = new SelectList(_context.Person, "Id", "FirstName");
-            return View();                                      // This View is CREATE View 
+           return View();                                      // This View is CREATE View 
         }
 
         // POST: Animal/Create
@@ -86,7 +96,7 @@ namespace JustInTime.WebApp.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("NoteId,PersonId,Title,Description,DateCreated,Type")] Note note)
+        public async Task<IActionResult> Create([Bind("Id,Title,Description,DateCreated")] Note note)
         {
             if (ModelState.IsValid)
             {
@@ -94,8 +104,7 @@ namespace JustInTime.WebApp.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["PersonId"] = new SelectList(_context.Person, "Id", "FirstName", note.PersonId);
-
+           
             return View(note);                                    // This View is CREATE View 
         }
 
@@ -112,8 +121,7 @@ namespace JustInTime.WebApp.Controllers
             {
                 return NotFound();
             }
-            ViewData["PersonId"] = new SelectList(_context.Person, "Id", "FirstName", note.PersonId);
-
+         
             return View(note);                                      // this View is EDIT(UPDATE) View
         }
 
@@ -122,7 +130,7 @@ namespace JustInTime.WebApp.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("NoteId,PersonId,Title,Description,DateCreated,Type")] Note note)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Description,DateCreated")] Note note)
         {
             if (id != note.NoteId)
             {
@@ -150,7 +158,6 @@ namespace JustInTime.WebApp.Controllers
 
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["PersonId"] = new SelectList(_context.Person, "Id", "FirstName", note.PersonId);
 
             return View(note);                                              // Edit (update)
         }
@@ -164,7 +171,6 @@ namespace JustInTime.WebApp.Controllers
             }
 
             var note = await _context.Notes
-                .Include(a => a.Person)
                 .FirstOrDefaultAsync(x => x.NoteId == id);
             if (note == null)
             {
