@@ -29,15 +29,8 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Index">Users</a>
-                        </li>
                         @if (SignInManager.IsSignedIn(User))
-                        {
-                            
-                                                            
-                        
-                            
+                        {                            
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Role Access
@@ -54,11 +47,8 @@
                                     </li>
                                 </ul>
                             </li>
-                        @*<li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="SleepTracker" asp-action="Index">Sleep Tracker</a>
-                        </li>*@
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Calendar" asp-action="Index">Calendar</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Index">Users</a>
                         </li>
                         }
                         <li class="nav-item">
@@ -70,10 +60,6 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
-                        @*
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="CalendarEvents" asp-action="Index">Calendar TimeEvents</a>
-                        </li>*@
                     </ul>
                     <partial name="_LoginPartial" />
                 </div>

@@ -1,10 +1,7 @@
 using JustInTime.DAL.Database.Contexts;
-using JustInTime.WebApp;
 using JustInTime.WebApp.Areas;
 using JustInTime.WebApp.Areas.Identity.Data;
 using JustInTime.WebApp.Controllers;
-using JustInTime.WebApp.IRepositories;
-using JustInTime.WebApp.Repositories;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -12,6 +9,16 @@ using System;
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("IdentityContextConnection") ?? throw new InvalidOperationException("Connection string 'IdentityContextConnection' not found.");
 
+
+builder.Services.AddTransient<IShortedUserController, PersonUserController>();
+builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<IdentityContext>(options => options.UseSqlServer(connectionString));
+builder.Services.AddRazorPages();
+
+builder.Services.AddIdentity<JustInTimeUser, IdentityRole>()
+            .AddEntityFrameworkStores<IdentityContext>()
+            .AddDefaultTokenProviders();
+/*
 builder.Services.AddDbContext<IdentityContext>(options =>
     options.UseSqlServer(connectionString));
 
@@ -21,35 +28,28 @@ builder.Services.AddDefaultIdentity<JustInTimeUser>(options => options.SignIn.Re
     .AddEntityFrameworkStores<IdentityContext>();
 builder.Services.AddRazorPages();
 
-/*
-builder.Services.AddIdentity<JustInTimeUser, IdentityRole>()
-            .AddEntityFrameworkStores<IdentityContext>()
-            .AddDefaultTokenProviders()
-            .AddDefaultUI();
 */
 
 
 // this is connection string (it connects c# code to the database)
 builder.Services.AddDbContext<NotesDbContext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("NotesConnectionString"));           // this is connection string for notes
-    /*options.UseSqlServer(builder.Configuration.GetConnectionString("ConnectionString"));*/   // this is connection string for big notes lists
+    options.UseSqlServer(builder.Configuration.GetConnectionString("NotesConnectionString")/*connectionString*/);
 });
 
-
-
+/*
 // Add services to the container.
-builder.Services.AddControllersWithViews();
-
+builder.Services.AddControllersWithViews();*/
+/*
 #region Authorization
 
 AddAuthorizationPolicies();
 
-#endregion
-
+#endregion*/
+/*
 AddScoped();
 
-
+*/
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -66,7 +66,7 @@ app.UseStaticFiles();
 app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
-/*
+
 app.UseEndpoints(e =>
 {
     e.MapRazorPages();
@@ -74,12 +74,11 @@ app.UseEndpoints(e =>
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
-});*/
-app.MapRazorPages();
+});
 
 
 app.Run();
-
+/*
 void AddAuthorizationPolicies()
 {
     builder.Services.AddAuthorization(options =>
@@ -98,4 +97,4 @@ void AddScoped()
     builder.Services.AddScoped<IUserRepository, UserRepository>();
     builder.Services.AddScoped<IRoleRepository, RoleRepository>();
     builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
-}
+}*/

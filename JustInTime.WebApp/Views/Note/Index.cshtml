@@ -91,6 +91,7 @@
                 <th>
                     Type
                 </th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -106,11 +107,11 @@
                     <td>
                         @Html.DisplayFor(modelItem => item.Type)
                     </td>
+                 
                     <td>
-                    <td>
-                        <a asp-action="Edit" asp-route-id="@item.Id">🖋</a> |
-                        <a asp-action="Details" asp-route-id="@item.Id">Open</a> |
-                        <a asp-action="Delete" asp-route-id="@item.Id">❌</a>
+                        <a asp-action="Edit" asp-route-id="@item.NoteId">🖋</a> |
+                        <a asp-action="Details" asp-route-id="@item.NoteId">Open</a> |
+                        <a asp-action="Delete" asp-route-id="@item.NoteId">❌</a>
                     </td>
                 </tr>
             }

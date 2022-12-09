@@ -11,14 +11,14 @@
     height: 550px; /*500px*/ /*550px*/ /*600px*/
     background: #ffffff; /*the color of card*/
     box-shadow: 10px 20px 40px rgba(0,0,0,0.25);
-   /* transition: 1s;*/
+    transition: 0.6s;
 }
 
 /* ============================ HOVER means that (hover selector is used to select elements when you mouse over them) ====================================*/
-/*
-.card:hover {
-    transform:();
-}*/
+
+    .card:hover {
+        transform: scale(1.1);
+    }
 
     .card .imgBox {
         position: relative;
@@ -120,8 +120,10 @@
 }
 #mycard3button {
     background-image: linear-gradient(to left,#12CBC4,#0652DD,#12CBC4);
-}/*
-#mycard1button*/
+}
+#mycard4button {
+    background-image: linear-gradient(to left,#FDA7DF,#9980FA,#FDA7DF);
+}
 
 .home-button:hover {
     background-position: right;

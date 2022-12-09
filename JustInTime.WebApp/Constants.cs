@@ -1,4 +1,4 @@
-﻿namespace JustInTime.WebApp
+﻿/*namespace JustInTime.WebApp
 {
     public static class Constants
     {
@@ -16,3 +16,4 @@
         }
     }
 }
+*/

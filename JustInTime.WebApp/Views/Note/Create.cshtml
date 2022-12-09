@@ -1,5 +1,4 @@
-﻿@*@using JustInTime.DAL.Domain.Enums;*@
-@model JustInTime.DAL.Domain.Entities.Note
+﻿@model JustInTime.DAL.Domain.Entities.Note
 
 @{
     ViewData["Title"] = "Create";
@@ -28,25 +27,6 @@
                 <input asp-for="Type" class="form-control" />
                 <span asp-validation-for="Type" class="text-danger"></span>
             </div>
-            @*
-            <div class="form-group">
-            <select asp-for="NoteType" asp-items="@ViewBag.States">
-                <option>Please select one</option>
-                <option>Urgent</option>
-                <option>Ordinary</option>
-                <option>Important</option>
-                <option>Temporary</option>
-            </select>
-            </div>*@@*
-            <div class="form-group">
-                <label asp-for="NoteType" class="col-md-2 control-label"></label>
-                <div class="col-md-10">
-                    <select asp-for="NoteType" asp-items="Html.GetEnumSelectList<JustInTime.DAL.Domain.Enums.Type>()">
-                        <option selected="selected" value="">Please select</option>
-                    </select>
-                    <span asp-validation-for="NoteType" class="text-danger" />
-                </div>
-            </div>*@
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>

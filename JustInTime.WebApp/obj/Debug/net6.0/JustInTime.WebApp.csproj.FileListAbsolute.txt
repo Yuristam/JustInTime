@@ -281,3 +281,16 @@ C:\Users\lmega\source\repos\JustInTime\JustInTime.WebApp\bin\Debug\net6.0\Views\
 C:\Users\lmega\source\repos\JustInTime\JustInTime.WebApp\bin\Debug\net6.0\JustInTime.BLL.dll
 C:\Users\lmega\source\repos\JustInTime\JustInTime.WebApp\bin\Debug\net6.0\JustInTime.BLL.pdb
 C:\Users\lmega\source\repos\JustInTime\JustInTime.WebApp\bin\Debug\net6.0\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll
+C:\Users\lmega\source\repos\JustInTime\JustInTime.WebApp\bin\Debug\net6.0\Microsoft.Extensions.Configuration.dll
+C:\Users\lmega\source\repos\JustInTime\JustInTime.WebApp\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\lmega\source\repos\JustInTime\JustInTime.WebApp\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\lmega\source\repos\JustInTime\JustInTime.WebApp\bin\Debug\net6.0\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+C:\Users\lmega\source\repos\JustInTime\JustInTime.WebApp\bin\Debug\net6.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\lmega\source\repos\JustInTime\JustInTime.WebApp\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\lmega\source\repos\JustInTime\JustInTime.WebApp\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\lmega\source\repos\JustInTime\JustInTime.WebApp\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\lmega\source\repos\JustInTime\JustInTime.WebApp\bin\Debug\net6.0\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\lmega\source\repos\JustInTime\JustInTime.WebApp\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+C:\Users\lmega\source\repos\JustInTime\JustInTime.WebApp\bin\Debug\net6.0\System.Text.Encodings.Web.dll
+C:\Users\lmega\source\repos\JustInTime\JustInTime.WebApp\bin\Debug\net6.0\System.Text.Json.dll
+C:\Users\lmega\source\repos\JustInTime\JustInTime.WebApp\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
