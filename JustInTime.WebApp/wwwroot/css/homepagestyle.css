@@ -141,11 +141,11 @@
 }
 #mycard5button {
     background-image: linear-gradient(to left,#00ff16,#2486ee,#00ff16);
-    margin-bottom: 40px;
+    /*margin-bottom: 40px;*/
 }
 #mycard6button {
-    background-image: linear-gradient(to left,#fbff00,#ff7d00,#fbff00);/*
-    margin-bottom: 40px;*/
+    background-image: linear-gradient(to left,#fbff00,#ff7d00,#fbff00);
+    margin-bottom: 40px;
 }
 
 .home-button:hover {
