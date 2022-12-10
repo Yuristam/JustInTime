@@ -8,7 +8,6 @@ namespace JustInTime.DAL.Domain.Entities
         {
             DateCreated = DateTime.Now;
         }
-
         public int Id { get; set; }
         
         [Required]
