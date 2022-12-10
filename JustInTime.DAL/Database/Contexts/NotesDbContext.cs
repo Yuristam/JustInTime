@@ -15,7 +15,7 @@ namespace JustInTime.DAL.Database.Contexts
         {
 
         }
-        public DbSet<GlobalNote> GlobalNotes { get; set; }
+        public virtual DbSet<GlobalNote> GlobalNotes { get; set; }
         public virtual DbSet<Person> Person { get; set; }
         public virtual DbSet<Note> Notes { get; set; } 
         public virtual DbSet<CheckList> CheckLists { get; set; }

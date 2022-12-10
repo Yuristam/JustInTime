@@ -19,7 +19,6 @@ namespace JustInTime.DAL.Domain.Entities
         public string? Description { get; set; }
         public DateTime DateCreated { get; set; }  
         public virtual Type Type { get; set; }
-
     }
 
     public enum Type
