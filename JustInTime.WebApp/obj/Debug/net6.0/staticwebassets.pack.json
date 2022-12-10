@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\JustInTime.WebApp.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\css\\GlobalNotesIndex.css",
+      "PackagePath": "staticwebassets\\css\\GlobalNotesIndex.css"
+    },
+    {
       "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\css\\calendarstyle.css",
       "PackagePath": "staticwebassets\\css\\calendarstyle.css"
     },
@@ -19,10 +23,6 @@
     {
       "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\css\\homepagestyle.css",
       "PackagePath": "staticwebassets\\css\\homepagestyle.css"
-    },
-    {
-      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\css\\mynotes.css",
-      "PackagePath": "staticwebassets\\css\\mynotes.css"
     },
     {
       "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\css\\sakura.css",
@@ -43,10 +43,6 @@
     {
       "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\js\\dycalendar.js",
       "PackagePath": "staticwebassets\\js\\dycalendar.js"
-    },
-    {
-      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\js\\mynotes.js",
-      "PackagePath": "staticwebassets\\js\\mynotes.js"
     },
     {
       "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\js\\sakura.js",
@@ -269,6 +265,10 @@
       "PackagePath": "staticwebassets\\lib\\images\\JustInTime icon1.png"
     },
     {
+      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\Programming.png",
+      "PackagePath": "staticwebassets\\lib\\images\\Programming.png"
+    },
+    {
       "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\Spirited Away.jpg",
       "PackagePath": "staticwebassets\\lib\\images\\Spirited Away.jpg"
     },
@@ -301,8 +301,8 @@
       "PackagePath": "staticwebassets\\lib\\images\\lofi-girl-study.jpg"
     },
     {
-      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\talking to myself.jpg",
-      "PackagePath": "staticwebassets\\lib\\images\\talking to myself.jpg"
+      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\talking to myself.png",
+      "PackagePath": "staticwebassets\\lib\\images\\talking to myself.png"
     },
     {
       "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\train background.jpg",
@@ -317,14 +317,6 @@
       "PackagePath": "staticwebassets\\lib\\images\\wallpaperflare.com_wallpaper (41).jpg"
     },
     {
-      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\wallpaperflare.com_wallpaper (43).jpg",
-      "PackagePath": "staticwebassets\\lib\\images\\wallpaperflare.com_wallpaper (43).jpg"
-    },
-    {
-      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\wallpaperflare.com_wallpaper (9).jpg",
-      "PackagePath": "staticwebassets\\lib\\images\\wallpaperflare.com_wallpaper (9).jpg"
-    },
-    {
       "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\work background.png",
       "PackagePath": "staticwebassets\\lib\\images\\work background.png"
     },
@@ -333,8 +325,8 @@
       "PackagePath": "staticwebassets\\lib\\images\\world background.jpeg"
     },
     {
-      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\world ideas card.jpg",
-      "PackagePath": "staticwebassets\\lib\\images\\world ideas card.jpg"
+      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\world index background.png",
+      "PackagePath": "staticwebassets\\lib\\images\\world index background.png"
     },
     {
       "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\wp5565660.jpg",
