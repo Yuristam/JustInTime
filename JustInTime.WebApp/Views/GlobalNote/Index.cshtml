@@ -4,9 +4,7 @@
     ViewData["Title"] = "Index";
 }
 
-<!--css style and js links here for this site.-->
-<link rel="stylesheet" href="css/mynotes.css" />
-<script defer src="js/mynotes.js"></script>
+<link rel="stylesheet" href="~/css/GlobalNotesIndex.css" />
 
 <!--this is Sakura blossom background (beginning)-->
 <link rel="stylesheet" href="css/sakura.css" />
@@ -35,25 +33,15 @@
     });
 </script>
 <!--this is Sakura blossom background (ending of code)-->
-<!--this is the name of page(it will appear at the top of the site)-->
-<h1>My Notes</h1>
-<section class="hidden">
-    <h1>My Notes</h1>
-    <p>This is the list of notes</p>
-</section>
 
-<section class="hidden">
-    <h2>Write Your Notes</h2>
-    <p>
-        Write whatever you want. You can write here you ideas.
-    </p>
-</section>
-
+<!--==================================the site begins here==============================================-->
+    <h1 id="pageTitle">My Notes</h1>
+    <p id="descriptionOfSite">This is Global Notes. Here you can share your ideas with the whole world.</p>
 
 <!-- this is CREATE button-->
-<section class="hidden">
-    <p>
-        <a asp-action="Create">Create New</a>
+
+    <p >
+        <a id="GlobalButton" asp-action="Create">Create New</a>
     </p>
 
     <!--this is search button end-->
@@ -72,10 +60,10 @@
         <thead>
             <tr>
                 <th>
-                    <a asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Title</a>
+                    <a id="SortButtons" asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Title</a>
                 </th>
                 <th>
-                    <a asp-action="Index" asp-route-sortOrder="@ViewData["DateSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">DateCreated</a>
+                <a id="SortButtons" asp-action="Index" asp-route-sortOrder="@ViewData["DateSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">DateCreated</a>
                 </th>
                 <th></th>
             </tr>
@@ -93,7 +81,7 @@
 
                     <td>
                         <a asp-action="Edit" asp-route-id="@item.Id">🖋</a> |
-                        <a asp-action="Details" asp-route-id="@item.Id">Open</a> |
+                    <a id="GlobalButton" asp-action="Details" asp-route-id="@item.Id">Open</a> |
                         <a asp-action="Delete" asp-route-id="@item.Id">❌</a>
                     </td>
                 </tr>
@@ -106,24 +94,17 @@
         var nextDisabled = !Model.HasNextPage ? "disabled" : "";
     }
 
-    <a asp-action="Index"
+<a id="NextPrevButtons" asp-action="Index"
        asp-route-sortOrder="@ViewData["CurrentSort"]"
        asp-route-pageNumber="@(Model.PageIndex - 1)"
        asp-route-currentFilter="@ViewData["CurrentFilter"]"
        class="btn btn-default @prevDisabled">
-        Previous
+        ◀
     </a>
-    <a asp-action="Index"
+<a id="NextPrevButtons" asp-action="Index"
        asp-route-sortOrder="@ViewData["CurrentSort"]"
        asp-route-pageNumber="@(Model.PageIndex + 1)"
        asp-route-currentFilter="@ViewData["CurrentFilter"]"
        class="btn btn-default @nextDisabled">
-        Next
+        ▶
     </a>
-</section>
-
-
-
-<section>
-    <img src="~/lib/images/anime-note-taking.gif" alt="Note Taking" width="200"> <!--this is note taking anime photo-->
-</section>

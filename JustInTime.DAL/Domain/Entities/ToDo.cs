@@ -15,6 +15,6 @@ namespace JustInTime.DAL.Domain.Entities
 
         public bool IsDone { get; set; }
         public int CheckListId { get; set; }
-        public CheckList CheckList { get; set; }
+        public virtual CheckList CheckList { get; set; }
     }
 }

@@ -1,0 +1,42 @@
+﻿body {
+    background-image: url("../lib/images/talking to myself.png");
+    color: aliceblue;
+}
+#pageTitle{
+    text-align: center;
+}
+#descriptionOfSite {
+    text-align: center;
+    color: #ffc107;
+}
+.a{
+    text-decoration: none;
+}
+#GlobalButton {
+    padding: 10px;
+    width: 220px;
+    font-family: "montserrat",sans-serif;
+    text-transform: uppercase;
+    border-radius: 6px;
+    color: #fff;
+    background-size: 230%;
+    transition: 0.6s;
+    text-decoration: none;
+    margin: 0 auto;
+    float: none;
+    z-index: 1;
+    text-align: center;
+    background-image: linear-gradient(to left,#12CBC4,#0652DD,#12CBC4);
+}
+#GlobalButton:hover {
+    background-position: right;
+}
+#NextPrevButtons{
+    transition: 0.5s;
+}
+#NextPrevButtons:hover {
+    transform: scale(2);
+}
+#SortButtons {
+    color: wheat;           
+}

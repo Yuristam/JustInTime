@@ -11,14 +11,14 @@ namespace JustInTime.DAL.Domain.Entities
         }
 
         public int NoteId { get; set; }
-        public virtual Person Person { get; set; }
-        public string PersonId { get; set; }
+        public virtual Person Person { get; set; } //если что это снизу
+        public string PersonId { get; set; }  //если что это сверху
         [Required]
         [MaxLength(120)]
         public string Title { get; set; }
         public string? Description { get; set; }
         public DateTime DateCreated { get; set; }  
-        public virtual Type Type { get; set; }
+        public /*virtual*/ Type Type { get; set; }
     }
 
     public enum Type

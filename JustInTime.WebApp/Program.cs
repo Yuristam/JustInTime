@@ -12,6 +12,7 @@ var connectionString = builder.Configuration.GetConnectionString("IdentityContex
 
 builder.Services.AddTransient<IShortedUserController, PersonUserController>();
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<NotesDbContext>(ctx => ctx.UseLazyLoadingProxies());
 builder.Services.AddDbContext<IdentityContext>(options => options.UseSqlServer(connectionString));
 builder.Services.AddRazorPages();
 

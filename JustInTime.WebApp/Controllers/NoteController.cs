@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualStudio.Web.CodeGeneration.Design;
+using System.Security.Claims;
 
 namespace JustInTime.WebApp.Controllers
 {
@@ -12,16 +14,24 @@ namespace JustInTime.WebApp.Controllers
     public class NoteController : Controller
     {
         private readonly NotesDbContext _context;
+        private readonly IHttpContextAccessor _httpContextAccessor;
 
-        public NoteController(NotesDbContext context)
+        public NoteController(NotesDbContext context, IHttpContextAccessor httpContextAccessor)
         {
             _context = context;
+            _httpContextAccessor = httpContextAccessor;
         }
 
         // GET: NOTES (ALL NOTES)
         [Authorize]
         public async Task<IActionResult> Index(string sortOrder, string searchString)
         {
+            string? userId = _httpContextAccessor
+                .HttpContext?
+                .User?
+                .FindFirstValue(ClaimTypes.NameIdentifier);
+
+           
 
             ViewData["NameSortParm"] = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
             ViewData["DateSortParm"] = sortOrder == "Date" ? "date_desc" : "Date";
@@ -30,7 +40,9 @@ namespace JustInTime.WebApp.Controllers
             var notes = from s in _context.Notes
                         select s;
 
-            notes = _context.Notes.Include(a => a.Person);
+            notes = _context.Notes
+                .Include(a => a.Person)
+                .Where(a => a.Person.Id == userId);/*.ToList();*/
 
             if (!String.IsNullOrEmpty(searchString))
             {
@@ -88,12 +100,18 @@ namespace JustInTime.WebApp.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("NoteId,PersonId,Title,Description,DateCreated,Type")] Note note)
         {
+            if (!(note.PersonId == null ))
+            {
+                _context.Add(note);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }/*
             if (ModelState.IsValid)
             {
                 _context.Add(note);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
-            }
+            }*/
             ViewData["PersonId"] = new SelectList(_context.Person, "Id", "FirstName", note.PersonId);
 
             return View(note);                                    // This View is CREATE View 
@@ -129,7 +147,8 @@ namespace JustInTime.WebApp.Controllers
                 return NotFound();
             }
 
-            if (ModelState.IsValid)
+            /*if (ModelState.IsValid)*/
+            if (id == note.NoteId)
             {
                 try
                 {

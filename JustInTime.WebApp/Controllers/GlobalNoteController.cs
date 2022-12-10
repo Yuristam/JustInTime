@@ -70,13 +70,13 @@ namespace JustInTime.WebApp.Controllers
         // GET: Note/Details/5   (NOTE BY ID)
         public async Task<IActionResult> Details(int? id)
         {
-            if (id == null || _context.Notes == null)
+            if (id == null || _context.GlobalNotes == null)
             {
                 return NotFound();
             }
 
-            var note = await _context.Notes
-                .FirstOrDefaultAsync(x => x.NoteId == id);
+            var note = await _context.GlobalNotes
+                .FirstOrDefaultAsync(x => x.Id == id);
             if (note == null)
             {
                 return NotFound();
