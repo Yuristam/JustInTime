@@ -1,6 +1,4 @@
-﻿@*@using JustInTime.BLL.Controllers;
-@model PaginatedList<JustInTime.DAL.Domain.Entities.Note>*@
-@model IEnumerable<JustInTime.DAL.Domain.Entities.Note>
+﻿@model IEnumerable<JustInTime.DAL.Domain.Entities.Note>
 @{
     ViewData["Title"] = "Index";
 }
@@ -57,8 +55,10 @@
     <p>
         <a asp-action="Create">Create New</a>
     </p>
+    <!-- this is CREATE button-->
 
-    <!--this is search button end-->
+
+    <!--this is search button start-->
     <form asp-action="Index" method="get">
         <div class="form-actions no-color">
             <p>
@@ -68,7 +68,7 @@
             </p>
         </div>
     </form>
-
+    <!--this is search button end-->
 
     <table class="hidden">
         <thead>
@@ -108,26 +108,7 @@
             }
         </tbody>
     </table>
-@*
-    @{
-        var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
-        var nextDisabled = !Model.HasNextPage ? "disabled" : "";
-    }
 
-    <a asp-action="Index"
-       asp-route-sortOrder="@ViewData["CurrentSort"]"
-       asp-route-pageNumber="@(Model.PageIndex - 1)"
-       asp-route-currentFilter="@ViewData["CurrentFilter"]"
-       class="btn btn-default @prevDisabled">
-        Previous
-    </a>
-    <a asp-action="Index"
-       asp-route-sortOrder="@ViewData["CurrentSort"]"
-       asp-route-pageNumber="@(Model.PageIndex + 1)"
-       asp-route-currentFilter="@ViewData["CurrentFilter"]"
-       class="btn btn-default @nextDisabled">
-        Next
-    </a>*@
 </section>
 
 

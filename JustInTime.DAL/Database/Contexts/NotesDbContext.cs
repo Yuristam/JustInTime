@@ -57,12 +57,6 @@ namespace JustInTime.DAL.Database.Contexts
               .HasForeignKey(x => x.PersonId)
               .IsRequired()
                 .OnDelete(DeleteBehavior.Cascade);
-            /*
-                        modelBuilder.Entity<Note>()
-                          .HasOne(x => x.Person)
-                          .WithMany(x => x.Notes)
-                          .HasForeignKey(x => x.NoteId);*/
-
         }
     }
 }
