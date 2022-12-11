@@ -15,9 +15,6 @@
                 @Html.DisplayNameFor(model => model.TaskDescription)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.AddDate)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.IsDone)
             </th>
             <th></th>
@@ -28,9 +25,6 @@
         <tr>
             <td>
                     @Html.DisplayFor(modelItem => item.TaskDescription)
-            </td>
-            <td>
-                    @Html.DisplayFor(modelItem => item.AddDate)
             </td>
             <td>
                     <input type="checkbox" checked="@item.IsDone" onclick="window.location.href = '/ToDo/ToggleIsDone/@item.ToDoId';" />

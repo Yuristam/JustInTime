@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="~/css/checklistindexstyle.css" />
 
 
-<h1 id="pageTitle">My CheckLists List</h1>
+<h1 id="pageTitle">My Todo Lists📝</h1>
 
 <!--create button-->
 <p>
@@ -15,22 +15,14 @@
 <!--create button-->
 
 <!--search button start-->
-<form asp-action="Index" method="get">
-    <div class="form-actions no-color">
-        <p>
-            Search: <input type="text" name="SearchString" value="@ViewData["CurrentFilter"]" />
-            <input type="submit" value="Search" class="btn btn-default" /> |
-            <a asp-action="Index">Back to Full List</a>
-        </p>
-    </div>
+<form asp-controller="CheckList" asp-action="Index">
+    <p>
+        Search: <input type="text" name="SearchString" />
+        <input type="submit" value="Filter" />
+    </p>
 </form>
 <!--search button end-->
 
-<!--sort begins-->
-<th>
-    <a asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Title</a>
-</th>
-<!--sort ends-->
 
 <!--==================================this is CheckList card=======================================-->
 @foreach (var item in Model)
