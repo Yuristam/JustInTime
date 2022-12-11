@@ -1,6 +1,7 @@
 ﻿using JustInTime.DAL.Database.Contexts;
 using JustInTime.DAL.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 
 namespace JustInTime.WebApp.Controllers
@@ -18,19 +19,21 @@ namespace JustInTime.WebApp.Controllers
 
         public async Task<IActionResult> Index()
         {
-            return View(await _context.ToDos.ToListAsync());    
+            var appDbContext = _context.ToDos.Include(f => f.CheckList);
+            return View(await appDbContext.ToListAsync());
         }
 
 
         public IActionResult Create()
         {
-            return View();                                    
+            ViewData["CheckListId"] = new SelectList(_context.CheckLists, "ToDoId", "TaskDescription");
+            return View();
         }
 
-      
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ToDoId,AddDate,TaskDescription,IsDone,CheckListId,CheckList")] ToDo toDo)
+        public async Task<IActionResult> Create([Bind("ToDoId,TaskDescription,IsDone,CheckListId")] ToDo toDo)
         {
             if (ModelState.IsValid)
             {
@@ -39,7 +42,7 @@ namespace JustInTime.WebApp.Controllers
                 return RedirectToAction(nameof(Index));
             }
 
-            return View(toDo);                                     
+            return View(toDo);
         }
 
         // GET: Animal/Edit/5
@@ -56,7 +59,7 @@ namespace JustInTime.WebApp.Controllers
                 return NotFound();
             }
 
-            return View(toDo);                                     
+            return View(toDo);
         }
 
         // POST: Animal/Edit/5

@@ -5,47 +5,43 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualStudio.Web.CodeGeneration.Design;
+using System.Security.Claims;
 
 namespace JustInTime.WebApp.Controllers
 {
     public class CheckListController : Controller
     {
         private readonly NotesDbContext _context;
+        private readonly IHttpContextAccessor _httpContextAccessor;
 
-        public CheckListController(NotesDbContext context)
+
+        public CheckListController(NotesDbContext context, IHttpContextAccessor httpContextAccessor)
         {
             _context = context;
+            _httpContextAccessor = httpContextAccessor;
         }
 
         // GET: TODOS (ALL ToDoS)
         /* public async Task<IActionResult> Index()
          {*/
         [Authorize]
-        public async Task<IActionResult> Index(
-    string sortOrder,
-    string currentFilter,
-    string searchString,
-    int? pageNumber)
+        public async Task<IActionResult> Index(string sortOrder, string searchString)
             {
-                ViewData["CurrentSort"] = sortOrder;
+            string? userId = _httpContextAccessor
+               .HttpContext?
+               .User?
+               .FindFirstValue(ClaimTypes.NameIdentifier);
+
                 ViewData["NameSortParm"] = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
-                ViewData["DateSortParm"] = sortOrder == "Date" ? "date_desc" : "Date";
-
-                if (searchString != null)
-                {
-                    pageNumber = 1;
-                }
-                else
-                {
-                    searchString = currentFilter;
-                }
-
-            ViewData["CurrentFilter"] = searchString;
+                        ViewData["CurrentFilter"] = searchString;
 
             var checkLists = from c in _context.CheckLists
                            select c;
-            
-            checkLists = _context.CheckLists.Include(a => a.Person);
+
+            checkLists = _context.CheckLists
+                .Include(a => a.Person)
+                .Where(p => p.Person.Id == userId);
 
             if (!String.IsNullOrEmpty(searchString))
             {
@@ -56,19 +52,12 @@ namespace JustInTime.WebApp.Controllers
                 case "name_desc":
                     checkLists = checkLists.OrderByDescending(s => s.Title);
                     break;
-                case "Date":
-                    checkLists = checkLists.OrderBy(s => s.DateCreated);
-                    break;
-                case "date_desc":
-                    checkLists = checkLists.OrderByDescending(s => s.DateCreated);
-                    break;
                 default:
                     checkLists = checkLists.OrderBy(s => s.Title);
                     break;
             }
 
-            int pageSize = 8;
-            return View(await PaginatedList<CheckList>.CreateAsync(checkLists.AsNoTracking(), pageNumber ?? 1, pageSize));
+            return View(await checkLists.AsNoTracking().ToListAsync());
 /*
             var appDbContext = _context.CheckLists.Include(a => a.Person);
             return View(await appDbContext.ToListAsync());*/
@@ -79,16 +68,17 @@ namespace JustInTime.WebApp.Controllers
         // GET: Note/Create
         public IActionResult Create()
         {
+            ViewData["PersonId"] = new SelectList(_context.Person, "Id", "FirstName");
             return View();                                      // This View is CREATE View 
         }
 
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("CheckListId,PersonId,Title,DateCreated,ToDos")] CheckList checkList)
+        public async Task<IActionResult> Create([Bind("CheckListId,PersonId,Title,DateCreated")] CheckList checkList)
         {
            
-            if (ModelState.IsValid)
+            if (!(checkList.PersonId == null || checkList.CheckListId == 0))
             {
                 _context.Add(checkList);
                 await _context.SaveChangesAsync();
@@ -122,14 +112,14 @@ namespace JustInTime.WebApp.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("CheckListId,PersonId,Title,DateCreated,ToDos")] CheckList checkList)
+        public async Task<IActionResult> Edit(int id, [Bind("CheckListId,PersonId,Title,DateCreated")] CheckList checkList)
         {
             if (id != checkList.CheckListId)
             {
                 return NotFound();
             }
 
-            if (ModelState.IsValid)
+            if (id == checkList.CheckListId)
             {
                 try
                 {
@@ -181,7 +171,7 @@ namespace JustInTime.WebApp.Controllers
         {
             if (_context.CheckLists == null)
             {
-                return Problem("Entity set 'NotesDbContext.Notes'  is null.");
+                return Problem("Entity set 'NotesDbContext.CheckLists'  is null.");
             }
 
             var checkList = await _context.CheckLists.FindAsync(id);
