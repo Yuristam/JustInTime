@@ -15,14 +15,14 @@
 <!--create button-->
 
 <!--search button start-->
-
 <form asp-controller="CheckList" asp-action="Index">
     <p id="search">
-        Search: <input class="search-txt" type="text" name="SearchString" />
-        <input type="submit" value="Filter" />
-        <a class="search-btn" asp-action="Index">Back to Full List</a>
+        🔎: <input  type="text" name="SearchString" />
+        <input id="searchButton" type="submit" value="SEARCH" />
     </p>
-</form>
+</form>  
+
+<a id="searchBack" asp-action="Index">BACK TO FULL LIST</a>
 <!--search button end-->
 
 
