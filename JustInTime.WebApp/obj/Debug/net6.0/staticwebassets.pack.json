@@ -237,10 +237,6 @@
       "PackagePath": "staticwebassets\\lib\\daypilot\\daypilot-all.min.js"
     },
     {
-      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\3.png",
-      "PackagePath": "staticwebassets\\lib\\images\\3.png"
-    },
-    {
       "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\7.jpg",
       "PackagePath": "staticwebassets\\lib\\images\\7.jpg"
     },
@@ -265,6 +261,14 @@
       "PackagePath": "staticwebassets\\lib\\images\\JustInTime icon1.png"
     },
     {
+      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\Kimi no Nawa.jpg",
+      "PackagePath": "staticwebassets\\lib\\images\\Kimi no Nawa.jpg"
+    },
+    {
+      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\Private Notes.png",
+      "PackagePath": "staticwebassets\\lib\\images\\Private Notes.png"
+    },
+    {
       "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\Programming.png",
       "PackagePath": "staticwebassets\\lib\\images\\Programming.png"
     },
@@ -275,10 +279,6 @@
     {
       "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\anime-guitar-boy.jpg",
       "PackagePath": "staticwebassets\\lib\\images\\anime-guitar-boy.jpg"
-    },
-    {
-      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\anime-note-taking.gif",
-      "PackagePath": "staticwebassets\\lib\\images\\anime-note-taking.gif"
     },
     {
       "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\avengers-background.jpg",

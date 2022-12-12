@@ -19,28 +19,30 @@ namespace JustInTime.WebApp.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var appDbContext = _context.ToDos.Include(f => f.CheckList);
+            var appDbContext = _context.ToDos
+                .Include(f => f.CheckList);
             return View(await appDbContext.ToListAsync());
         }
 
 
         public IActionResult Create()
         {
-            ViewData["CheckListId"] = new SelectList(_context.CheckLists, "ToDoId", "TaskDescription");
+            ViewData["CheckListId"] = new SelectList(_context.CheckLists, "CheckListId", "Title");
             return View();
         }
 
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ToDoId,TaskDescription,IsDone,CheckListId")] ToDo toDo)
+        public async Task<IActionResult> Create([Bind("ToDoId,CheckListId,TaskDescription,IsDone")] ToDo toDo)
         {
-            if (ModelState.IsValid)
-            {
+            if (/*toDo.ToDoId == 0*/!(toDo.CheckListId == null))
+            {   
                 _context.Add(toDo);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["CheckListId"] = new SelectList(_context.CheckLists, "CheckListId", "Title", toDo.CheckListId);
 
             return View(toDo);
         }
@@ -59,6 +61,7 @@ namespace JustInTime.WebApp.Controllers
                 return NotFound();
             }
 
+            ViewData["CheckListId"] = new SelectList(_context.CheckLists, "CheckListId", "Title", toDo.CheckListId);
             return View(toDo);
         }
 
@@ -67,14 +70,14 @@ namespace JustInTime.WebApp.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ToDoId,AddDate,TaskDescription,IsDone,CheckListId,CheckList")] ToDo toDo)
+        public async Task<IActionResult> Edit(int id, [Bind("ToDoId,CheckListId,TaskDescription,IsDone")] ToDo toDo)
         {
             if (id != toDo.ToDoId)
             {
                 return NotFound();
             }
 
-            if (ModelState.IsValid)
+            if (id != toDo.ToDoId)
             {
                 try
                 {
@@ -95,6 +98,7 @@ namespace JustInTime.WebApp.Controllers
 
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["CheckListId"] = new SelectList(_context.CheckLists, "CheckListId", "Title", toDo.CheckListId);
 
             return View(toDo);                                              // Edit (update)
         }
@@ -108,6 +112,7 @@ namespace JustInTime.WebApp.Controllers
             }
 
             var toDo = await _context.ToDos
+                  .Include(a => a.CheckList)
                 .FirstOrDefaultAsync(x => x.ToDoId == id);
             if (toDo == null)
             {
@@ -124,7 +129,7 @@ namespace JustInTime.WebApp.Controllers
         {
             if (_context.ToDos == null)
             {
-                return Problem("Entity set 'NotesDbContext.Notes'  is null.");
+                return Problem("Entity set 'NotesDbContext.Todos'  is null.");
             }
 
             var toDo = await _context.ToDos.FindAsync(id);

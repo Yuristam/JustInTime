@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace JustInTime.WebApp.Migrations
 {
-    public partial class init7thMigration : Migration
+    public partial class Init8thMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

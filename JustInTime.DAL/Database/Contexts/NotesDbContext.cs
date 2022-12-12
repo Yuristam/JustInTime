@@ -37,12 +37,13 @@ namespace JustInTime.DAL.Database.Contexts
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            //many-t0-one
+            //many-t0-one 
             modelBuilder.Entity<ToDo>()
                 .HasOne(t => t.CheckList)
                 .WithMany(c => c.ToDos)
                 .HasForeignKey(t => t.CheckListId)
-                .IsRequired(false);
+                .IsRequired();/*
+                .OnDelete(DeleteBehavior.Cascade);*/
 
             modelBuilder.Entity<Person>()
                .HasMany(x => x.Notes)
@@ -57,6 +58,13 @@ namespace JustInTime.DAL.Database.Contexts
               .HasForeignKey(x => x.PersonId)
               .IsRequired()
                 .OnDelete(DeleteBehavior.Cascade);
+
+   /*         modelBuilder.Entity<CheckList>()
+                .HasMany(t => t.ToDos)
+                .WithOne(c => c.CheckList)
+                .HasForeignKey(t => t.ToDoId)
+                .IsRequired()
+                .OnDelete(DeleteBehavior.Cascade); */
         }
     }
 }

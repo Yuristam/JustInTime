@@ -69,7 +69,6 @@ namespace JustInTime.WebApp.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("CheckListId,PersonId,Title,DateCreated,Todos")] CheckList checkList)
         {
-           
             if (!(checkList.PersonId == null))
             {
                 _context.Add(checkList);
@@ -149,7 +148,7 @@ namespace JustInTime.WebApp.Controllers
                 .Include(a => a.Person)
                 .FirstOrDefaultAsync(x => x.CheckListId == id);
             if (checkList == null)
-            {
+            {   
                 return NotFound();
             }
 
