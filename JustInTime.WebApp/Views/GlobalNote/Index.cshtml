@@ -22,7 +22,7 @@
         <div class="form-actions no-color">
         <p id="search">
             🔎: <input type="text" name="SearchString" value="@ViewData["CurrentFilter"]" />
-            <input type="submit" value="SEARCH" class="btn btn-default" /> 
+            <input id="searchButtonser" type="submit" value="SEARCH" class="btn btn-default" /> 
             </p>
         </div>
     </form>
@@ -32,8 +32,8 @@
 
 
 <!--this is sort button start-->
-<a id="SortButtons" asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Title</a>
-<a id="SortButtons" asp-action="Index" asp-route-sortOrder="@ViewData["DateSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">DateCreated</a>
+<a id="SortButtons1" asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Title</a>
+<a id="SortButtons2" asp-action="Index" asp-route-sortOrder="@ViewData["DateSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">DateCreated</a>
 <!--this is sort button end-->
 
 

@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\css\\homepagestyle.css"
     },
     {
+      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\css\\mynotes.css",
+      "PackagePath": "staticwebassets\\css\\mynotes.css"
+    },
+    {
       "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\css\\sakura.css",
       "PackagePath": "staticwebassets\\css\\sakura.css"
     },
@@ -273,16 +277,16 @@
       "PackagePath": "staticwebassets\\lib\\images\\away_by_ricodz_deg3pfe.jpg"
     },
     {
-      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\bf82f6956a32819af48c2572243e8286.jpg",
-      "PackagePath": "staticwebassets\\lib\\images\\bf82f6956a32819af48c2572243e8286.jpg"
-    },
-    {
       "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\cosmo background.jpg",
       "PackagePath": "staticwebassets\\lib\\images\\cosmo background.jpg"
     },
     {
       "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\lofi-girl-study.jpg",
       "PackagePath": "staticwebassets\\lib\\images\\lofi-girl-study.jpg"
+    },
+    {
+      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\spiderman.jpg",
+      "PackagePath": "staticwebassets\\lib\\images\\spiderman.jpg"
     },
     {
       "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\talking to myself.png",

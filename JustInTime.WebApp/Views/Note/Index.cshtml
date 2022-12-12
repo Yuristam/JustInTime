@@ -5,7 +5,6 @@
 
 <!--css style and js links here for this site.-->
 <link rel="stylesheet" href="css/mynotes.css" />
-<script defer src="js/mynotes.js"></script>
 
 <!--this is Sakura blossom background (beginning)-->
 <link rel="stylesheet" href="css/sakura.css" />
@@ -36,80 +35,87 @@
 <!--this is Sakura blossom background (ending of code)-->
 
 <!--this is the name of page(it will appear at the top of the site)-->
-<h1>My Notes</h1>
-<section class="hidden">
-    <h1>My Notes</h1>
-    <p>This is the list of notes</p>
-</section>
+<h1 id="pageTitle">My Notes</h1>
 
-<section class="hidden">
-    <h2>Write Your Notes</h2>
-    <p>
-        Write whatever you want. You can write here you ideas.
-    </p>
-</section>
 
 
 <!-- this is CREATE button-->
-<section class="hidden">
     <p>
-        <a asp-action="Create">Create New</a>
+    <a id="GlobalButton" asp-action="Create">Create New</a>
     </p>
     <!-- this is CREATE button-->
 
 
     <!--this is search button start-->
-    <form asp-action="Index" method="get">
-        <div class="form-actions no-color">
-            <p>
-                Search: <input type="text" name="SearchString" value="@ViewData["CurrentFilter"]" />
-                <input type="submit" value="Search" class="btn btn-default" /> |
-                <a asp-action="Index">Back to Full List</a>
-            </p>
-        </div>
-    </form>
+    <form asp-controller="Note" asp-action="Index">
+    <p id="search">
+        🔎: <input  type="text" name="SearchString" />
+        <input id="searchButton" type="submit" value="SEARCH" />
+    </p>
+</form>  
+
+<a id="searchBack" asp-action="Index">BACK TO FULL LIST</a>
     <!--this is search button end-->
+   
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!--this is sort button start-->
+    <a id="SortButtons1" asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Title</a>
+    <a id="SortButtons2" asp-action="Index" asp-route-sortOrder="@ViewData["DateSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">DateCreated</a>
+    <!--this is sort button end-->
 
-    <table class="hidden">
-        <thead>
-            <tr>
-                <th>
-                    <a asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Title</a>
-                </th>
-                <th>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @foreach (var item in Model)
+    {
+        <a class="home-button" id="mycard1button" asp-area="" asp-controller="ToDo" asp-action="Index">
+            <div class="card">
+                <div class="details">
+                    <div class="content">
+                        <h3>
+                            @Html.DisplayFor(modelItem => item.Title)
+                        </h3>
+                        <h3>
+                            @Html.DisplayFor(modelItem => item.Type)
+                        </h3>
+                        <h6>
+                            @Html.DisplayFor(modelItem => item.DateCreated)
+                        </h6>
+                        <p>Click Me</p>
+                    </div>
+                </div>
+                <a asp-action="Edit" asp-route-id="@item.NoteId">🖋</a> |
+                <a asp-action="Delete" asp-route-id="@item.NoteId">❌</a>
+            </div>
+        </a>
+    }
+
+@*
+
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Title</a>
                    <a asp-action="Index" asp-route-sortOrder="@ViewData["DateSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">DateCreated</a>
-            </th>
-                <th>
-                    Type
-                </th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model)
-            {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Title)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.DateCreated)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Type)
-                    </td>
-                 
-                    <td>
-                        <a asp-action="Edit" asp-route-id="@item.NoteId">🖋</a> |
-                        <a asp-action="Details" asp-route-id="@item.NoteId">Open</a> |
-                        <a asp-action="Delete" asp-route-id="@item.NoteId">❌</a>
-                    </td>
-                </tr>
-            }
-        </tbody>
-    </table>
+            
 
-</section>
-
-
-
+*@
