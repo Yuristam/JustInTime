@@ -4,8 +4,39 @@
     ViewData["Title"] = "Index";
 }
 
+<link rel="stylesheet" href="~/css/toDoIndexStyle.css" />
+
+
+<!--this is Sakura blossom background (beginning)-->
+<link rel="stylesheet" href="css/sakura.css" />
+<script src="js/sakura.js" text="text/javascript"></script>
+
+<script>
+    var sakura = new Sakura('body', {
+        colors: [
+            {
+                gradientColorStart: 'rgba(255, 183, 197, 0.9)',
+                gradientColorEnd: 'rgba(255, 197, 208, 0.9)',
+                gradientColorDegree: 120,
+            },
+            {
+                gradientColorStart: 'rgba(255,189,189)',
+                gradientColorEnd: 'rgba(227,170,181)',
+                gradientColorDegree: 120,
+            },
+            {
+                gradientColorStart: 'rgba(212,152,163)',
+                gradientColorEnd: 'rgba(242,185,196)',
+                gradientColorDegree: 120,
+            },
+        ],
+        delay: 200,
+    });
+</script>
+<!--this is Sakura blossom background (ending of code)-->
+
 <p>
-    <a asp-action="Create">Create New</a>
+    <a id="createButton" asp-action="Create">Create New</a>
 </p>
 
 <table class="table">
@@ -27,7 +58,7 @@
                     @Html.DisplayFor(modelItem => item.TaskDescription)
             </td>
             <td>
-                    <input  type="checkbox" checked="@item.IsDone onclick="updateStatus(this)"" >
+                    <input  type="checkbox" checked="@item.IsDone" onclick="updateStatus(this)" >
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.ToDoId">Edit</a>
@@ -38,3 +69,5 @@
     </tbody>
 </table>
 
+
+<img id="backImg"src="~/lib/images/Spirited Away.jpg" />

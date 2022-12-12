@@ -12,6 +12,37 @@
 .a{
     text-decoration: none;
 }
+
+
+.card {
+    margin: 40px;
+    margin-top: 10%; /*для выпрямления*/
+    margin-bottom: -5%; /*для выпрямления*/
+    width: 240px; /*250px*/ /*30%*/
+    height: 100px; /*150px*/
+    display: inline-block;
+    backdrop-filter: blur(15px); /*эффект блюра*/
+    background: rgba(255,255,255,0.05); /*the color of card*/
+    color: aliceblue;
+    box-shadow: 10px 20px 40px rgba(0,0,0,0.25);
+    border: 0;
+    border-radius: 0.5rem;
+    transition: 0.5s;
+}
+
+    .card:hover {
+        transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */ /*увеличивает размер*/
+    }
+
+    .card .details .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+
+
 #GlobalButton {
     padding: 10px;
     width: 220px;
@@ -39,4 +70,51 @@
 }
 #SortButtons {
     color: wheat;           
+}
+
+
+
+#search {/*
+    background: rgba(2,200,255,0.5);*/
+    position: absolute;
+    display: inline-block;
+    color: aliceblue;/*
+    border-radius: 30px;*/
+ /*   padding: 10px;*/
+}
+
+#searchButton {
+    background-image: linear-gradient(to left,#FDA7DF,#9980FA,#FDA7DF);
+    border: white;
+    color: antiquewhite;/*
+    border-radius: 20px;*/
+    background-size: 230%;
+  /*  padding: 10px;*/
+    transition: 0.5s;
+}
+
+    #searchButton:hover {
+        background-position: right;
+    }
+
+#searchBack {
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 330px;
+    background-image: linear-gradient(to left,#FDA7DF,#9980FA,#FDA7DF);
+    border-radius: 20px;
+    text-decoration: none;
+    background-size: 230%;
+    border: white;
+    color: antiquewhite;
+    transition: 0.5s;
+    padding: 10px;
+}
+
+    #searchBack:hover {
+        background-position: right;
+    }
+
+#mycard1button{
+    
 }
