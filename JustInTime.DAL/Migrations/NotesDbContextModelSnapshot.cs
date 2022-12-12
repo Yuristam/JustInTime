@@ -46,7 +46,7 @@ namespace JustInTime.DAL.Migrations
 
                     b.HasIndex("PersonId");
 
-                    b.ToTable("CheckLists");
+                    b.ToTable("CheckLists", (string)null);
                 });
 
             modelBuilder.Entity("JustInTime.DAL.Domain.Entities.GlobalNote", b =>
@@ -70,7 +70,7 @@ namespace JustInTime.DAL.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("GlobalNotes");
+                    b.ToTable("GlobalNotes", (string)null);
                 });
 
             modelBuilder.Entity("JustInTime.DAL.Domain.Entities.Note", b =>
@@ -103,7 +103,7 @@ namespace JustInTime.DAL.Migrations
 
                     b.HasIndex("PersonId");
 
-                    b.ToTable("Notes");
+                    b.ToTable("Notes", (string)null);
                 });
 
             modelBuilder.Entity("JustInTime.DAL.Domain.Entities.Person", b =>
@@ -129,7 +129,7 @@ namespace JustInTime.DAL.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Person");
+                    b.ToTable("Person", (string)null);
                 });
 
             modelBuilder.Entity("JustInTime.DAL.Domain.Entities.ToDo", b =>
@@ -155,7 +155,7 @@ namespace JustInTime.DAL.Migrations
 
                     b.HasIndex("CheckListId");
 
-                    b.ToTable("ToDos");
+                    b.ToTable("ToDos", (string)null);
                 });
 
             modelBuilder.Entity("JustInTime.DAL.Domain.Entities.CheckList", b =>

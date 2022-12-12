@@ -36,7 +36,7 @@ namespace JustInTime.WebApp.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("ToDoId,CheckListId,TaskDescription,IsDone")] ToDo toDo)
         {
-            if (/*toDo.ToDoId == 0*/!(toDo.CheckListId == null))
+            if (toDo.ToDoId == 0/*!(toDo.CheckListId == null)*/)
             {   
                 _context.Add(toDo);
                 await _context.SaveChangesAsync();

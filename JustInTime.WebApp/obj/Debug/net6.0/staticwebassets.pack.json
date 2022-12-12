@@ -9,10 +9,6 @@
       "PackagePath": "staticwebassets\\css\\GlobalNotesIndex.css"
     },
     {
-      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\css\\calendarstyle.css",
-      "PackagePath": "staticwebassets\\css\\calendarstyle.css"
-    },
-    {
       "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\css\\checklistindexstyle.css",
       "PackagePath": "staticwebassets\\css\\checklistindexstyle.css"
     },
@@ -261,8 +257,8 @@
       "PackagePath": "staticwebassets\\lib\\images\\JustInTime icon1.png"
     },
     {
-      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\Kimi no Nawa.jpg",
-      "PackagePath": "staticwebassets\\lib\\images\\Kimi no Nawa.jpg"
+      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\Kimi no Nawa.png",
+      "PackagePath": "staticwebassets\\lib\\images\\Kimi no Nawa.png"
     },
     {
       "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\Private Notes.png",
