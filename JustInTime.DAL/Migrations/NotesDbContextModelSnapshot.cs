@@ -184,7 +184,9 @@ namespace JustInTime.DAL.Migrations
                 {
                     b.HasOne("JustInTime.DAL.Domain.Entities.CheckList", "CheckList")
                         .WithMany("ToDos")
-                        .HasForeignKey("CheckListId");
+                        .HasForeignKey("CheckListId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("CheckList");
                 });

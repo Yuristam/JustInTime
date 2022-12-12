@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace JustInTime.DAL.Migrations
 {
     [DbContext(typeof(NotesDbContext))]
-    [Migration("20221209075826_init 25 Migration")]
-    partial class init25Migration
+    [Migration("20221211215620_Init 35th Migration")]
+    partial class Init35thMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -49,6 +49,30 @@ namespace JustInTime.DAL.Migrations
                     b.HasIndex("PersonId");
 
                     b.ToTable("CheckLists");
+                });
+
+            modelBuilder.Entity("JustInTime.DAL.Domain.Entities.GlobalNote", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("DateCreated")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasMaxLength(120)
+                        .HasColumnType("nvarchar(120)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("GlobalNotes");
                 });
 
             modelBuilder.Entity("JustInTime.DAL.Domain.Entities.Note", b =>
@@ -118,9 +142,6 @@ namespace JustInTime.DAL.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ToDoId"), 1L, 1);
 
-                    b.Property<DateTime>("AddDate")
-                        .HasColumnType("datetime2");
-
                     b.Property<int>("CheckListId")
                         .HasColumnType("int");
 
@@ -165,7 +186,9 @@ namespace JustInTime.DAL.Migrations
                 {
                     b.HasOne("JustInTime.DAL.Domain.Entities.CheckList", "CheckList")
                         .WithMany("ToDos")
-                        .HasForeignKey("CheckListId");
+                        .HasForeignKey("CheckListId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("CheckList");
                 });

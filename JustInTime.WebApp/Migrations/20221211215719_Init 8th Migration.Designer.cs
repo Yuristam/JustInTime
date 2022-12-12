@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace JustInTime.WebApp.Migrations
 {
     [DbContext(typeof(IdentityContext))]
-    [Migration("20221209075959_init 7th Migration")]
-    partial class init7thMigration
+    [Migration("20221211215719_Init 8th Migration")]
+    partial class Init8thMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

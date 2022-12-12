@@ -16,6 +16,6 @@ namespace JustInTime.DAL.Domain.Entities
         [MaxLength (120)]
         public string Title { get; set; }
         public DateTime DateCreated { get; set; }
-        public virtual List<ToDo>? ToDos { get; set; } = new List<ToDo>();
+        public virtual List<ToDo> ToDos { get; set; } = new List<ToDo>();
     }
 }

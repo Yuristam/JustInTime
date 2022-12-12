@@ -5,10 +5,25 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace JustInTime.DAL.Migrations
 {
-    public partial class init25Migration : Migration
+    public partial class Init35thMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.CreateTable(
+                name: "GlobalNotes",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Title = table.Column<string>(type: "nvarchar(120)", maxLength: 120, nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    DateCreated = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_GlobalNotes", x => x.Id);
+                });
+
             migrationBuilder.CreateTable(
                 name: "Person",
                 columns: table => new
@@ -74,10 +89,9 @@ namespace JustInTime.DAL.Migrations
                 {
                     ToDoId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    AddDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    CheckListId = table.Column<int>(type: "int", nullable: false),
                     TaskDescription = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
-                    IsDone = table.Column<bool>(type: "bit", nullable: false),
-                    CheckListId = table.Column<int>(type: "int", nullable: false)
+                    IsDone = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -86,7 +100,8 @@ namespace JustInTime.DAL.Migrations
                         name: "FK_ToDos_CheckLists_CheckListId",
                         column: x => x.CheckListId,
                         principalTable: "CheckLists",
-                        principalColumn: "CheckListId");
+                        principalColumn: "CheckListId",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
@@ -107,6 +122,9 @@ namespace JustInTime.DAL.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "GlobalNotes");
+
             migrationBuilder.DropTable(
                 name: "Notes");
 
