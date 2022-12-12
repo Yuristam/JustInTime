@@ -6,36 +6,9 @@
 
 <link rel="stylesheet" href="~/css/GlobalNotesIndex.css" />
 
-<!--this is Sakura blossom background (beginning)-->
-<link rel="stylesheet" href="css/sakura.css" />
-<script src="js/sakura.js" text="text/javascript"></script>
-
-<script>
-    var sakura = new Sakura('body', {
-        colors: [
-            {
-                gradientColorStart: 'rgba(255, 183, 197, 0.9)',
-                gradientColorEnd: 'rgba(255, 197, 208, 0.9)',
-                gradientColorDegree: 120,
-            },
-            {
-                gradientColorStart: 'rgba(255,189,189)',
-                gradientColorEnd: 'rgba(227,170,181)',
-                gradientColorDegree: 120,
-            },
-            {
-                gradientColorStart: 'rgba(212,152,163)',
-                gradientColorEnd: 'rgba(242,185,196)',
-                gradientColorDegree: 120,
-            },
-        ],
-        delay: 200,
-    });
-</script>
-<!--this is Sakura blossom background (ending of code)-->
 
 <!--==================================the site begins here==============================================-->
-    <h1 id="pageTitle">My Notes</h1>
+    <h1 id="pageTitle">Global Ideas</h1>
     <p id="descriptionOfSite">This is Global Notes. Here you can share your ideas with the whole world.</p>
 
 <!-- this is CREATE button-->
@@ -44,18 +17,48 @@
         <a id="GlobalButton" asp-action="Create">Create New</a>
     </p>
 
-    <!--this is search button end-->
+    <!--this is search button start-->
     <form asp-action="Index" method="get">
         <div class="form-actions no-color">
-            <p>
-                Search: <input type="text" name="SearchString" value="@ViewData["CurrentFilter"]" />
-                <input type="submit" value="Search" class="btn btn-default" /> |
-                <a asp-action="Index">Back to Full List</a>
+        <p id="search">
+            🔎: <input type="text" name="SearchString" value="@ViewData["CurrentFilter"]" />
+            <input type="submit" value="SEARCH" class="btn btn-default" /> 
             </p>
         </div>
     </form>
 
+<a id="searchBack" asp-action="Index">BACK TO FULL LIST</a>
+<!--this is search button end-->
 
+
+<!--this is sort button start-->
+<a id="SortButtons" asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Title</a>
+<a id="SortButtons" asp-action="Index" asp-route-sortOrder="@ViewData["DateSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">DateCreated</a>
+<!--this is sort button end-->
+
+
+<!--=================================================Card Note=============================================-->
+@foreach (var item in Model)
+{
+    <a class="home-button" id="mycard1button" asp-area="" asp-action="Details" asp-route-id="@item.Id">
+        <div class="card">
+            <div class="details">
+                <div class="content">
+                    <h3>
+                        @Html.DisplayFor(modelItem => item.Title)
+                    </h3>
+                    <h6>
+                        @Html.DisplayFor(modelItem => item.DateCreated)
+                    </h6>
+                    <p>OPEN</p>
+                </div>
+            </div>
+            <a asp-action="Edit" asp-route-id="@item.Id">🖋</a> |
+           <a asp-action="Delete" asp-route-id="@item.Id">❌</a>
+        </div>
+    </a>
+}
+@*
     <table class="hidden">
         <thead>
             <tr>
@@ -88,6 +91,10 @@
             }
         </tbody>
     </table>
+
+*@
+
+    <!--=====================================Pagination Buttons=========================================-->
 
     @{
         var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";

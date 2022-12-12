@@ -39,16 +39,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="wwwroot\lib\daypilot\daypilot-all.min.js" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\JustInTime.BLL\JustInTime.BLL.csproj" />
     <ProjectReference Include="..\JustInTime.DAL\JustInTime.DAL.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <TypeScriptCompile Include="wwwroot\lib\daypilot\daypilot-all.min.d.ts" />
   </ItemGroup>
 
   <ItemGroup>
