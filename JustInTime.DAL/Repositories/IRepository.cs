@@ -26,7 +26,6 @@ namespace JustInTime.DAL.Repositories
     }
 }*/
 
-using JustInTime.DAL.Domain.Entities;
 using System.Linq.Expressions;
 
 namespace JustInTime.DAL.Repositories

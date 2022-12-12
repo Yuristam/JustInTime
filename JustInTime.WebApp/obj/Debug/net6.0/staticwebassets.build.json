@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "64a7U2qYG4MvgOtEm5xwmt3KadDGIEw7mMKzoPh/Uxc=",
+  "Hash": "tIDPvvdY95baPgSOKqDe/u7QR0AiVYU2+Sqryb3VIs8=",
   "Source": "JustInTime.WebApp",
   "BasePath": "_content/JustInTime.WebApp",
   "Mode": "Default",
@@ -1069,23 +1069,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\JustInTime.WebApp.bundle.scp.css"
-    },
-    {
-      "Identity": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\css\\calendarstyle.css",
-      "SourceId": "JustInTime.WebApp",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\",
-      "BasePath": "_content/JustInTime.WebApp",
-      "RelativePath": "css/calendarstyle.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\calendarstyle.css"
     },
     {
       "Identity": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\css\\checklistindexstyle.css",
@@ -2244,12 +2227,12 @@
       "OriginalItemSpec": "wwwroot\\lib\\images\\JustInTime icon1.png"
     },
     {
-      "Identity": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\Kimi no Nawa.jpg",
+      "Identity": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\Kimi no Nawa.png",
       "SourceId": "JustInTime.WebApp",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\",
       "BasePath": "_content/JustInTime.WebApp",
-      "RelativePath": "lib/images/Kimi no Nawa.jpg",
+      "RelativePath": "lib/images/Kimi no Nawa.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -2258,7 +2241,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\images\\Kimi no Nawa.jpg"
+      "OriginalItemSpec": "wwwroot\\lib\\images\\Kimi no Nawa.png"
     },
     {
       "Identity": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\lofi-girl-study.jpg",

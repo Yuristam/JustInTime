@@ -22,7 +22,7 @@ namespace JustInTime.DAL.Domain.Entities
     }
 
     public enum Type
-    {
+    {   
         [Display(Name = "Urgent")]
         Urgent,
         [Display(Name = "Temporary")]

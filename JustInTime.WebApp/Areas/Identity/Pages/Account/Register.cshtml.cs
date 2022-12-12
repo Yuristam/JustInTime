@@ -123,10 +123,10 @@ namespace JustInTime.WebApp.Areas.Identity.Pages.Account
 
         public async Task OnGetAsync(string returnUrl = null)
         {
-            if (!await _roleManager.RoleExistsAsync(WC.Admin))
+            if (!await _roleManager.RoleExistsAsync(WebConstants.Admin))
             {
-                await _roleManager.CreateAsync(new IdentityRole(WC.Admin));
-                await _roleManager.CreateAsync(new IdentityRole(WC.User));
+                await _roleManager.CreateAsync(new IdentityRole(WebConstants.Admin));
+                await _roleManager.CreateAsync(new IdentityRole(WebConstants.User));
             }
             ReturnUrl = returnUrl;
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
@@ -148,13 +148,13 @@ namespace JustInTime.WebApp.Areas.Identity.Pages.Account
                 {
                     _shortedUserController.AddUser(user,  Input.FirstName, Input.LastName, Input.DateTime);
 
-                    if (User.IsInRole(WC.Admin))
+                    if (User.IsInRole(WebConstants.Admin))
                     {
-                        await _userManager.AddToRoleAsync(user, WC.Admin);
+                        await _userManager.AddToRoleAsync(user, WebConstants.Admin);
                     }
                     else
                     {
-                        await _userManager.AddToRoleAsync(user, WC.User);
+                        await _userManager.AddToRoleAsync(user, WebConstants.User);
                     }
                     _logger.LogInformation("User created a new account with password.");
 

@@ -1,8 +1,7 @@
 ﻿namespace JustInTime.WebApp
 {
-    public static class WC
+    public static class WebConstants
     {
-
         public const string Admin = "Admin";
         public const string User = "User";
     }
