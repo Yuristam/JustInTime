@@ -58,34 +58,10 @@
     <!--this is search button end-->
    
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <!--this is sort button start-->
     <a id="SortButtons1" asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Title</a>
     <a id="SortButtons2" asp-action="Index" asp-route-sortOrder="@ViewData["DateSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">DateCreated</a>
     <!--this is sort button end-->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     @foreach (var item in Model)
@@ -94,12 +70,13 @@
             <div class="card">
                 <div class="details">
                     <div class="content">
-                        <h3>
+                        <h6>
                             @Html.DisplayFor(modelItem => item.Title)
-                        </h3>
-                        <h3>
-                            @Html.DisplayFor(modelItem => item.Type)
-                        </h3>
+                        </h6>
+                        <h6>
+                            @Html.DisplayFor(modelItem => item.Type)3
+
+                        </h6>
                         <h6>
                             @Html.DisplayFor(modelItem => item.DateCreated)
                         </h6>
