@@ -1,0 +1,11 @@
+﻿body {
+    background-image: url("../lib/images/details.jpg");
+    background-repeat: no-repeat;
+    background-size: 1600px; /*width 1600px*/
+}
+#NoteDescription{
+/*i need to add container here and decorate it*/
+}
+#NoteButtons {
+    /*i need to add container here and decorate it*/
+}

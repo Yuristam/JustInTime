@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "fqY1nEskxlWTSZH5UklG6rfBQAM6tR08Rzjd+bm2YWY=",
+  "Hash": "iyp13AW5We1mOIjAneu2Udagahsll7WofuGxq9dSKdk=",
   "Source": "JustInTime.WebApp",
   "BasePath": "_content/JustInTime.WebApp",
   "Mode": "Default",
@@ -1088,6 +1088,23 @@
       "OriginalItemSpec": "wwwroot\\css\\checklistindexstyle.css"
     },
     {
+      "Identity": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\css\\Details.css",
+      "SourceId": "JustInTime.WebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\",
+      "BasePath": "_content/JustInTime.WebApp",
+      "RelativePath": "css/Details.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Details.css"
+    },
+    {
       "Identity": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\css\\GlobalNotesIndex.css",
       "SourceId": "JustInTime.WebApp",
       "SourceType": "Discovered",
@@ -2006,40 +2023,6 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
     },
     {
-      "Identity": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\7.jpg",
-      "SourceId": "JustInTime.WebApp",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\",
-      "BasePath": "_content/JustInTime.WebApp",
-      "RelativePath": "lib/images/7.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\images\\7.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\83913e_7d939c644d1f4a8c9220043d286f986b_mv2.png",
-      "SourceId": "JustInTime.WebApp",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\",
-      "BasePath": "_content/JustInTime.WebApp",
-      "RelativePath": "lib/images/83913e_7d939c644d1f4a8c9220043d286f986b_mv2.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\images\\83913e_7d939c644d1f4a8c9220043d286f986b_mv2.png"
-    },
-    {
       "Identity": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\87827291_p0.jpg",
       "SourceId": "JustInTime.WebApp",
       "SourceType": "Discovered",
@@ -2091,23 +2074,6 @@
       "OriginalItemSpec": "wwwroot\\lib\\images\\avengers-background.jpg"
     },
     {
-      "Identity": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\away_by_ricodz_deg3pfe.jpg",
-      "SourceId": "JustInTime.WebApp",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\",
-      "BasePath": "_content/JustInTime.WebApp",
-      "RelativePath": "lib/images/away_by_ricodz_deg3pfe.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\images\\away_by_ricodz_deg3pfe.jpg"
-    },
-    {
       "Identity": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\Cartoon2_land.jpg",
       "SourceId": "JustInTime.WebApp",
       "SourceType": "Discovered",
@@ -2140,6 +2106,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\images\\cosmo background.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\details.jpg",
+      "SourceId": "JustInTime.WebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\",
+      "BasePath": "_content/JustInTime.WebApp",
+      "RelativePath": "lib/images/details.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\images\\details.jpg"
     },
     {
       "Identity": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\JustInTime icon.png",
@@ -2210,12 +2193,12 @@
       "OriginalItemSpec": "wwwroot\\lib\\images\\lofi-girl-study.jpg"
     },
     {
-      "Identity": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\Private Notes.png",
+      "Identity": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\mobile part.jpg",
       "SourceId": "JustInTime.WebApp",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\",
       "BasePath": "_content/JustInTime.WebApp",
-      "RelativePath": "lib/images/Private Notes.png",
+      "RelativePath": "lib/images/mobile part.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -2224,7 +2207,24 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\images\\Private Notes.png"
+      "OriginalItemSpec": "wwwroot\\lib\\images\\mobile part.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\Private Note.png",
+      "SourceId": "JustInTime.WebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\",
+      "BasePath": "_content/JustInTime.WebApp",
+      "RelativePath": "lib/images/Private Note.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\images\\Private Note.png"
     },
     {
       "Identity": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\Programming.png",
@@ -2395,23 +2395,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\images\\world index background.png"
-    },
-    {
-      "Identity": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\wp5565660.jpg",
-      "SourceId": "JustInTime.WebApp",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\",
-      "BasePath": "_content/JustInTime.WebApp",
-      "RelativePath": "lib/images/wp5565660.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\images\\wp5565660.jpg"
     },
     {
       "Identity": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\jquery\\dist\\jquery.js",

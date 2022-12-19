@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\JustInTime.WebApp.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\css\\Details.css",
+      "PackagePath": "staticwebassets\\css\\Details.css"
+    },
+    {
       "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\css\\GlobalNotesIndex.css",
       "PackagePath": "staticwebassets\\css\\GlobalNotesIndex.css"
     },
@@ -225,14 +229,6 @@
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\7.jpg",
-      "PackagePath": "staticwebassets\\lib\\images\\7.jpg"
-    },
-    {
-      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\83913e_7d939c644d1f4a8c9220043d286f986b_mv2.png",
-      "PackagePath": "staticwebassets\\lib\\images\\83913e_7d939c644d1f4a8c9220043d286f986b_mv2.png"
-    },
-    {
       "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\87827291_p0.jpg",
       "PackagePath": "staticwebassets\\lib\\images\\87827291_p0.jpg"
     },
@@ -253,8 +249,8 @@
       "PackagePath": "staticwebassets\\lib\\images\\Kimi no Nawa.png"
     },
     {
-      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\Private Notes.png",
-      "PackagePath": "staticwebassets\\lib\\images\\Private Notes.png"
+      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\Private Note.png",
+      "PackagePath": "staticwebassets\\lib\\images\\Private Note.png"
     },
     {
       "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\Programming.png",
@@ -273,16 +269,20 @@
       "PackagePath": "staticwebassets\\lib\\images\\avengers-background.jpg"
     },
     {
-      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\away_by_ricodz_deg3pfe.jpg",
-      "PackagePath": "staticwebassets\\lib\\images\\away_by_ricodz_deg3pfe.jpg"
-    },
-    {
       "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\cosmo background.jpg",
       "PackagePath": "staticwebassets\\lib\\images\\cosmo background.jpg"
     },
     {
+      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\details.jpg",
+      "PackagePath": "staticwebassets\\lib\\images\\details.jpg"
+    },
+    {
       "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\lofi-girl-study.jpg",
       "PackagePath": "staticwebassets\\lib\\images\\lofi-girl-study.jpg"
+    },
+    {
+      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\mobile part.jpg",
+      "PackagePath": "staticwebassets\\lib\\images\\mobile part.jpg"
     },
     {
       "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\spiderman.jpg",
@@ -315,10 +315,6 @@
     {
       "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\world index background.png",
       "PackagePath": "staticwebassets\\lib\\images\\world index background.png"
-    },
-    {
-      "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\images\\wp5565660.jpg",
-      "PackagePath": "staticwebassets\\lib\\images\\wp5565660.jpg"
     },
     {
       "Id": "C:\\Users\\lmega\\source\\repos\\JustInTime\\JustInTime.WebApp\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",

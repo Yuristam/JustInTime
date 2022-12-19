@@ -4,9 +4,12 @@
     ViewData["Title"] = "Details";
 }
 
+
+<link rel="stylesheet" href="~/css/Details.css" />
+
 <h1>Details</h1>
 
-<div>
+<div id="NoteDescription">
     <h4>Note</h4>
     <hr />
     <dl class="row">
@@ -30,7 +33,7 @@
         </dd>
     </dl>
 </div>
-<div>
+<div id="NoteButtons">
     <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
     <a asp-action="Index">Back to List</a>
 </div>
